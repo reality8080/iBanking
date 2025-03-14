@@ -687,7 +687,7 @@
             historyGbtn.HoverState.FillColor = Color.FromArgb(14, 126, 254);
             historyGbtn.HoverState.ForeColor = Color.White;
             historyGbtn.HoverState.Image = (Image)resources.GetObject("resource.Image2");
-            historyGbtn.Image = Properties.Resources.historical512Gray;
+            historyGbtn.Image = (Image)resources.GetObject("historyGbtn.Image");
             historyGbtn.ImageAlign = HorizontalAlignment.Left;
             historyGbtn.ImageSize = new Size(30, 30);
             historyGbtn.Location = new Point(37, 207);
@@ -713,7 +713,7 @@
             guna2Button4.HoverState.FillColor = Color.FromArgb(14, 126, 254);
             guna2Button4.HoverState.ForeColor = Color.White;
             guna2Button4.HoverState.Image = Properties.Resources.prepaidCards512White;
-            guna2Button4.Image = Properties.Resources.prepaidCards512Gray;
+            guna2Button4.Image = (Image)resources.GetObject("guna2Button4.Image");
             guna2Button4.ImageAlign = HorizontalAlignment.Left;
             guna2Button4.ImageSize = new Size(30, 30);
             guna2Button4.Location = new Point(37, 269);
