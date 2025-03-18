@@ -118,46 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cards-icon-size_512Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cards-icon-size_512Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dollar512Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dollar512Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="homeGray1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\homeGray1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cards-icon-size_512Yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cards-icon-size_512Yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="prepaidCards512White" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\prepaidCards512White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="searchIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\searchIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="home_Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home_Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="historical512Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\historical512Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="prepaidCards512Yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\prepaidCards512Yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dollar512Yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dollar512Yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="prepaidCards512Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\prepaidCards512Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="logo FIT FA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo FIT FA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="homeGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\homeGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cards-icon-size_512White" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cards-icon-size_512White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

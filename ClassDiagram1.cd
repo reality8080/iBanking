@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="iBanking.Models.BankAcc">
+    <Position X="7.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAGAAAAAAAAAAAAAAAAAAIAAAAAAAAIAAAAIEAATiAA=</HashCode>
+      <FileName>Models\BankAcc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iBanking.Models.BankCard">
+    <Position X="9" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAACAEAIAIAAAAAAAABAAAAQAAAAAAA=</HashCode>
+      <FileName>Models\BankCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iBanking.Models.Customer">
+    <Position X="2" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAIAAAgAAAAAAAAAAIEAAAgAAAIAAAAAAI=</HashCode>
+      <FileName>Models\Customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iBanking.Models.Loans">
+    <Position X="5.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAQAgAAAAAIAAAAAQAAAIAAAAAAAAEAA=</HashCode>
+      <FileName>Models\Loans.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iBanking.Models.Transactions">
+    <Position X="3.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBgAAAAAAAIQAAAAAAAIAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Models\Transactions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iBanking.Models.UserAuth">
+    <Position X="10.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAIEAgAAAAAAAAAAAAgAAIAA=</HashCode>
+      <FileName>Models\UserAuth.cs</FileName>
+      <NewMemberFileName>Models\userAuth.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="iBanking.Interfaces.Delete.IDeleteBankAcc" Collapsed="true">
+    <Position X="14.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Interfaces\Delete\IDeleteBankAcc.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="iBanking.Interfaces.Delete.IDeleteBankCard" Collapsed="true">
+    <Position X="16.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Interfaces\Delete\IDeleteBankCard.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="iBanking.Interfaces.Delete.IDeleteCustomer" Collapsed="true">
+    <Position X="18.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Delete\IDeleteCustomer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="iBanking.Interfaces.Delete.IDeleteLoans" Collapsed="true">
+    <Position X="14.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Delete\IDeleteLoans.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="iBanking.Interfaces.Delete.IDeleteTransaction" Collapsed="true">
+    <Position X="16.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Delete\IDeleteTransaction.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="iBanking.Interfaces.Delete.IDeleteUserAuth" Collapsed="true">
+    <Position X="18.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Delete\IDeleteUserAuth.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="iBanking.Interfaces.Read.IReadBankAcc" Collapsed="true">
+    <Position X="14.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Read\IReadBankAcc.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="iBanking.Interfaces.Read.IReadBankCard" Collapsed="true">
+    <Position X="16.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Read\IReadBankCard.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="iBanking.Interfaces.Read.IReadCustomer" Collapsed="true">
+    <Position X="14.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAEAAAAAAA=</HashCode>
+      <FileName>Interfaces\Read\IReadCustomer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="iBanking.Interfaces.Read.IReadLoans" Collapsed="true">
+    <Position X="16.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Read\IReadLoans.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="iBanking.Interfaces.Update.IUpdateBankAcc" Collapsed="true">
+    <Position X="14.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Update\IUpdateBankAcc.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="iBanking.Interfaces.Update.IUpdateBankCard" Collapsed="true">
+    <Position X="16.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Update\IUpdateBankCard.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="iBanking.Interfaces.Update.IUpdateCustomer" Collapsed="true">
+    <Position X="14.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Update\IUpdateCustomer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="iBanking.Interfaces.Write.IWriteBankAcc" Collapsed="true">
+    <Position X="14.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Write\IWriteBankAcc.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="iBanking.Interfaces.Write.IWriteCustomer" Collapsed="true">
+    <Position X="16.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Write\IWriteCustomer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
