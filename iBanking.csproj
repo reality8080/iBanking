@@ -40,8 +40,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repository\Read\" />
-    <Folder Include="Repository\Update\" />
     <Folder Include="Service\" />
   </ItemGroup>
 

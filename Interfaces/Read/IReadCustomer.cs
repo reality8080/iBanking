@@ -9,8 +9,7 @@ namespace iBanking.Interfaces.Read
 {
     public interface IReadCustomer
     {
-        public Task<IEnumerable< Customer>> Get(Customer customer);
         public Task<IEnumerable<Customer>> GetAll();
-        public Task<Boolean> GetById(Guid idCus);
+        public Task<Customer?> GetById(Guid idCus);
     }
 }
