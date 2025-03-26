@@ -418,7 +418,7 @@
             controlPageGunaPanel.Location = new Point(1, 58);
             controlPageGunaPanel.Name = "controlPageGunaPanel";
             controlPageGunaPanel.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            controlPageGunaPanel.Size = new Size(315, 1045);
+            controlPageGunaPanel.Size = new Size(315, 863);
             controlPageGunaPanel.TabIndex = 0;
             // 
             // userNameGHLabel
@@ -622,7 +622,7 @@
             rightDashGPanel.Location = new Point(978, 0);
             rightDashGPanel.Name = "rightDashGPanel";
             rightDashGPanel.ShadowDecoration.CustomizableEdges = customizableEdges37;
-            rightDashGPanel.Size = new Size(566, 1042);
+            rightDashGPanel.Size = new Size(566, 860);
             rightDashGPanel.TabIndex = 7;
             // 
             // guna2Panel3
@@ -783,7 +783,7 @@
             mainDashGPanel.Location = new Point(-1, 0);
             mainDashGPanel.Name = "mainDashGPanel";
             mainDashGPanel.ShadowDecoration.CustomizableEdges = customizableEdges59;
-            mainDashGPanel.Size = new Size(980, 1045);
+            mainDashGPanel.Size = new Size(980, 863);
             mainDashGPanel.TabIndex = 6;
             // 
             // tabControl2
@@ -980,7 +980,7 @@
             bankTPage.Location = new Point(4, 37);
             bankTPage.Name = "bankTPage";
             bankTPage.Padding = new Padding(3);
-            bankTPage.Size = new Size(894, 616);
+            bankTPage.Size = new Size(894, 571);
             bankTPage.TabIndex = 1;
             bankTPage.Text = "Bank Of VietNam";
             // 
@@ -1152,7 +1152,7 @@
             FPBTPage.Location = new Point(4, 37);
             FPBTPage.Name = "FPBTPage";
             FPBTPage.Padding = new Padding(3);
-            FPBTPage.Size = new Size(894, 616);
+            FPBTPage.Size = new Size(894, 571);
             FPBTPage.TabIndex = 2;
             FPBTPage.Text = "First Platypus Bank";
             // 
@@ -1530,6 +1530,7 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            FormClosing += Form1_FormClosing;
             Load += Form1_Load;
             controlPageGunaPanel.ResumeLayout(false);
             controlPageGunaPanel.PerformLayout();
