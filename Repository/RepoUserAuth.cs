@@ -1,8 +1,5 @@
 ﻿using iBanking.Data;
-using iBanking.Interfaces.Repo.Create;
-using iBanking.Interfaces.Repo.Delete;
-using iBanking.Interfaces.Repo.Read;
-using iBanking.Interfaces.Repo.Update;
+using iBanking.Interfaces.Repo;
 using iBanking.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -14,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace iBanking.Repository
 {
-    public class RepoUserAuth : IRCreaUAuth, IRReadUAuth, IRUpdaUAuth, IRDeleUAuth
+    public class RepoUserAuth : IRepoUserAuth
     {
         private readonly iBankContext _context;
         private readonly ILogger<RepoUserAuth> _logger;

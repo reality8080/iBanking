@@ -1,4 +1,5 @@
 ﻿using iBanking.Data;
+using iBanking.Interfaces.Repo;
 using iBanking.Interfaces.Repo.Create;
 using iBanking.Interfaces.Repo.Delete;
 using iBanking.Interfaces.Repo.Read;
@@ -14,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace iBanking.Repository
 {
-    public class RepoCustom : IRCreaCus, IRDeleCus, IRReadCus, IRUpdaCus
+    public class RepoCustom : IRepoCus
     {
         private readonly iBankContext _context;
         private readonly ILogger<RepoCustom> _logger;

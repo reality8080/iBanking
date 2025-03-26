@@ -1,8 +1,5 @@
 ﻿using iBanking.Data;
-using iBanking.Interfaces.Repo.Create;
-using iBanking.Interfaces.Repo.Delete;
-using iBanking.Interfaces.Repo.Read;
-using iBanking.Interfaces.Repo.Update;
+using iBanking.Interfaces.Repo;
 using iBanking.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -15,7 +12,7 @@ using System.Transactions;
 
 namespace iBanking.Repository
 {
-    public class RepoTransHistory:IRCreaTrans, IRReadTrans, IRUpdaTrans, IRDeleTrans
+    public class RepoTransHistory:IRepoTransHistory
     {
         public readonly iBankContext _context;
         public readonly ILogger<RepoTransHistory> _logger;

@@ -17,10 +17,15 @@ namespace iBanking.Data
         public DbSet<Transactions> Transactions { get; set; }
         public DbSet<UserAuth> UserAuths { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public iBankContext(DbContextOptions<iBankContext> options)
+            :base(options)
         {
-            optionsBuilder.UseSqlServer("Data Source=(localdb)\\localThienPhu;Initial Catalog=iBanking;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
         }
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer("Data Source=(localdb)\\localThienPhu;Initial Catalog=iBanking;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
