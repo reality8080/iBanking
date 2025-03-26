@@ -40,7 +40,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Interfaces\Ser\" />
     <Folder Include="Service\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Interfaces\Repo\Create\IRCreaBCard.cs" />
   </ItemGroup>
 
 </Project>
