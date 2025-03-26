@@ -1,8 +1,5 @@
 ﻿using iBanking.Data;
-using iBanking.Interfaces.Repo.Create;
-using iBanking.Interfaces.Repo.Delete;
-using iBanking.Interfaces.Repo.Read;
-using iBanking.Interfaces.Repo.Update;
+using iBanking.Interfaces.Repo;
 using iBanking.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,35 +19,16 @@ namespace iBanking
             services.AddDbContext<iBankContext>(options =>
             options.UseSqlServer("Data Source=(localdb)\\localThienPhu;Initial Catalog=iBanking;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False"));
 
-            services.AddScoped(typeof(IRCreaCus),typeof(RepoCustom));
-            services.AddScoped(typeof(IRDeleCus), typeof(RepoCustom));
-            services.AddScoped(typeof(IRReadCus), typeof(RepoCustom));
-            services.AddScoped(typeof(IRUpdaCus), typeof(RepoCustom));
+            services.AddScoped(typeof(IRepoCus), typeof(RepoCustom));
+            services.AddScoped(typeof(IRepoBAcc), typeof(RepoBAcc));
+            services.AddScoped(typeof(IRepoBCard), typeof(RepoBCard));
+            services.AddScoped(typeof(IRepoLoans), typeof(RepoLoans));
+            services.AddScoped(typeof(IRepoTransHistory), typeof(RepoTransHistory));
+            services.AddScoped(typeof(IRepoUserAuth), typeof(RepoUserAuth));
 
-            services.AddScoped(typeof(IRCreaCus), typeof(RepoCustom));
-            services.AddScoped(typeof(IRDeleCus), typeof(RepoCustom));
-            services.AddScoped(typeof(IRReadCus), typeof(RepoCustom));
-            services.AddScoped(typeof(IRUpdaCus), typeof(RepoCustom));
+            services.AddTransient<Form1>();
 
-            services.AddScoped(typeof(IRCreaCus), typeof(RepoCustom));
-            services.AddScoped(typeof(IRDeleCus), typeof(RepoCustom));
-            services.AddScoped(typeof(IRReadCus), typeof(RepoCustom));
-            services.AddScoped(typeof(IRUpdaCus), typeof(RepoCustom));
-
-            services.AddScoped(typeof(IRCreaCus), typeof(RepoCustom));
-            services.AddScoped(typeof(IRDeleCus), typeof(RepoCustom));
-            services.AddScoped(typeof(IRReadCus), typeof(RepoCustom));
-            services.AddScoped(typeof(IRUpdaCus), typeof(RepoCustom));
-
-            services.AddScoped(typeof(IRCreaCus), typeof(RepoCustom));
-            services.AddScoped(typeof(IRDeleCus), typeof(RepoCustom));
-            services.AddScoped(typeof(IRReadCus), typeof(RepoCustom));
-            services.AddScoped(typeof(IRUpdaCus), typeof(RepoCustom));
-
-            services.AddScoped(typeof(IRCreaCus), typeof(RepoCustom));
-            services.AddScoped(typeof(IRDeleCus), typeof(RepoCustom));
-            services.AddScoped(typeof(IRReadCus), typeof(RepoCustom));
-            services.AddScoped(typeof(IRUpdaCus), typeof(RepoCustom));
+            return services.BuildServiceProvider();
         }
     }
 }

@@ -1,9 +1,5 @@
 ﻿using iBanking.Data;
 using iBanking.Interfaces.Repo;
-using iBanking.Interfaces.Repo.Create;
-using iBanking.Interfaces.Repo.Delete;
-using iBanking.Interfaces.Repo.Read;
-using iBanking.Interfaces.Repo.Update;
 using iBanking.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
