@@ -759,10 +759,10 @@
             guna2Transition1.SetDecoration(guna2PictureBox2, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2PictureBox2.Image = Properties.Resources.bluePink;
             guna2PictureBox2.ImageRotate = 0F;
-            guna2PictureBox2.Location = new Point(0, 0);
+            guna2PictureBox2.Location = new Point(3, 0);
             guna2PictureBox2.Name = "guna2PictureBox2";
             guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges33;
-            guna2PictureBox2.Size = new Size(563, 128);
+            guna2PictureBox2.Size = new Size(560, 128);
             guna2PictureBox2.TabIndex = 2;
             guna2PictureBox2.TabStop = false;
             guna2PictureBox2.UseTransparentBackground = true;
