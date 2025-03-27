@@ -219,7 +219,7 @@
             minusGIBtn.CheckedState.ImageSize = new Size(64, 64);
             guna2Transition1.SetDecoration(minusGIBtn, Guna.UI2.AnimatorNS.DecorationType.None);
             minusGIBtn.HoverState.ImageSize = new Size(30, 30);
-            minusGIBtn.Image = (Image)resources.GetObject("minusGIBtn.Image");
+            minusGIBtn.Image = Properties.Resources.minus;
             minusGIBtn.ImageOffset = new Point(0, 0);
             minusGIBtn.ImageRotate = 0F;
             minusGIBtn.ImageSize = new Size(30, 30);
@@ -238,7 +238,7 @@
             exitGImageBtn.CheckedState.ImageSize = new Size(64, 64);
             guna2Transition1.SetDecoration(exitGImageBtn, Guna.UI2.AnimatorNS.DecorationType.None);
             exitGImageBtn.HoverState.ImageSize = new Size(30, 30);
-            exitGImageBtn.Image = (Image)resources.GetObject("exitGImageBtn.Image");
+            exitGImageBtn.Image = Properties.Resources.exit;
             exitGImageBtn.ImageOffset = new Point(0, 0);
             exitGImageBtn.ImageRotate = 0F;
             exitGImageBtn.ImageSize = new Size(30, 30);
@@ -297,7 +297,7 @@
             myBanksGbtn.HoverState.BorderColor = Color.FromArgb(14, 126, 254);
             myBanksGbtn.HoverState.FillColor = Color.FromArgb(14, 126, 254);
             myBanksGbtn.HoverState.ForeColor = Color.White;
-            myBanksGbtn.HoverState.Image = (Image)resources.GetObject("resource.Image1");
+            myBanksGbtn.HoverState.Image = Properties.Resources.dollar512White;
             myBanksGbtn.Image = (Image)resources.GetObject("myBanksGbtn.Image");
             myBanksGbtn.ImageAlign = HorizontalAlignment.Left;
             myBanksGbtn.ImageSize = new Size(30, 30);
@@ -327,8 +327,8 @@
             historyGbtn.HoverState.BorderColor = Color.FromArgb(14, 126, 254);
             historyGbtn.HoverState.FillColor = Color.FromArgb(14, 126, 254);
             historyGbtn.HoverState.ForeColor = Color.White;
-            historyGbtn.HoverState.Image = (Image)resources.GetObject("resource.Image2");
-            historyGbtn.Image = (Image)resources.GetObject("historyGbtn.Image");
+            historyGbtn.HoverState.Image = Properties.Resources.historical512White;
+            historyGbtn.Image = Properties.Resources.historical512Gray;
             historyGbtn.ImageAlign = HorizontalAlignment.Left;
             historyGbtn.ImageSize = new Size(30, 30);
             historyGbtn.Location = new Point(18, 167);
@@ -358,7 +358,7 @@
             transferGBtn.HoverState.FillColor = Color.FromArgb(14, 126, 254);
             transferGBtn.HoverState.ForeColor = Color.White;
             transferGBtn.HoverState.Image = Properties.Resources.prepaidCards512White;
-            transferGBtn.Image = (Image)resources.GetObject("transferGBtn.Image");
+            transferGBtn.Image = Properties.Resources.prepaidCards512Gray;
             transferGBtn.ImageAlign = HorizontalAlignment.Left;
             transferGBtn.ImageSize = new Size(30, 30);
             transferGBtn.Location = new Point(18, 209);
@@ -447,7 +447,7 @@
             // 
             avatarGunaCPB.BackColor = Color.Transparent;
             guna2Transition1.SetDecoration(avatarGunaCPB, Guna.UI2.AnimatorNS.DecorationType.None);
-            avatarGunaCPB.Image = (Image)resources.GetObject("avatarGunaCPB.Image");
+            avatarGunaCPB.Image = Properties.Resources.avartar1;
             avatarGunaCPB.ImageRotate = 0F;
             avatarGunaCPB.Location = new Point(16, 897);
             avatarGunaCPB.Name = "avatarGunaCPB";
@@ -464,7 +464,7 @@
             imageLogOut.CheckedState.ImageSize = new Size(64, 64);
             guna2Transition1.SetDecoration(imageLogOut, Guna.UI2.AnimatorNS.DecorationType.None);
             imageLogOut.HoverState.ImageSize = new Size(40, 40);
-            imageLogOut.Image = (Image)resources.GetObject("imageLogOut.Image");
+            imageLogOut.Image = Properties.Resources.exit_icon_size_512;
             imageLogOut.ImageOffset = new Point(0, 0);
             imageLogOut.ImageRotate = 0F;
             imageLogOut.ImageSize = new Size(30, 30);
@@ -504,7 +504,7 @@
             conncetBankGBtn.HoverState.FillColor = Color.FromArgb(14, 126, 254);
             conncetBankGBtn.HoverState.ForeColor = Color.White;
             conncetBankGBtn.HoverState.Image = Properties.Resources.cards_icon_size_512White;
-            conncetBankGBtn.Image = (Image)resources.GetObject("conncetBankGBtn.Image");
+            conncetBankGBtn.Image = Properties.Resources.cards_icon_size_512Gray;
             conncetBankGBtn.ImageAlign = HorizontalAlignment.Left;
             conncetBankGBtn.ImageSize = new Size(30, 30);
             conncetBankGBtn.Location = new Point(18, 251);
@@ -716,7 +716,6 @@
             addBGBtn.FillColor = Color.White;
             addBGBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             addBGBtn.ForeColor = Color.Black;
-            addBGBtn.Image = (Image)resources.GetObject("addBGBtn.Image");
             addBGBtn.Location = new Point(357, 251);
             addBGBtn.Name = "addBGBtn";
             addBGBtn.ShadowDecoration.CustomizableEdges = customizableEdges30;
@@ -730,7 +729,7 @@
             guna2Transition1.SetDecoration(avartarCPBox, Guna.UI2.AnimatorNS.DecorationType.None);
             avartarCPBox.ErrorImage = null;
             avartarCPBox.FillColor = Color.Yellow;
-            avartarCPBox.Image = (Image)resources.GetObject("avartarCPBox.Image");
+            avartarCPBox.Image = Properties.Resources.avartar11;
             avartarCPBox.ImageRotate = 0F;
             avartarCPBox.Location = new Point(41, 74);
             avartarCPBox.Name = "avartarCPBox";
@@ -758,7 +757,7 @@
             guna2PictureBox2.BackColor = Color.Transparent;
             guna2PictureBox2.CustomizableEdges = customizableEdges32;
             guna2Transition1.SetDecoration(guna2PictureBox2, Guna.UI2.AnimatorNS.DecorationType.None);
-            guna2PictureBox2.Image = (Image)resources.GetObject("guna2PictureBox2.Image");
+            guna2PictureBox2.Image = Properties.Resources.bluePink;
             guna2PictureBox2.ImageRotate = 0F;
             guna2PictureBox2.Location = new Point(0, 0);
             guna2PictureBox2.Name = "guna2PictureBox2";
@@ -843,7 +842,7 @@
             guna2DataGridView1.Name = "guna2DataGridView1";
             guna2DataGridView1.RowHeadersVisible = false;
             guna2DataGridView1.RowHeadersWidth = 51;
-            guna2DataGridView1.Size = new Size(884, 401);
+            guna2DataGridView1.Size = new Size(884, 386);
             guna2DataGridView1.TabIndex = 1;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -1015,7 +1014,7 @@
             guna2DataGridView2.Name = "guna2DataGridView2";
             guna2DataGridView2.RowHeadersVisible = false;
             guna2DataGridView2.RowHeadersWidth = 51;
-            guna2DataGridView2.Size = new Size(882, 434);
+            guna2DataGridView2.Size = new Size(882, 381);
             guna2DataGridView2.TabIndex = 3;
             guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -1187,7 +1186,7 @@
             guna2DataGridView3.Name = "guna2DataGridView3";
             guna2DataGridView3.RowHeadersVisible = false;
             guna2DataGridView3.RowHeadersWidth = 51;
-            guna2DataGridView3.Size = new Size(882, 434);
+            guna2DataGridView3.Size = new Size(882, 381);
             guna2DataGridView3.TabIndex = 5;
             guna2DataGridView3.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             guna2DataGridView3.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -1509,14 +1508,8 @@
             // iconIL
             // 
             iconIL.ColorDepth = ColorDepth.Depth32Bit;
-            iconIL.ImageStream = (ImageListStreamer)resources.GetObject("iconIL.ImageStream");
+            iconIL.ImageSize = new Size(16, 16);
             iconIL.TransparentColor = Color.Transparent;
-            iconIL.Images.SetKeyName(0, "cards-icon-size_512White.png");
-            iconIL.Images.SetKeyName(1, "dollar512White.png");
-            iconIL.Images.SetKeyName(2, "historical512White.png");
-            iconIL.Images.SetKeyName(3, "homeWhite.png");
-            iconIL.Images.SetKeyName(4, "prepaidCards512White.png");
-            iconIL.Images.SetKeyName(5, "searchIconWhite.png");
             // 
             // Form1
             // 

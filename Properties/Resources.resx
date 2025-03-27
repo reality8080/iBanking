@@ -118,13 +118,46 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="logo FIT FA" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo FIT FA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bluePink" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\BackGround\bluePink.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Icon\icon\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="historical512White" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Icon\White\historical512White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="avartar11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Avartar\avartar1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="prepaidCards512White" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Icon\White\prepaidCards512White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="historical512Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Icon\Gray\historical512Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="prepaidCards512Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Icon\Gray\prepaidCards512Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="avartar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Avartar\avartar1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cards-icon-size_512White" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Icon\White\cards-icon-size_512White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Icon\icon\minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cards-icon-size_512Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Icon\Gray\cards-icon-size_512Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo FIT FA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo FIT FA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dollar512White" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Icon\White\dollar512White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exit-icon-size_512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Icon\icon\exit-icon-size_512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
