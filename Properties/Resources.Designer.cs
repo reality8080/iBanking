@@ -63,9 +63,29 @@ namespace iBanking.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cards_icon_size_512White {
+            get {
+                object obj = ResourceManager.GetObject("cards-icon-size_512White", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_FIT_FA {
             get {
                 object obj = ResourceManager.GetObject("logo FIT FA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap prepaidCards512White {
+            get {
+                object obj = ResourceManager.GetObject("prepaidCards512White", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

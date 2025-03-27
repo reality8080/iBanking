@@ -13,9 +13,8 @@ namespace iBanking
 {
     public class Startup
     {
-        public static IServiceProvider ConfigureServices()
+        public static void ConfigureServices(IServiceCollection services)
         {
-            var services = new ServiceCollection();
             services.AddDbContext<iBankContext>(options =>
             options.UseSqlServer("Data Source=(localdb)\\localThienPhu;Initial Catalog=iBanking;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False"));
 
@@ -25,10 +24,12 @@ namespace iBanking
             services.AddScoped(typeof(IRepoLoans), typeof(RepoLoans));
             services.AddScoped(typeof(IRepoTransHistory), typeof(RepoTransHistory));
             services.AddScoped(typeof(IRepoUserAuth), typeof(RepoUserAuth));
-
+            // Dùng khi dùng trực tiếp DBcontext
             services.AddTransient<Form1>();
+            // Dùng khi dùng dbcontext gián tiếp
+            //services.AddSingleton<Form1>();
 
-            return services.BuildServiceProvider();
+            //return services.BuildServiceProvider();
         }
     }
 }

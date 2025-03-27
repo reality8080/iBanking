@@ -357,6 +357,7 @@
             transferGBtn.HoverState.BorderColor = Color.FromArgb(14, 126, 254);
             transferGBtn.HoverState.FillColor = Color.FromArgb(14, 126, 254);
             transferGBtn.HoverState.ForeColor = Color.White;
+            transferGBtn.HoverState.Image = Properties.Resources.prepaidCards512White;
             transferGBtn.Image = (Image)resources.GetObject("transferGBtn.Image");
             transferGBtn.ImageAlign = HorizontalAlignment.Left;
             transferGBtn.ImageSize = new Size(30, 30);
@@ -418,7 +419,7 @@
             controlPageGunaPanel.Location = new Point(1, 58);
             controlPageGunaPanel.Name = "controlPageGunaPanel";
             controlPageGunaPanel.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            controlPageGunaPanel.Size = new Size(315, 863);
+            controlPageGunaPanel.Size = new Size(315, 1045);
             controlPageGunaPanel.TabIndex = 0;
             // 
             // userNameGHLabel
@@ -502,6 +503,7 @@
             conncetBankGBtn.HoverState.BorderColor = Color.FromArgb(14, 126, 254);
             conncetBankGBtn.HoverState.FillColor = Color.FromArgb(14, 126, 254);
             conncetBankGBtn.HoverState.ForeColor = Color.White;
+            conncetBankGBtn.HoverState.Image = Properties.Resources.cards_icon_size_512White;
             conncetBankGBtn.Image = (Image)resources.GetObject("conncetBankGBtn.Image");
             conncetBankGBtn.ImageAlign = HorizontalAlignment.Left;
             conncetBankGBtn.ImageSize = new Size(30, 30);
@@ -622,7 +624,7 @@
             rightDashGPanel.Location = new Point(978, 0);
             rightDashGPanel.Name = "rightDashGPanel";
             rightDashGPanel.ShadowDecoration.CustomizableEdges = customizableEdges37;
-            rightDashGPanel.Size = new Size(566, 860);
+            rightDashGPanel.Size = new Size(566, 1045);
             rightDashGPanel.TabIndex = 7;
             // 
             // guna2Panel3
@@ -783,7 +785,7 @@
             mainDashGPanel.Location = new Point(-1, 0);
             mainDashGPanel.Name = "mainDashGPanel";
             mainDashGPanel.ShadowDecoration.CustomizableEdges = customizableEdges59;
-            mainDashGPanel.Size = new Size(980, 863);
+            mainDashGPanel.Size = new Size(980, 1045);
             mainDashGPanel.TabIndex = 6;
             // 
             // tabControl2
