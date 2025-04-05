@@ -15,6 +15,7 @@ namespace iBanking.Interfaces.Repo
         public Task<IEnumerable<UserAuth>> GetByIdAcc(Guid idAcc);
         public Task<IEnumerable<UserAuth>> GetAll();
         public Task<UserAuth?> GetByIdUser(Guid idUserAuth);
+        public Task<UserAuth?> GetByUserName(string userName);
         public Task<bool> Update(Guid idUserAuth, UserAuth newUserAuth);
 
     }

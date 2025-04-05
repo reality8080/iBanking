@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace iBanking
 {
-    public partial class Form1 : Form
+    public partial class mainForm : System.Windows.Forms.Form
     {
 
         [DllImport("user32.dll")]
@@ -13,7 +13,7 @@ namespace iBanking
 
         private List<Guna.UI2.WinForms.Guna2Button>? buttons;
 
-        public Form1()
+        public mainForm()
         {
             InitializeComponent();
 
@@ -72,9 +72,9 @@ namespace iBanking
         private void Form1_Load(object sender, EventArgs e)
         {
             buttons = new List<Guna.UI2.WinForms.Guna2Button>
-            {
-                homeGbtn,myBanksGbtn,historyGbtn,transferGBtn,conncetBankGBtn
-            };
+                {
+                    homeGbtn,myBanksGbtn,historyGbtn,transferGBtn,conncetBankGBtn
+                };
         }
 
         private void ResestButtons()
@@ -127,6 +127,11 @@ namespace iBanking
             {
                 e.Cancel = true;
             }
+        }
+
+        private void mainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

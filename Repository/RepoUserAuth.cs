@@ -163,6 +163,26 @@ namespace iBanking.Repository
             }
         }
 
+        public async Task<UserAuth?> GetByUserName(string userName)
+        {
+            try
+            {
+                var check=await _context.UserAuths.FirstOrDefaultAsync(ua=>ua.username==userName);
+                if(check == null)
+                {
+                    _logger.LogWarning("Khong ton tai user");
+                    return null;
+                }
+                _logger.LogInformation("Success");
+                return check;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                return null;
+            }
+        }
+
         public async Task<bool> Update(Guid idUserAuth, UserAuth newUserAuth)
         {
             if (idUserAuth == Guid.Empty)

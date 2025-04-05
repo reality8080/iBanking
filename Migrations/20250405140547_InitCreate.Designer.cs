@@ -12,8 +12,8 @@ using iBanking.Data;
 namespace iBanking.Migrations
 {
     [DbContext(typeof(iBankContext))]
-    [Migration("20250321144430_iBank")]
-    partial class iBank
+    [Migration("20250405140547_InitCreate")]
+    partial class InitCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -47,8 +47,8 @@ namespace iBanking.Migrations
 
                     b.Property<string>("typeAcc")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("idAcc");
 
@@ -106,7 +106,6 @@ namespace iBanking.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("cccd")
-                        .IsRequired()
                         .HasMaxLength(10)
                         .HasColumnType("nvarchar(10)");
 
@@ -126,12 +125,6 @@ namespace iBanking.Migrations
                         .HasColumnType("nvarchar(10)");
 
                     b.HasKey("idCus");
-
-                    b.HasIndex("cccd")
-                        .IsUnique();
-
-                    b.HasIndex("email")
-                        .IsUnique();
 
                     b.HasIndex("phone");
 

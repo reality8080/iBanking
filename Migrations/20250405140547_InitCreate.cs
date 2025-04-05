@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace iBanking.Migrations
 {
     /// <inheritdoc />
-    public partial class iBank : Migration
+    public partial class InitCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -16,7 +16,7 @@ namespace iBanking.Migrations
                 columns: table => new
                 {
                     idCus = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    cccd = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    cccd = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: true),
                     name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     birth = table.Column<DateTime>(type: "datetime2", nullable: false),
                     address = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
@@ -35,7 +35,7 @@ namespace iBanking.Migrations
                     idAcc = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     idCus = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     accNum = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    typeAcc = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    typeAcc = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     currBalance = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     openDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -146,18 +146,6 @@ namespace iBanking.Migrations
                 name: "IX_BankCards_idAcc",
                 table: "BankCards",
                 column: "idAcc");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Customers_cccd",
-                table: "Customers",
-                column: "cccd",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Customers_email",
-                table: "Customers",
-                column: "email",
-                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Customers_phone",

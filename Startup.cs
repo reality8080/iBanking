@@ -1,9 +1,13 @@
 ﻿using iBanking.Data;
+using iBanking.Form;
 using iBanking.Interfaces.Repo;
+using iBanking.Interfaces.Ser;
 using iBanking.Repository;
+using iBanking.Service;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,8 +28,15 @@ namespace iBanking
             services.AddScoped(typeof(IRepoLoans), typeof(RepoLoans));
             services.AddScoped(typeof(IRepoTransHistory), typeof(RepoTransHistory));
             services.AddScoped(typeof(IRepoUserAuth), typeof(RepoUserAuth));
+
+            services.AddScoped(typeof(ISerCustomer), typeof(SerCustomer));
+            services.AddScoped(typeof(ISerUserAuth), typeof(SerUserAuth));
+            services.AddScoped(typeof(ISerBAcc), typeof(SerBAcc));
+
             // Dùng khi dùng trực tiếp DBcontext
-            services.AddTransient<Form1>();
+            services.AddTransient<mainForm>();
+            services.AddTransient<loginForm>();
+            services.AddTransient<SignUp>();
             // Dùng khi dùng dbcontext gián tiếp
             //services.AddSingleton<Form1>();
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using iBanking.Interfaces.Repo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -7,6 +8,24 @@ namespace iBanking.Models
 {
     public class BankAcc
     {
+        //private readonly IRepoBAcc _rBAcc;
+        // khoi tao ban dau
+        public BankAcc(Guid idCus, string typeAcc, string accNum)
+        {
+            this.idCus = idCus;
+            this.typeAcc = typeAcc;
+            //this._rBAcc = _repoBAcc ?? throw new ArgumentNullException(nameof(_repoBAcc));
+            this.accNum = accNum;
+        }
+        //Cap nhat du lieu
+        //public BankAcc(string accNum, string typeAcc, decimal currBalance, DateTime openDate)
+        //{
+        //    this.accNum = accNum;
+        //    this.typeAcc = typeAcc;
+        //    this.currBalance = currBalance;
+        //    this.openDate = openDate;
+        //}
+
         [Key]
         public Guid idAcc { get; set; } = Guid.NewGuid(); // Khóa chính
 
@@ -14,12 +33,12 @@ namespace iBanking.Models
         public Guid idCus { get; set; }
 
         [Required, MaxLength(20)]
-        public string? accNum { get; set; } = string.Empty;
+        public string accNum { get; set; } = string.Empty;
 
-        [Required, MaxLength(50)]
+        [Required, MaxLength(100)]
         public string? typeAcc { get; set; } = string.Empty;
 
-        [Required, Column(TypeName = "decimal(18,2)")]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal currBalance { get; set; }
 
         [Required]

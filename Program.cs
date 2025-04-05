@@ -21,8 +21,8 @@ namespace iBanking
             var builder = Host.CreateApplicationBuilder();
             Startup.ConfigureServices(builder.Services);
             using var host = builder.Build();
-            using (var F1 = host.Services.GetRequiredService<Form1>()){
-                Application.Run(F1);
+            using (var lF = host.Services.GetRequiredService<loginForm>()){
+                Application.Run(lF);
             };
         }
     }

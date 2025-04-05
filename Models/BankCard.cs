@@ -10,6 +10,15 @@ namespace iBanking.Models
 {
     public class BankCard
     {
+        public BankCard(Guid idAcc, string? typeCard, string? numberCard, DateTime expiredCard, string? statusCard)
+        {
+            this.idAcc = idAcc;
+            this.typeCard = typeCard;
+            this.numberCard = numberCard;
+            this.expiredCard = expiredCard;
+            this.statusCard = statusCard;
+        }
+
         [Key]
         public Guid idCard { get; set; }
         [Required]
