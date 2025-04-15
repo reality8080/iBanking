@@ -63,6 +63,36 @@ namespace iBanking.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap avartar1 {
+            get {
+                object obj = ResourceManager.GetObject("avartar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap avartar11 {
+            get {
+                object obj = ResourceManager.GetObject("avartar11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bluePink {
+            get {
+                object obj = ResourceManager.GetObject("bluePink", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cards_icon_size_512Gray {
             get {
                 object obj = ResourceManager.GetObject("cards-icon-size_512Gray", resourceCulture);
@@ -83,16 +113,6 @@ namespace iBanking.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cards_icon_size_512Yellow {
-            get {
-                object obj = ResourceManager.GetObject("cards-icon-size_512Yellow", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap dollar512Gray {
             get {
                 object obj = ResourceManager.GetObject("dollar512Gray", resourceCulture);
@@ -103,9 +123,49 @@ namespace iBanking.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap dollar512Yellow {
+        internal static System.Drawing.Bitmap dollar512Gray1 {
             get {
-                object obj = ResourceManager.GetObject("dollar512Yellow", resourceCulture);
+                object obj = ResourceManager.GetObject("dollar512Gray1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dollar512White {
+            get {
+                object obj = ResourceManager.GetObject("dollar512White", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dollar512White1 {
+            get {
+                object obj = ResourceManager.GetObject("dollar512White1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exit {
+            get {
+                object obj = ResourceManager.GetObject("exit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exit1 {
+            get {
+                object obj = ResourceManager.GetObject("exit1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +183,9 @@ namespace iBanking.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap home_Gray {
+        internal static System.Drawing.Bitmap historical512White {
             get {
-                object obj = ResourceManager.GetObject("home_Gray", resourceCulture);
+                object obj = ResourceManager.GetObject("historical512White", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +203,9 @@ namespace iBanking.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap homeGray1 {
+        internal static System.Drawing.Bitmap homeWhite {
             get {
-                object obj = ResourceManager.GetObject("homeGray1", resourceCulture);
+                object obj = ResourceManager.GetObject("homeWhite", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +216,16 @@ namespace iBanking.Properties {
         internal static System.Drawing.Bitmap logo_FIT_FA {
             get {
                 object obj = ResourceManager.GetObject("logo FIT FA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minus {
+            get {
+                object obj = ResourceManager.GetObject("minus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +253,9 @@ namespace iBanking.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap prepaidCards512Yellow {
+        internal static System.Drawing.Bitmap screenshot_1744638477 {
             get {
-                object obj = ResourceManager.GetObject("prepaidCards512Yellow", resourceCulture);
+                object obj = ResourceManager.GetObject("screenshot_1744638477", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +263,39 @@ namespace iBanking.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap searchIcon {
+        internal static System.Drawing.Bitmap screenshot_17446384771 {
             get {
-                object obj = ResourceManager.GetObject("searchIcon", resourceCulture);
+                object obj = ResourceManager.GetObject("screenshot_17446384771", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap screenshot_17446384772 {
+            get {
+                object obj = ResourceManager.GetObject("screenshot_17446384772", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap searchIconGray {
+            get {
+                object obj = ResourceManager.GetObject("searchIconGray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap The_Shield_against_Cyber_Threats__Password_Manager_Tools_Revealed {
+            get {
+                object obj = ResourceManager.GetObject("The Shield against Cyber Threats_ Password Manager Tools Revealed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
