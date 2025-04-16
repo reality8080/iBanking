@@ -15,7 +15,6 @@ namespace iBanking.Data
         public DbSet<BankCard> BankCards { get; set; }
         public DbSet<Loans> Loans { get; set; }
         public DbSet<Transactions> Transactions { get; set; }
-        public DbSet<UserAuth> UserAuths { get; set; }
 
         public iBankContext(DbContextOptions<iBankContext> options)
             :base(options)
@@ -59,11 +58,6 @@ namespace iBanking.Data
                 .HasOne(t=>t.BankAcc)
                 .WithMany(b=>b.Transactions)
                 .HasForeignKey(t=>t.idAcc)
-                .OnDelete(DeleteBehavior.Cascade);
-            modelBuilder.Entity<UserAuth>()
-                .HasOne(ua => ua.BankAcc)
-                .WithMany(ba => ba.UserAuths)
-                .HasForeignKey(ua => ua.idAcc)
                 .OnDelete(DeleteBehavior.Cascade);
         }
     }

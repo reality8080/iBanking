@@ -62,10 +62,9 @@
             loginGBtn = new Guna.UI2.WinForms.Guna2Button();
             exitGIBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             layoutPanel = new Guna.UI2.WinForms.Guna2Panel();
-            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             layoutGP.SuspendLayout();
             layoutPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SuspendLayout();
             // 
             // layoutGP
@@ -86,7 +85,7 @@
             layoutGP.Controls.Add(loginGBtn);
             layoutGP.CustomizableEdges = customizableEdges13;
             layoutGP.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            layoutGP.Location = new Point(26, 152);
+            layoutGP.Location = new Point(40, 152);
             layoutGP.Name = "layoutGP";
             layoutGP.ShadowDecoration.CustomizableEdges = customizableEdges14;
             layoutGP.Size = new Size(460, 597);
@@ -272,7 +271,7 @@
             exitGIBtn.ImageOffset = new Point(0, 0);
             exitGIBtn.ImageRotate = 0F;
             exitGIBtn.ImageSize = new Size(20, 20);
-            exitGIBtn.Location = new Point(1210, 8);
+            exitGIBtn.Location = new Point(1217, 13);
             exitGIBtn.Name = "exitGIBtn";
             exitGIBtn.PressedState.ImageSize = new Size(64, 64);
             exitGIBtn.ShadowDecoration.CustomizableEdges = customizableEdges15;
@@ -289,24 +288,20 @@
             layoutPanel.Location = new Point(1, -1);
             layoutPanel.Name = "layoutPanel";
             layoutPanel.ShadowDecoration.CustomizableEdges = customizableEdges17;
-            layoutPanel.Size = new Size(1262, 47);
+            layoutPanel.Size = new Size(1262, 53);
             layoutPanel.TabIndex = 20;
             layoutPanel.MouseMove += layoutPanel_MouseMove;
             // 
-            // guna2PictureBox1
+            // guna2Panel1
             // 
-            guna2PictureBox1.BackColor = Color.Transparent;
-            guna2PictureBox1.CustomizableEdges = customizableEdges18;
-            guna2PictureBox1.Image = Properties.Resources.z6504614426267_306de2ee412c7e50308ee17c3ad3a9af;
-            guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(594, 45);
-            guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges19;
-            guna2PictureBox1.Size = new Size(666, 794);
-            guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            guna2PictureBox1.TabIndex = 21;
-            guna2PictureBox1.TabStop = false;
-            guna2PictureBox1.UseTransparentBackground = true;
+            guna2Panel1.BackgroundImage = Properties.Resources.loginP;
+            guna2Panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            guna2Panel1.CustomizableEdges = customizableEdges18;
+            guna2Panel1.Location = new Point(564, 52);
+            guna2Panel1.Name = "guna2Panel1";
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            guna2Panel1.Size = new Size(699, 787);
+            guna2Panel1.TabIndex = 21;
             // 
             // loginForm
             // 
@@ -314,7 +309,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1260, 837);
-            Controls.Add(guna2PictureBox1);
+            Controls.Add(guna2Panel1);
             Controls.Add(layoutPanel);
             Controls.Add(layoutGP);
             FormBorderStyle = FormBorderStyle.None;
@@ -325,7 +320,6 @@
             layoutGP.ResumeLayout(false);
             layoutGP.PerformLayout();
             layoutPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -345,6 +339,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel userNameHGLb;
         private Guna.UI2.WinForms.Guna2Panel layoutPanel;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

@@ -337,6 +337,7 @@
             Controls.Add(LayoutGPanel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "SignUp";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "SignUp";
             LayoutGPanel.ResumeLayout(false);
             LayoutGPanel.PerformLayout();

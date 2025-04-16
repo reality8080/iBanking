@@ -10,7 +10,7 @@ namespace iBanking.Models
 {
     public class BankCard
     {
-        public BankCard(Guid idAcc, string? typeCard, string? numberCard, DateTime expiredCard, string? statusCard)
+        public BankCard(string idAcc, string? typeCard, string? numberCard, DateTime expiredCard, string? statusCard)
         {
             this.idAcc = idAcc;
             this.typeCard = typeCard;
@@ -20,9 +20,9 @@ namespace iBanking.Models
         }
 
         [Key]
-        public Guid idCard { get; set; }
+        public string? idCard { get; set; }
         [Required]
-        public Guid idAcc { get; set; }
+        public string idAcc { get; set; }
         [Required, MaxLength(100)]
         public string? typeCard { get; set; } = string.Empty;
         [Required, MaxLength(20)]

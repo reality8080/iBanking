@@ -6,7 +6,7 @@ namespace iBanking.Models
 {
     public class Loans
     {
-        public Loans(Guid idAcc, decimal money, decimal percentage, int term, string? status)
+        public Loans(string idAcc, decimal money, decimal percentage, int term, string? status)
         {
             this.idAcc = idAcc;
             this.money = money;
@@ -16,10 +16,10 @@ namespace iBanking.Models
         }
 
         [Key]
-        public Guid idLoan { get; set; } = Guid.NewGuid(); // Khóa chính
+        public string idLoan { get; set; } = String.Empty; // Khóa chính
 
         [Required]
-        public Guid idAcc { get; set; }
+        public string idAcc { get; set; }
 
         [Required, Column(TypeName = "decimal(18,2)")]
         public decimal money { get; set; }

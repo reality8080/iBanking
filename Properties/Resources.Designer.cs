@@ -63,6 +63,16 @@ namespace iBanking.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3D_illustrations___Maria_Garaeva {
+            get {
+                object obj = ResourceManager.GetObject("3D illustrations - Maria Garaeva", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap avartar1 {
             get {
                 object obj = ResourceManager.GetObject("avartar1", resourceCulture);
@@ -206,6 +216,16 @@ namespace iBanking.Properties {
         internal static System.Drawing.Bitmap homeWhite {
             get {
                 object obj = ResourceManager.GetObject("homeWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loginP {
+            get {
+                object obj = ResourceManager.GetObject("loginP", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
