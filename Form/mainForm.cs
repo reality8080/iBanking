@@ -1,10 +1,15 @@
+using iBanking.Properties;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
 namespace iBanking
 {
-    public partial class Form1 : Form
+    public partial class mainForm : System.Windows.Forms.Form
     {
+        private readonly ILogger<mainForm> _logger;
+        private readonly IServiceProvider _serviceProvider;
 
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, IntPtr wParam, IntPtr lParam);
@@ -13,10 +18,11 @@ namespace iBanking
 
         private List<Guna.UI2.WinForms.Guna2Button>? buttons;
 
-        public Form1()
+        public mainForm(ILogger<mainForm> _logger, IServiceProvider serviceProvider)
         {
             InitializeComponent();
-
+            this._logger = _logger;
+            _serviceProvider = serviceProvider;
         }
 
         private void exitGImageBtn_MouseClick(object sender, MouseEventArgs e)
@@ -40,26 +46,26 @@ namespace iBanking
 
         private void homeGbtn_Click(object sender, EventArgs e)
         {
-            setActiveBtns(homeGbtn, "D:\\2024-2025\\HK2\\WindowsForm\\iBanking\\Resources\\Images\\Icon\\White\\homeWhite.png");
+            setActiveBtns(homeGbtn,     "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\White\\homeWhite.png");
             tabControlBank.SelectedIndex = 0;
         }
 
         private void myBanksGbtn_Click(object sender, EventArgs e)
         {
-            setActiveBtns(myBanksGbtn, "D:\\2024-2025\\HK2\\WindowsForm\\iBanking\\Resources\\Images\\Icon\\White\\dollar512White.png");
+            setActiveBtns(myBanksGbtn,  "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\White\\dollar512White.png");
             tabControlBank.SelectedIndex = 1;
         }
 
         private void historyGbtn_Click(object sender, EventArgs e)
         {
-            setActiveBtns(historyGbtn, "D:\\2024-2025\\HK2\\WindowsForm\\iBanking\\Resources\\Images\\Icon\\White\\historical512White.png");
+            setActiveBtns(historyGbtn,  "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\White\\historical512White.png");
             tabControlBank.SelectedIndex = 2;
 
         }
 
         private void transferGBtn_Click(object sender, EventArgs e)
         {
-            setActiveBtns(transferGBtn, "D:\\2024-2025\\HK2\\WindowsForm\\iBanking\\Resources\\Images\\Icon\\White\\prepaidCards512White.png");
+            setActiveBtns(transferGBtn, "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\White\\prepaidCards512White.png");
             tabControlBank.SelectedIndex = 3;
         }
 
@@ -72,9 +78,9 @@ namespace iBanking
         private void Form1_Load(object sender, EventArgs e)
         {
             buttons = new List<Guna.UI2.WinForms.Guna2Button>
-            {
-                homeGbtn,myBanksGbtn,historyGbtn,transferGBtn,conncetBankGBtn
-            };
+                {
+                    homeGbtn,myBanksGbtn,historyGbtn,transferGBtn,conncetBankGBtn
+                };
         }
 
         private void ResestButtons()
@@ -98,11 +104,11 @@ namespace iBanking
 
         private string GetDefaultIconPath(Guna.UI2.WinForms.Guna2Button btn)
         {
-            if (btn == homeGbtn) return "D:\\2024-2025\\HK2\\WindowsForm\\iBanking\\Resources\\Images\\Icon\\Gray\\homeGray.png";
-            if (btn == myBanksGbtn) return "D:\\2024-2025\\HK2\\WindowsForm\\iBanking\\Resources\\Images\\Icon\\Gray\\dollar512Gray.png";
-            if (btn == historyGbtn) return "D:\\2024-2025\\HK2\\WindowsForm\\iBanking\\Resources\\Images\\Icon\\Gray\\historical512Gray.png";
-            if (btn == transferGBtn) return "D:\\2024-2025\\HK2\\WindowsForm\\iBanking\\Resources\\Images\\Icon\\Gray\\prepaidCards512Gray.png";
-            if (btn == conncetBankGBtn) return "D:\\2024-2025\\HK2\\WindowsForm\\iBanking\\Resources\\Images\\Icon\\Gray\\cards-icon-size_512Gray.png";
+            if (btn == homeGbtn) return     "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\Gray\\homeGray.png";
+            if (btn == myBanksGbtn) return  "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\Gray\\dollar512Gray.png";
+            if (btn == historyGbtn) return  "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\Gray\\historical512Gray.png";
+            if (btn == transferGBtn) return "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\Gray\\prepaidCards512Gray.png";
+            if (btn == conncetBankGBtn) return "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\Gray\\cards-icon-size_512Gray.png";
             return "";
         }
         private void setActiveBtns(Guna.UI2.WinForms.Guna2Button btn, string activeIconPath)
@@ -127,6 +133,45 @@ namespace iBanking
             {
                 e.Cancel = true;
             }
+        }
+
+        private void mainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+
+        private void imageLogOut_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var result = MessageBox.Show("Do you want to log out?", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    _logger.LogInformation("User logged out successfully.");
+                    var lForm = _serviceProvider.GetService<loginForm>();
+                    this.Hide();
+                    if (lForm != null)
+                    {
+                        lForm.FormClosed += (s, args) => this.Close();
+                        lForm.Show();
+                    }
+                    else
+                    {
+                        _logger.LogWarning("Login form could not be created.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _logger.LogError(ex, "An error occurred while logging out.");
+            }
+        }
+
+        private void mainDashGPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

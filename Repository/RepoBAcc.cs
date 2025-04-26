@@ -135,7 +135,7 @@ namespace iBanking.Repository
                     _logger.LogWarning($"Tai khoan voi ID {idBAcc} khong ton tai");
                     return false;
                 }
-                acc.accNum = newBankAcc.accNum ?? acc.accNum;
+                acc.accNum = newBankAcc.accNum != string.Empty ? newBankAcc.accNum : acc.accNum;
                 acc.typeAcc = newBankAcc.typeAcc ?? acc.typeAcc;
                 acc.currBalance = newBankAcc.currBalance !=0?newBankAcc.currBalance:acc.currBalance;
                 acc.openDate = newBankAcc.openDate !=DateTime.MinValue ? newBankAcc.openDate:acc.openDate;
@@ -166,7 +166,7 @@ namespace iBanking.Repository
                     _logger.LogWarning("Tai khoan khong ton tai");
                     return false;
                 }
-                acc.accNum = newBankAcc.accNum ?? acc.accNum;
+                acc.accNum = newBankAcc.accNum != string.Empty ? newBankAcc.accNum: acc.accNum;
                 acc.typeAcc = newBankAcc.typeAcc ?? acc.typeAcc;
                 acc.currBalance = newBankAcc.currBalance != 0 ? newBankAcc.currBalance : acc.currBalance;
                 acc.openDate = newBankAcc.openDate != DateTime.MinValue ? newBankAcc.openDate : acc.openDate;
@@ -180,5 +180,7 @@ namespace iBanking.Repository
                 return false;
             }
         }
+
+
     }
 }

@@ -6,6 +6,15 @@ namespace iBanking.Models
 {
     public class Loans
     {
+        public Loans(Guid idAcc, decimal money, decimal percentage, int term, string? status)
+        {
+            this.idAcc = idAcc;
+            this.money = money;
+            this.percentage = percentage;
+            this.term = term;
+            this.status = status;
+        }
+
         [Key]
         public Guid idLoan { get; set; } = Guid.NewGuid(); // Khóa chính
 

@@ -1,20 +1,31 @@
-﻿using iBanking.Data;
+﻿using Google.Cloud.Firestore;
+using iBanking.Data;
+using iBanking.Form;
 using iBanking.Interfaces.Repo;
+using iBanking.Interfaces.Ser;
 using iBanking.Repository;
+using iBanking.Service;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using System.Text.Json;
+
 
 namespace iBanking
 {
     public class Startup
     {
+        //public static IServiceProvider? serviceProvider { get; private set; }
         public static void ConfigureServices(IServiceCollection services)
         {
+            //Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", @"ibanking-8080-firebase-adminsdk.json");
+
+            //var projectId = "ibanking-8080";
+            //var db = FirestoreDb.Create(projectId);
+            //services.AddSingleton(db);
+
             services.AddDbContext<iBankContext>(options =>
             options.UseSqlServer("Data Source=(localdb)\\localThienPhu;Initial Catalog=iBanking;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False"));
 
@@ -24,12 +35,39 @@ namespace iBanking
             services.AddScoped(typeof(IRepoLoans), typeof(RepoLoans));
             services.AddScoped(typeof(IRepoTransHistory), typeof(RepoTransHistory));
             services.AddScoped(typeof(IRepoUserAuth), typeof(RepoUserAuth));
+
+            services.AddScoped(typeof(ISerCustomer), typeof(SerCustomer));
+            services.AddScoped(typeof(ISerUserAuth), typeof(SerUserAuth));
+            services.AddScoped(typeof(ISerBAcc), typeof(SerBAcc));
+
             // Dùng khi dùng trực tiếp DBcontext
-            services.AddTransient<Form1>();
+            services.AddTransient<mainForm>();
+            services.AddTransient<loginForm>();
+            services.AddTransient<SignUp>();
+            services.AddTransient<ForgotPass>();
+            services.AddTransient<OtpUControl>();
             // Dùng khi dùng dbcontext gián tiếp
             //services.AddSingleton<Form1>();
 
             //return services.BuildServiceProvider();
+
+            //string jsonString = File.ReadAllText("config.json");
+            //var appConfig = JsonConvert.DeserializeObject<AppConfig>(jsonString);
+            //if (appConfig?.FirebaseConfig == null)
+            //{
+            //    throw new InvalidOperationException("Không thể đọc cấu hình Firebase từ config.json.");
+            //}
+            //services.AddSingleton(appConfig.FirebaseConfig);
+            //services.AddScoped<IAuthService, FirebaseAuthSer>();
+
+            //serviceProvider = services.BuildServiceProvider();
+            services.AddLogging(builder =>
+            {
+                builder.AddDebug();
+                builder.AddConsole();
+            });
+            //services.AddScoped<IFire>
         }
+
     }
 }

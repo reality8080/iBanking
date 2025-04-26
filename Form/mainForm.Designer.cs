@@ -1,6 +1,6 @@
 ﻿namespace iBanking
 {
-    partial class Form1
+    partial class mainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -54,7 +54,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -107,7 +107,7 @@
             myBanksGbtn = new Guna.UI2.WinForms.Guna2Button();
             historyGbtn = new Guna.UI2.WinForms.Guna2Button();
             transferGBtn = new Guna.UI2.WinForms.Guna2Button();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            searchTXT = new Guna.UI2.WinForms.Guna2TextBox();
             controlPageGunaPanel = new Guna.UI2.WinForms.Guna2Panel();
             userNameGHLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             nameGHLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -238,7 +238,7 @@
             exitGImageBtn.CheckedState.ImageSize = new Size(64, 64);
             guna2Transition1.SetDecoration(exitGImageBtn, Guna.UI2.AnimatorNS.DecorationType.None);
             exitGImageBtn.HoverState.ImageSize = new Size(30, 30);
-            exitGImageBtn.Image = Properties.Resources.exit;
+            exitGImageBtn.Image = Properties.Resources.exit1;
             exitGImageBtn.ImageOffset = new Point(0, 0);
             exitGImageBtn.ImageRotate = 0F;
             exitGImageBtn.ImageSize = new Size(30, 30);
@@ -255,6 +255,7 @@
             // 
             homeGbtn.BackColor = Color.Transparent;
             homeGbtn.BorderRadius = 5;
+            homeGbtn.Checked = true;
             homeGbtn.CustomizableEdges = customizableEdges3;
             guna2Transition1.SetDecoration(homeGbtn, Guna.UI2.AnimatorNS.DecorationType.None);
             homeGbtn.DisabledState.BorderColor = Color.DarkGray;
@@ -267,8 +268,8 @@
             homeGbtn.HoverState.BorderColor = Color.FromArgb(14, 126, 254);
             homeGbtn.HoverState.FillColor = Color.FromArgb(14, 126, 254);
             homeGbtn.HoverState.ForeColor = Color.White;
-            homeGbtn.HoverState.Image = (Image)resources.GetObject("resource.Image");
-            homeGbtn.Image = (Image)resources.GetObject("homeGbtn.Image");
+            homeGbtn.HoverState.Image = Properties.Resources.homeWhite;
+            homeGbtn.Image = Properties.Resources.homeGray;
             homeGbtn.ImageAlign = HorizontalAlignment.Left;
             homeGbtn.ImageSize = new Size(30, 30);
             homeGbtn.Location = new Point(18, 83);
@@ -297,8 +298,7 @@
             myBanksGbtn.HoverState.BorderColor = Color.FromArgb(14, 126, 254);
             myBanksGbtn.HoverState.FillColor = Color.FromArgb(14, 126, 254);
             myBanksGbtn.HoverState.ForeColor = Color.White;
-            myBanksGbtn.HoverState.Image = Properties.Resources.dollar512White;
-            myBanksGbtn.Image = (Image)resources.GetObject("myBanksGbtn.Image");
+            myBanksGbtn.Image = Properties.Resources.dollar512Gray;
             myBanksGbtn.ImageAlign = HorizontalAlignment.Left;
             myBanksGbtn.ImageSize = new Size(30, 30);
             myBanksGbtn.Location = new Point(18, 125);
@@ -328,7 +328,7 @@
             historyGbtn.HoverState.FillColor = Color.FromArgb(14, 126, 254);
             historyGbtn.HoverState.ForeColor = Color.White;
             historyGbtn.HoverState.Image = Properties.Resources.historical512White;
-            historyGbtn.Image = Properties.Resources.historical512Gray;
+            historyGbtn.Image = Properties.Resources.historical512Gray1;
             historyGbtn.ImageAlign = HorizontalAlignment.Left;
             historyGbtn.ImageSize = new Size(30, 30);
             historyGbtn.Location = new Point(18, 167);
@@ -357,7 +357,6 @@
             transferGBtn.HoverState.BorderColor = Color.FromArgb(14, 126, 254);
             transferGBtn.HoverState.FillColor = Color.FromArgb(14, 126, 254);
             transferGBtn.HoverState.ForeColor = Color.White;
-            transferGBtn.HoverState.Image = Properties.Resources.prepaidCards512White;
             transferGBtn.Image = Properties.Resources.prepaidCards512Gray;
             transferGBtn.ImageAlign = HorizontalAlignment.Left;
             transferGBtn.ImageSize = new Size(30, 30);
@@ -371,32 +370,32 @@
             transferGBtn.UseTransparentBackground = true;
             transferGBtn.Click += transferGBtn_Click;
             // 
-            // guna2TextBox1
+            // searchTXT
             // 
-            guna2TextBox1.BorderColor = Color.FromArgb(208, 213, 221);
-            guna2TextBox1.BorderRadius = 6;
-            guna2TextBox1.BorderThickness = 2;
-            guna2TextBox1.CustomizableEdges = customizableEdges11;
-            guna2Transition1.SetDecoration(guna2TextBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 13.8F);
-            guna2TextBox1.ForeColor = Color.FromArgb(102, 112, 133);
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.IconLeft = (Image)resources.GetObject("guna2TextBox1.IconLeft");
-            guna2TextBox1.Location = new Point(24, 32);
-            guna2TextBox1.Margin = new Padding(5, 6, 5, 6);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PlaceholderForeColor = Color.FromArgb(102, 112, 133);
-            guna2TextBox1.PlaceholderText = "Search";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2TextBox1.Size = new Size(234, 37);
-            guna2TextBox1.TabIndex = 4;
+            searchTXT.BorderColor = Color.FromArgb(208, 213, 221);
+            searchTXT.BorderRadius = 6;
+            searchTXT.BorderThickness = 2;
+            searchTXT.CustomizableEdges = customizableEdges11;
+            guna2Transition1.SetDecoration(searchTXT, Guna.UI2.AnimatorNS.DecorationType.None);
+            searchTXT.DefaultText = "";
+            searchTXT.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            searchTXT.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            searchTXT.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            searchTXT.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            searchTXT.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            searchTXT.Font = new Font("Segoe UI", 13.8F);
+            searchTXT.ForeColor = Color.FromArgb(102, 112, 133);
+            searchTXT.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            searchTXT.IconLeft = Properties.Resources.searchIconGray;
+            searchTXT.Location = new Point(24, 32);
+            searchTXT.Margin = new Padding(5, 6, 5, 6);
+            searchTXT.Name = "searchTXT";
+            searchTXT.PlaceholderForeColor = Color.FromArgb(102, 112, 133);
+            searchTXT.PlaceholderText = "Search";
+            searchTXT.SelectedText = "";
+            searchTXT.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            searchTXT.Size = new Size(234, 37);
+            searchTXT.TabIndex = 4;
             // 
             // controlPageGunaPanel
             // 
@@ -409,7 +408,7 @@
             controlPageGunaPanel.Controls.Add(imageLogOut);
             controlPageGunaPanel.Controls.Add(guna2Panel1);
             controlPageGunaPanel.Controls.Add(conncetBankGBtn);
-            controlPageGunaPanel.Controls.Add(guna2TextBox1);
+            controlPageGunaPanel.Controls.Add(searchTXT);
             controlPageGunaPanel.Controls.Add(transferGBtn);
             controlPageGunaPanel.Controls.Add(historyGbtn);
             controlPageGunaPanel.Controls.Add(myBanksGbtn);
@@ -474,6 +473,7 @@
             imageLogOut.ShadowDecoration.CustomizableEdges = customizableEdges14;
             imageLogOut.Size = new Size(40, 40);
             imageLogOut.TabIndex = 11;
+            imageLogOut.Click += imageLogOut_Click;
             // 
             // guna2Panel1
             // 
@@ -503,7 +503,6 @@
             conncetBankGBtn.HoverState.BorderColor = Color.FromArgb(14, 126, 254);
             conncetBankGBtn.HoverState.FillColor = Color.FromArgb(14, 126, 254);
             conncetBankGBtn.HoverState.ForeColor = Color.White;
-            conncetBankGBtn.HoverState.Image = Properties.Resources.cards_icon_size_512White;
             conncetBankGBtn.Image = Properties.Resources.cards_icon_size_512Gray;
             conncetBankGBtn.ImageAlign = HorizontalAlignment.Left;
             conncetBankGBtn.ImageSize = new Size(30, 30);
@@ -654,7 +653,6 @@
             guna2GradientPanel1.BackColor = Color.Transparent;
             guna2GradientPanel1.BorderColor = Color.Black;
             guna2GradientPanel1.BorderRadius = 25;
-            guna2GradientPanel1.BorderThickness = 1;
             guna2GradientPanel1.CustomizableEdges = customizableEdges25;
             guna2Transition1.SetDecoration(guna2GradientPanel1, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2GradientPanel1.FillColor = Color.FromArgb(128, 255, 255);
@@ -759,10 +757,11 @@
             guna2Transition1.SetDecoration(guna2PictureBox2, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2PictureBox2.Image = Properties.Resources.bluePink;
             guna2PictureBox2.ImageRotate = 0F;
-            guna2PictureBox2.Location = new Point(0, 0);
+            guna2PictureBox2.Location = new Point(3, 0);
             guna2PictureBox2.Name = "guna2PictureBox2";
             guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges33;
-            guna2PictureBox2.Size = new Size(563, 128);
+            guna2PictureBox2.Size = new Size(560, 128);
+            guna2PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox2.TabIndex = 2;
             guna2PictureBox2.TabStop = false;
             guna2PictureBox2.UseTransparentBackground = true;
@@ -786,6 +785,7 @@
             mainDashGPanel.ShadowDecoration.CustomizableEdges = customizableEdges59;
             mainDashGPanel.Size = new Size(980, 1045);
             mainDashGPanel.TabIndex = 6;
+            mainDashGPanel.Paint += mainDashGPanel_Paint;
             // 
             // tabControl2
             // 
@@ -1511,7 +1511,7 @@
             iconIL.ImageSize = new Size(16, 16);
             iconIL.TransparentColor = Color.Transparent;
             // 
-            // Form1
+            // mainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -1522,10 +1522,11 @@
             Controls.Add(guna2Panel2);
             guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Form1";
+            Name = "mainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             FormClosing += Form1_FormClosing;
+            FormClosed += mainForm_FormClosed;
             Load += Form1_Load;
             controlPageGunaPanel.ResumeLayout(false);
             controlPageGunaPanel.PerformLayout();
@@ -1568,7 +1569,7 @@
         private Guna.UI2.WinForms.Guna2Button myBanksGbtn;
         private Guna.UI2.WinForms.Guna2Button historyGbtn;
         private Guna.UI2.WinForms.Guna2Button transferGBtn;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox searchTXT;
         private Guna.UI2.WinForms.Guna2Panel controlPageGunaPanel;
         private Guna.UI2.WinForms.Guna2Button conncetBankGBtn;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;

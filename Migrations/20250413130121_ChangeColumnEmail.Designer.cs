@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using iBanking.Data;
 
@@ -11,9 +12,11 @@ using iBanking.Data;
 namespace iBanking.Migrations
 {
     [DbContext(typeof(iBankContext))]
-    partial class iBankContextModelSnapshot : ModelSnapshot
+    [Migration("20250413130121_ChangeColumnEmail")]
+    partial class ChangeColumnEmail
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -103,7 +106,6 @@ namespace iBanking.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("cccd")
-                        .IsRequired()
                         .HasMaxLength(10)
                         .HasColumnType("nvarchar(10)");
 

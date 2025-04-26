@@ -105,3 +105,5 @@ Hệ thống sử dụng Windows Forms làm giao diện người dùng và tích
 - **AutoMapper** - Hỗ trợ chuyển đổi dữ liệu giữa Model và DTO.
 
 ## 📥 Cài Đặt
+
+## 31/3/2025, ngày mai nhớ tiếp tục tạo tài khoản cho người dùng, nhớ tạo cus-> ba->ua, idCus->idBAcc rồi mới xong userAuth

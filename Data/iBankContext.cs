@@ -17,6 +17,7 @@ namespace iBanking.Data
         public DbSet<Transactions> Transactions { get; set; }
         public DbSet<UserAuth> UserAuths { get; set; }
 
+
         public iBankContext(DbContextOptions<iBankContext> options)
             :base(options)
         {
@@ -30,12 +31,14 @@ namespace iBanking.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            //modelBuilder.Entity<Customer>()
+            //    .HasIndex(c => c.cccd)
+            //    .IsUnique();
             modelBuilder.Entity<Customer>()
-                .HasIndex(c => c.cccd)
-                .IsUnique();
+                .HasKey(u => u.idCus);
             modelBuilder.Entity<Customer>()
                 .HasIndex(c => c.email)
-                .IsUnique();
+               ;
             modelBuilder.Entity<Customer>()
                 .HasIndex(c => c.phone);
             modelBuilder.Entity<BankAcc>()
