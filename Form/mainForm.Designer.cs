@@ -29,78 +29,78 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges62 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges63 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges64 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges65 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges66 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges67 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges68 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges69 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges70 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges71 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges72 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges73 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges80 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges81 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges74 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges75 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges76 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges77 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges78 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges79 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges84 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges85 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges82 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges83 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges97 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges98 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges95 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges96 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges86 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges87 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges88 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges89 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges90 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges91 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges92 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges93 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges94 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges104 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges105 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges109 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges110 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges106 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges107 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges108 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges114 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges115 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges111 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges112 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges113 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle18 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges119 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges120 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges116 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges117 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges118 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges102 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges103 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges99 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges100 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges101 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges121 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges122 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges58 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges59 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges57 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges55 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges60 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges61 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             minusGIBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             exitGImageBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             homeGbtn = new Guna.UI2.WinForms.Guna2Button();
@@ -226,7 +226,7 @@
             minusGIBtn.Location = new Point(1748, 12);
             minusGIBtn.Name = "minusGIBtn";
             minusGIBtn.PressedState.ImageSize = new Size(64, 64);
-            minusGIBtn.ShadowDecoration.CustomizableEdges = customizableEdges62;
+            minusGIBtn.ShadowDecoration.CustomizableEdges = customizableEdges1;
             minusGIBtn.Size = new Size(30, 30);
             minusGIBtn.TabIndex = 4;
             minusGIBtn.UseTransparentBackground = true;
@@ -245,7 +245,7 @@
             exitGImageBtn.Location = new Point(1804, 12);
             exitGImageBtn.Name = "exitGImageBtn";
             exitGImageBtn.PressedState.ImageSize = new Size(64, 64);
-            exitGImageBtn.ShadowDecoration.CustomizableEdges = customizableEdges63;
+            exitGImageBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
             exitGImageBtn.Size = new Size(30, 30);
             exitGImageBtn.TabIndex = 3;
             exitGImageBtn.UseTransparentBackground = true;
@@ -255,7 +255,8 @@
             // 
             homeGbtn.BackColor = Color.Transparent;
             homeGbtn.BorderRadius = 5;
-            homeGbtn.CustomizableEdges = customizableEdges64;
+            homeGbtn.Checked = true;
+            homeGbtn.CustomizableEdges = customizableEdges3;
             guna2Transition1.SetDecoration(homeGbtn, Guna.UI2.AnimatorNS.DecorationType.None);
             homeGbtn.DisabledState.BorderColor = Color.DarkGray;
             homeGbtn.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -273,7 +274,7 @@
             homeGbtn.ImageSize = new Size(30, 30);
             homeGbtn.Location = new Point(18, 83);
             homeGbtn.Name = "homeGbtn";
-            homeGbtn.ShadowDecoration.CustomizableEdges = customizableEdges65;
+            homeGbtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
             homeGbtn.Size = new Size(246, 36);
             homeGbtn.TabIndex = 0;
             homeGbtn.Text = "Home";
@@ -285,7 +286,7 @@
             // 
             myBanksGbtn.BackColor = Color.Transparent;
             myBanksGbtn.BorderRadius = 5;
-            myBanksGbtn.CustomizableEdges = customizableEdges66;
+            myBanksGbtn.CustomizableEdges = customizableEdges5;
             guna2Transition1.SetDecoration(myBanksGbtn, Guna.UI2.AnimatorNS.DecorationType.None);
             myBanksGbtn.DisabledState.BorderColor = Color.DarkGray;
             myBanksGbtn.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -297,13 +298,12 @@
             myBanksGbtn.HoverState.BorderColor = Color.FromArgb(14, 126, 254);
             myBanksGbtn.HoverState.FillColor = Color.FromArgb(14, 126, 254);
             myBanksGbtn.HoverState.ForeColor = Color.White;
-            myBanksGbtn.HoverState.Image = Properties.Resources.dollar512White;
             myBanksGbtn.Image = Properties.Resources.dollar512Gray;
             myBanksGbtn.ImageAlign = HorizontalAlignment.Left;
             myBanksGbtn.ImageSize = new Size(30, 30);
             myBanksGbtn.Location = new Point(18, 125);
             myBanksGbtn.Name = "myBanksGbtn";
-            myBanksGbtn.ShadowDecoration.CustomizableEdges = customizableEdges67;
+            myBanksGbtn.ShadowDecoration.CustomizableEdges = customizableEdges6;
             myBanksGbtn.Size = new Size(246, 36);
             myBanksGbtn.TabIndex = 1;
             myBanksGbtn.Text = "My Banks";
@@ -315,7 +315,7 @@
             // 
             historyGbtn.BackColor = Color.Transparent;
             historyGbtn.BorderRadius = 5;
-            historyGbtn.CustomizableEdges = customizableEdges68;
+            historyGbtn.CustomizableEdges = customizableEdges7;
             guna2Transition1.SetDecoration(historyGbtn, Guna.UI2.AnimatorNS.DecorationType.None);
             historyGbtn.DisabledState.BorderColor = Color.DarkGray;
             historyGbtn.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -328,12 +328,12 @@
             historyGbtn.HoverState.FillColor = Color.FromArgb(14, 126, 254);
             historyGbtn.HoverState.ForeColor = Color.White;
             historyGbtn.HoverState.Image = Properties.Resources.historical512White;
-            historyGbtn.Image = Properties.Resources.historical512Gray;
+            historyGbtn.Image = Properties.Resources.historical512Gray1;
             historyGbtn.ImageAlign = HorizontalAlignment.Left;
             historyGbtn.ImageSize = new Size(30, 30);
             historyGbtn.Location = new Point(18, 167);
             historyGbtn.Name = "historyGbtn";
-            historyGbtn.ShadowDecoration.CustomizableEdges = customizableEdges69;
+            historyGbtn.ShadowDecoration.CustomizableEdges = customizableEdges8;
             historyGbtn.Size = new Size(246, 36);
             historyGbtn.TabIndex = 2;
             historyGbtn.Text = "Transaction History";
@@ -345,7 +345,7 @@
             // 
             transferGBtn.BackColor = Color.Transparent;
             transferGBtn.BorderRadius = 5;
-            transferGBtn.CustomizableEdges = customizableEdges70;
+            transferGBtn.CustomizableEdges = customizableEdges9;
             guna2Transition1.SetDecoration(transferGBtn, Guna.UI2.AnimatorNS.DecorationType.None);
             transferGBtn.DisabledState.BorderColor = Color.DarkGray;
             transferGBtn.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -357,13 +357,12 @@
             transferGBtn.HoverState.BorderColor = Color.FromArgb(14, 126, 254);
             transferGBtn.HoverState.FillColor = Color.FromArgb(14, 126, 254);
             transferGBtn.HoverState.ForeColor = Color.White;
-            transferGBtn.HoverState.Image = Properties.Resources.prepaidCards512White;
             transferGBtn.Image = Properties.Resources.prepaidCards512Gray;
             transferGBtn.ImageAlign = HorizontalAlignment.Left;
             transferGBtn.ImageSize = new Size(30, 30);
             transferGBtn.Location = new Point(18, 209);
             transferGBtn.Name = "transferGBtn";
-            transferGBtn.ShadowDecoration.CustomizableEdges = customizableEdges71;
+            transferGBtn.ShadowDecoration.CustomizableEdges = customizableEdges10;
             transferGBtn.Size = new Size(246, 36);
             transferGBtn.TabIndex = 3;
             transferGBtn.Text = "Payment Transfer";
@@ -376,7 +375,7 @@
             searchTXT.BorderColor = Color.FromArgb(208, 213, 221);
             searchTXT.BorderRadius = 6;
             searchTXT.BorderThickness = 2;
-            searchTXT.CustomizableEdges = customizableEdges72;
+            searchTXT.CustomizableEdges = customizableEdges11;
             guna2Transition1.SetDecoration(searchTXT, Guna.UI2.AnimatorNS.DecorationType.None);
             searchTXT.DefaultText = "";
             searchTXT.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -394,7 +393,7 @@
             searchTXT.PlaceholderForeColor = Color.FromArgb(102, 112, 133);
             searchTXT.PlaceholderText = "Search";
             searchTXT.SelectedText = "";
-            searchTXT.ShadowDecoration.CustomizableEdges = customizableEdges73;
+            searchTXT.ShadowDecoration.CustomizableEdges = customizableEdges12;
             searchTXT.Size = new Size(234, 37);
             searchTXT.TabIndex = 4;
             // 
@@ -414,11 +413,11 @@
             controlPageGunaPanel.Controls.Add(historyGbtn);
             controlPageGunaPanel.Controls.Add(myBanksGbtn);
             controlPageGunaPanel.Controls.Add(homeGbtn);
-            controlPageGunaPanel.CustomizableEdges = customizableEdges80;
+            controlPageGunaPanel.CustomizableEdges = customizableEdges19;
             guna2Transition1.SetDecoration(controlPageGunaPanel, Guna.UI2.AnimatorNS.DecorationType.None);
             controlPageGunaPanel.Location = new Point(1, 58);
             controlPageGunaPanel.Name = "controlPageGunaPanel";
-            controlPageGunaPanel.ShadowDecoration.CustomizableEdges = customizableEdges81;
+            controlPageGunaPanel.ShadowDecoration.CustomizableEdges = customizableEdges20;
             controlPageGunaPanel.Size = new Size(315, 1045);
             controlPageGunaPanel.TabIndex = 0;
             // 
@@ -451,7 +450,7 @@
             avatarGunaCPB.ImageRotate = 0F;
             avatarGunaCPB.Location = new Point(16, 897);
             avatarGunaCPB.Name = "avatarGunaCPB";
-            avatarGunaCPB.ShadowDecoration.CustomizableEdges = customizableEdges74;
+            avatarGunaCPB.ShadowDecoration.CustomizableEdges = customizableEdges13;
             avatarGunaCPB.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             avatarGunaCPB.Size = new Size(60, 60);
             avatarGunaCPB.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -471,7 +470,7 @@
             imageLogOut.Location = new Point(234, 898);
             imageLogOut.Name = "imageLogOut";
             imageLogOut.PressedState.ImageSize = new Size(64, 64);
-            imageLogOut.ShadowDecoration.CustomizableEdges = customizableEdges75;
+            imageLogOut.ShadowDecoration.CustomizableEdges = customizableEdges14;
             imageLogOut.Size = new Size(40, 40);
             imageLogOut.TabIndex = 11;
             imageLogOut.Click += imageLogOut_Click;
@@ -479,12 +478,12 @@
             // guna2Panel1
             // 
             guna2Panel1.BorderColor = Color.Black;
-            guna2Panel1.CustomizableEdges = customizableEdges76;
+            guna2Panel1.CustomizableEdges = customizableEdges15;
             guna2Transition1.SetDecoration(guna2Panel1, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2Panel1.FillColor = Color.FromArgb(102, 112, 133);
             guna2Panel1.Location = new Point(18, 871);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges77;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges16;
             guna2Panel1.Size = new Size(246, 1);
             guna2Panel1.TabIndex = 9;
             // 
@@ -492,7 +491,7 @@
             // 
             conncetBankGBtn.BackColor = Color.Transparent;
             conncetBankGBtn.BorderRadius = 5;
-            conncetBankGBtn.CustomizableEdges = customizableEdges78;
+            conncetBankGBtn.CustomizableEdges = customizableEdges17;
             guna2Transition1.SetDecoration(conncetBankGBtn, Guna.UI2.AnimatorNS.DecorationType.None);
             conncetBankGBtn.DisabledState.BorderColor = Color.DarkGray;
             conncetBankGBtn.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -504,13 +503,12 @@
             conncetBankGBtn.HoverState.BorderColor = Color.FromArgb(14, 126, 254);
             conncetBankGBtn.HoverState.FillColor = Color.FromArgb(14, 126, 254);
             conncetBankGBtn.HoverState.ForeColor = Color.White;
-            conncetBankGBtn.HoverState.Image = Properties.Resources.cards_icon_size_512White;
             conncetBankGBtn.Image = Properties.Resources.cards_icon_size_512Gray;
             conncetBankGBtn.ImageAlign = HorizontalAlignment.Left;
             conncetBankGBtn.ImageSize = new Size(30, 30);
             conncetBankGBtn.Location = new Point(18, 251);
             conncetBankGBtn.Name = "conncetBankGBtn";
-            conncetBankGBtn.ShadowDecoration.CustomizableEdges = customizableEdges79;
+            conncetBankGBtn.ShadowDecoration.CustomizableEdges = customizableEdges18;
             conncetBankGBtn.Size = new Size(246, 36);
             conncetBankGBtn.TabIndex = 8;
             conncetBankGBtn.Text = "Connect Bank";
@@ -527,11 +525,11 @@
             controlLGP.Controls.Add(guna2PictureBox1);
             controlLGP.Controls.Add(minusGIBtn);
             controlLGP.Controls.Add(exitGImageBtn);
-            controlLGP.CustomizableEdges = customizableEdges84;
+            controlLGP.CustomizableEdges = customizableEdges23;
             guna2Transition1.SetDecoration(controlLGP, Guna.UI2.AnimatorNS.DecorationType.None);
             controlLGP.Location = new Point(1, 1);
             controlLGP.Name = "controlLGP";
-            controlLGP.ShadowDecoration.CustomizableEdges = customizableEdges85;
+            controlLGP.ShadowDecoration.CustomizableEdges = customizableEdges24;
             controlLGP.Size = new Size(1859, 58);
             controlLGP.TabIndex = 4;
             controlLGP.Paint += controlLGP_Paint;
@@ -553,13 +551,13 @@
             // guna2PictureBox1
             // 
             guna2PictureBox1.BackColor = Color.Transparent;
-            guna2PictureBox1.CustomizableEdges = customizableEdges82;
+            guna2PictureBox1.CustomizableEdges = customizableEdges21;
             guna2Transition1.SetDecoration(guna2PictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2PictureBox1.Image = Properties.Resources.logo_FIT_FA;
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(33, 8);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges83;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges22;
             guna2PictureBox1.Size = new Size(45, 36);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox1.TabIndex = 8;
@@ -569,22 +567,22 @@
             // guna2Transition1
             // 
             guna2Transition1.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = (PointF)resources.GetObject("animation2.BlindCoeff");
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = (PointF)resources.GetObject("animation2.MosaicCoeff");
-            animation2.MosaicShift = (PointF)resources.GetObject("animation2.MosaicShift");
-            animation2.MosaicSize = 0;
-            animation2.Padding = new Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = (PointF)resources.GetObject("animation2.ScaleCoeff");
-            animation2.SlideCoeff = (PointF)resources.GetObject("animation2.SlideCoeff");
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            guna2Transition1.DefaultAnimation = animation2;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = (PointF)resources.GetObject("animation1.BlindCoeff");
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = (PointF)resources.GetObject("animation1.MosaicCoeff");
+            animation1.MosaicShift = (PointF)resources.GetObject("animation1.MosaicShift");
+            animation1.MosaicSize = 0;
+            animation1.Padding = new Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = (PointF)resources.GetObject("animation1.ScaleCoeff");
+            animation1.SlideCoeff = (PointF)resources.GetObject("animation1.SlideCoeff");
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            guna2Transition1.DefaultAnimation = animation1;
             // 
             // tabControlBank
             // 
@@ -619,12 +617,12 @@
             rightDashGPanel.BorderColor = Color.FromArgb(102, 112, 133);
             rightDashGPanel.BorderThickness = 1;
             rightDashGPanel.Controls.Add(guna2Panel3);
-            rightDashGPanel.CustomizableEdges = customizableEdges97;
+            rightDashGPanel.CustomizableEdges = customizableEdges36;
             guna2Transition1.SetDecoration(rightDashGPanel, Guna.UI2.AnimatorNS.DecorationType.None);
             rightDashGPanel.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold);
             rightDashGPanel.Location = new Point(978, 0);
             rightDashGPanel.Name = "rightDashGPanel";
-            rightDashGPanel.ShadowDecoration.CustomizableEdges = customizableEdges98;
+            rightDashGPanel.ShadowDecoration.CustomizableEdges = customizableEdges37;
             rightDashGPanel.Size = new Size(566, 1045);
             rightDashGPanel.TabIndex = 7;
             // 
@@ -641,11 +639,11 @@
             guna2Panel3.Controls.Add(avartarCPBox);
             guna2Panel3.Controls.Add(banksGLB);
             guna2Panel3.Controls.Add(guna2PictureBox2);
-            guna2Panel3.CustomizableEdges = customizableEdges95;
+            guna2Panel3.CustomizableEdges = customizableEdges34;
             guna2Transition1.SetDecoration(guna2Panel3, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2Panel3.Location = new Point(0, 0);
             guna2Panel3.Name = "guna2Panel3";
-            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges96;
+            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges35;
             guna2Panel3.Size = new Size(566, 602);
             guna2Panel3.TabIndex = 8;
             guna2Panel3.UseTransparentBackground = true;
@@ -655,13 +653,13 @@
             guna2GradientPanel1.BackColor = Color.Transparent;
             guna2GradientPanel1.BorderColor = Color.Black;
             guna2GradientPanel1.BorderRadius = 25;
-            guna2GradientPanel1.CustomizableEdges = customizableEdges86;
+            guna2GradientPanel1.CustomizableEdges = customizableEdges25;
             guna2Transition1.SetDecoration(guna2GradientPanel1, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2GradientPanel1.FillColor = Color.FromArgb(128, 255, 255);
             guna2GradientPanel1.FillColor2 = Color.FromArgb(128, 128, 255);
             guna2GradientPanel1.Location = new Point(61, 318);
             guna2GradientPanel1.Name = "guna2GradientPanel1";
-            guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges87;
+            guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges26;
             guna2GradientPanel1.Size = new Size(384, 201);
             guna2GradientPanel1.TabIndex = 15;
             guna2GradientPanel1.UseTransparentBackground = true;
@@ -683,13 +681,13 @@
             bankCardgGP.BorderColor = Color.Black;
             bankCardgGP.BorderRadius = 25;
             bankCardgGP.BorderThickness = 1;
-            bankCardgGP.CustomizableEdges = customizableEdges88;
+            bankCardgGP.CustomizableEdges = customizableEdges27;
             guna2Transition1.SetDecoration(bankCardgGP, Guna.UI2.AnimatorNS.DecorationType.None);
             bankCardgGP.FillColor = Color.FromArgb(128, 255, 255);
             bankCardgGP.FillColor2 = Color.FromArgb(128, 128, 255);
             bankCardgGP.Location = new Point(80, 375);
             bankCardgGP.Name = "bankCardgGP";
-            bankCardgGP.ShadowDecoration.CustomizableEdges = customizableEdges89;
+            bankCardgGP.ShadowDecoration.CustomizableEdges = customizableEdges28;
             bankCardgGP.Size = new Size(384, 201);
             bankCardgGP.TabIndex = 16;
             bankCardgGP.UseTransparentBackground = true;
@@ -707,7 +705,7 @@
             // 
             // addBGBtn
             // 
-            addBGBtn.CustomizableEdges = customizableEdges90;
+            addBGBtn.CustomizableEdges = customizableEdges29;
             guna2Transition1.SetDecoration(addBGBtn, Guna.UI2.AnimatorNS.DecorationType.None);
             addBGBtn.DisabledState.BorderColor = Color.DarkGray;
             addBGBtn.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -718,7 +716,7 @@
             addBGBtn.ForeColor = Color.Black;
             addBGBtn.Location = new Point(357, 251);
             addBGBtn.Name = "addBGBtn";
-            addBGBtn.ShadowDecoration.CustomizableEdges = customizableEdges91;
+            addBGBtn.ShadowDecoration.CustomizableEdges = customizableEdges30;
             addBGBtn.Size = new Size(162, 39);
             addBGBtn.TabIndex = 14;
             addBGBtn.Text = "Add Banks";
@@ -733,7 +731,7 @@
             avartarCPBox.ImageRotate = 0F;
             avartarCPBox.Location = new Point(41, 74);
             avartarCPBox.Name = "avartarCPBox";
-            avartarCPBox.ShadowDecoration.CustomizableEdges = customizableEdges92;
+            avartarCPBox.ShadowDecoration.CustomizableEdges = customizableEdges31;
             avartarCPBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             avartarCPBox.Size = new Size(100, 100);
             avartarCPBox.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -755,13 +753,13 @@
             // guna2PictureBox2
             // 
             guna2PictureBox2.BackColor = Color.Transparent;
-            guna2PictureBox2.CustomizableEdges = customizableEdges93;
+            guna2PictureBox2.CustomizableEdges = customizableEdges32;
             guna2Transition1.SetDecoration(guna2PictureBox2, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2PictureBox2.Image = Properties.Resources.bluePink;
             guna2PictureBox2.ImageRotate = 0F;
             guna2PictureBox2.Location = new Point(3, 0);
             guna2PictureBox2.Name = "guna2PictureBox2";
-            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges94;
+            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges33;
             guna2PictureBox2.Size = new Size(560, 128);
             guna2PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox2.TabIndex = 2;
@@ -779,12 +777,12 @@
             mainDashGPanel.Controls.Add(subtextGHLabel);
             mainDashGPanel.Controls.Add(guna2HtmlLabel1);
             mainDashGPanel.Controls.Add(welcomeGHLabel);
-            mainDashGPanel.CustomizableEdges = customizableEdges104;
+            mainDashGPanel.CustomizableEdges = customizableEdges58;
             guna2Transition1.SetDecoration(mainDashGPanel, Guna.UI2.AnimatorNS.DecorationType.None);
             mainDashGPanel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             mainDashGPanel.Location = new Point(-1, 0);
             mainDashGPanel.Name = "mainDashGPanel";
-            mainDashGPanel.ShadowDecoration.CustomizableEdges = customizableEdges105;
+            mainDashGPanel.ShadowDecoration.CustomizableEdges = customizableEdges59;
             mainDashGPanel.Size = new Size(980, 1045);
             mainDashGPanel.TabIndex = 6;
             mainDashGPanel.Paint += mainDashGPanel_Paint;
@@ -817,28 +815,28 @@
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle10.BackColor = Color.White;
-            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle11.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle11.ForeColor = Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             guna2DataGridView1.ColumnHeadersHeight = 30;
             guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             guna2DataGridView1.Columns.AddRange(new DataGridViewColumn[] { tranCol, amountCol, statusCol, dateCol, categoryCol });
             guna2Transition1.SetDecoration(guna2DataGridView1, Guna.UI2.AnimatorNS.DecorationType.None);
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = Color.White;
-            dataGridViewCellStyle12.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle12.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle12.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle12.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
             guna2DataGridView1.Location = new Point(4, 170);
             guna2DataGridView1.Name = "guna2DataGridView1";
@@ -906,12 +904,12 @@
             guna2Panel5.Controls.Add(moneyGHLabel);
             guna2Panel5.Controls.Add(nameBank);
             guna2Panel5.Controls.Add(avarCPB);
-            guna2Panel5.CustomizableEdges = customizableEdges109;
+            guna2Panel5.CustomizableEdges = customizableEdges41;
             guna2Transition1.SetDecoration(guna2Panel5, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2Panel5.FillColor = Color.FromArgb(237, 246, 255);
             guna2Panel5.Location = new Point(4, 3);
             guna2Panel5.Name = "guna2Panel5";
-            guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges110;
+            guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges42;
             guna2Panel5.Size = new Size(884, 161);
             guna2Panel5.TabIndex = 0;
             // 
@@ -919,7 +917,7 @@
             // 
             guna2Button1.BackColor = Color.Transparent;
             guna2Button1.BorderRadius = 12;
-            guna2Button1.CustomizableEdges = customizableEdges106;
+            guna2Button1.CustomizableEdges = customizableEdges38;
             guna2Transition1.SetDecoration(guna2Button1, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -930,7 +928,7 @@
             guna2Button1.ForeColor = Color.FromArgb(2, 120, 72);
             guna2Button1.Location = new Point(722, 31);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges107;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges39;
             guna2Button1.Size = new Size(118, 28);
             guna2Button1.TabIndex = 3;
             guna2Button1.Text = "savings";
@@ -967,7 +965,7 @@
             avarCPB.ImageRotate = 0F;
             avarCPB.Location = new Point(34, 31);
             avarCPB.Name = "avarCPB";
-            avarCPB.ShadowDecoration.CustomizableEdges = customizableEdges108;
+            avarCPB.ShadowDecoration.CustomizableEdges = customizableEdges40;
             avarCPB.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             avarCPB.Size = new Size(100, 100);
             avarCPB.TabIndex = 0;
@@ -989,28 +987,28 @@
             // 
             // guna2DataGridView2
             // 
-            dataGridViewCellStyle13.BackColor = Color.White;
-            guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle14.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle14.ForeColor = Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             guna2DataGridView2.ColumnHeadersHeight = 30;
             guna2DataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             guna2DataGridView2.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5 });
             guna2Transition1.SetDecoration(guna2DataGridView2, Guna.UI2.AnimatorNS.DecorationType.None);
-            dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = Color.White;
-            dataGridViewCellStyle15.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle15.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle15.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle15.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle15.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle6;
             guna2DataGridView2.GridColor = Color.FromArgb(231, 229, 255);
             guna2DataGridView2.Location = new Point(5, 175);
             guna2DataGridView2.Name = "guna2DataGridView2";
@@ -1078,12 +1076,12 @@
             guna2Panel6.Controls.Add(guna2HtmlLabel3);
             guna2Panel6.Controls.Add(guna2HtmlLabel4);
             guna2Panel6.Controls.Add(guna2CirclePictureBox1);
-            guna2Panel6.CustomizableEdges = customizableEdges114;
+            guna2Panel6.CustomizableEdges = customizableEdges46;
             guna2Transition1.SetDecoration(guna2Panel6, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2Panel6.FillColor = Color.FromArgb(237, 246, 255);
             guna2Panel6.Location = new Point(5, 8);
             guna2Panel6.Name = "guna2Panel6";
-            guna2Panel6.ShadowDecoration.CustomizableEdges = customizableEdges115;
+            guna2Panel6.ShadowDecoration.CustomizableEdges = customizableEdges47;
             guna2Panel6.Size = new Size(884, 161);
             guna2Panel6.TabIndex = 2;
             // 
@@ -1091,7 +1089,7 @@
             // 
             guna2Button2.BackColor = Color.Transparent;
             guna2Button2.BorderRadius = 12;
-            guna2Button2.CustomizableEdges = customizableEdges111;
+            guna2Button2.CustomizableEdges = customizableEdges43;
             guna2Transition1.SetDecoration(guna2Button2, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -1102,7 +1100,7 @@
             guna2Button2.ForeColor = Color.FromArgb(2, 120, 72);
             guna2Button2.Location = new Point(722, 31);
             guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges112;
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges44;
             guna2Button2.Size = new Size(118, 28);
             guna2Button2.TabIndex = 3;
             guna2Button2.Text = "savings";
@@ -1139,7 +1137,7 @@
             guna2CirclePictureBox1.ImageRotate = 0F;
             guna2CirclePictureBox1.Location = new Point(34, 31);
             guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges113;
+            guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges45;
             guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CirclePictureBox1.Size = new Size(100, 100);
             guna2CirclePictureBox1.TabIndex = 0;
@@ -1161,28 +1159,28 @@
             // 
             // guna2DataGridView3
             // 
-            dataGridViewCellStyle16.BackColor = Color.White;
-            guna2DataGridView3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
-            dataGridViewCellStyle17.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle17.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle17.ForeColor = Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle7.BackColor = Color.White;
+            guna2DataGridView3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle8.ForeColor = Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
+            guna2DataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             guna2DataGridView3.ColumnHeadersHeight = 30;
             guna2DataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             guna2DataGridView3.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8, dataGridViewTextBoxColumn9, dataGridViewTextBoxColumn10 });
             guna2Transition1.SetDecoration(guna2DataGridView3, Guna.UI2.AnimatorNS.DecorationType.None);
-            dataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = Color.White;
-            dataGridViewCellStyle18.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle18.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle18.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle18.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle18.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView3.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = Color.White;
+            dataGridViewCellStyle9.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle9.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle9.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
+            guna2DataGridView3.DefaultCellStyle = dataGridViewCellStyle9;
             guna2DataGridView3.GridColor = Color.FromArgb(231, 229, 255);
             guna2DataGridView3.Location = new Point(5, 175);
             guna2DataGridView3.Name = "guna2DataGridView3";
@@ -1250,12 +1248,12 @@
             guna2Panel7.Controls.Add(guna2HtmlLabel5);
             guna2Panel7.Controls.Add(guna2HtmlLabel6);
             guna2Panel7.Controls.Add(guna2CirclePictureBox2);
-            guna2Panel7.CustomizableEdges = customizableEdges119;
+            guna2Panel7.CustomizableEdges = customizableEdges51;
             guna2Transition1.SetDecoration(guna2Panel7, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2Panel7.FillColor = Color.FromArgb(237, 246, 255);
             guna2Panel7.Location = new Point(5, 8);
             guna2Panel7.Name = "guna2Panel7";
-            guna2Panel7.ShadowDecoration.CustomizableEdges = customizableEdges120;
+            guna2Panel7.ShadowDecoration.CustomizableEdges = customizableEdges52;
             guna2Panel7.Size = new Size(884, 161);
             guna2Panel7.TabIndex = 4;
             // 
@@ -1263,7 +1261,7 @@
             // 
             guna2Button3.BackColor = Color.Transparent;
             guna2Button3.BorderRadius = 12;
-            guna2Button3.CustomizableEdges = customizableEdges116;
+            guna2Button3.CustomizableEdges = customizableEdges48;
             guna2Transition1.SetDecoration(guna2Button3, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2Button3.DisabledState.BorderColor = Color.DarkGray;
             guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -1274,7 +1272,7 @@
             guna2Button3.ForeColor = Color.FromArgb(2, 120, 72);
             guna2Button3.Location = new Point(722, 31);
             guna2Button3.Name = "guna2Button3";
-            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges117;
+            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges49;
             guna2Button3.Size = new Size(118, 28);
             guna2Button3.TabIndex = 3;
             guna2Button3.Text = "savings";
@@ -1311,7 +1309,7 @@
             guna2CirclePictureBox2.ImageRotate = 0F;
             guna2CirclePictureBox2.Location = new Point(34, 31);
             guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
-            guna2CirclePictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges118;
+            guna2CirclePictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges50;
             guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CirclePictureBox2.Size = new Size(100, 100);
             guna2CirclePictureBox2.TabIndex = 0;
@@ -1340,11 +1338,11 @@
             guna2Panel4.Controls.Add(totalLabel);
             guna2Panel4.Controls.Add(numberAccGHLabel);
             guna2Panel4.Controls.Add(guna2CircleProgressBar1);
-            guna2Panel4.CustomizableEdges = customizableEdges102;
+            guna2Panel4.CustomizableEdges = customizableEdges56;
             guna2Transition1.SetDecoration(guna2Panel4, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2Panel4.Location = new Point(45, 100);
             guna2Panel4.Name = "guna2Panel4";
-            guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges103;
+            guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges57;
             guna2Panel4.Size = new Size(898, 190);
             guna2Panel4.TabIndex = 3;
             guna2Panel4.UseTransparentBackground = true;
@@ -1362,7 +1360,7 @@
             // 
             // AddG2Btn
             // 
-            AddG2Btn.CustomizableEdges = customizableEdges99;
+            AddG2Btn.CustomizableEdges = customizableEdges53;
             guna2Transition1.SetDecoration(AddG2Btn, Guna.UI2.AnimatorNS.DecorationType.None);
             AddG2Btn.DisabledState.BorderColor = Color.DarkGray;
             AddG2Btn.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -1373,7 +1371,7 @@
             AddG2Btn.ForeColor = Color.FromArgb(14, 126, 254);
             AddG2Btn.Location = new Point(702, 18);
             AddG2Btn.Name = "AddG2Btn";
-            AddG2Btn.ShadowDecoration.CustomizableEdges = customizableEdges100;
+            AddG2Btn.ShadowDecoration.CustomizableEdges = customizableEdges54;
             AddG2Btn.Size = new Size(143, 38);
             AddG2Btn.TabIndex = 3;
             AddG2Btn.Text = "Add Bank";
@@ -1410,7 +1408,7 @@
             guna2CircleProgressBar1.Location = new Point(44, 18);
             guna2CircleProgressBar1.Minimum = 0;
             guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
-            guna2CircleProgressBar1.ShadowDecoration.CustomizableEdges = customizableEdges101;
+            guna2CircleProgressBar1.ShadowDecoration.CustomizableEdges = customizableEdges55;
             guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CircleProgressBar1.Size = new Size(162, 162);
             guna2CircleProgressBar1.TabIndex = 0;
@@ -1499,11 +1497,11 @@
             // 
             guna2Panel2.BackColor = Color.White;
             guna2Panel2.Controls.Add(tabControlBank);
-            guna2Panel2.CustomizableEdges = customizableEdges121;
+            guna2Panel2.CustomizableEdges = customizableEdges60;
             guna2Transition1.SetDecoration(guna2Panel2, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2Panel2.Location = new Point(312, 1);
             guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges122;
+            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges61;
             guna2Panel2.Size = new Size(1545, 1102);
             guna2Panel2.TabIndex = 6;
             // 

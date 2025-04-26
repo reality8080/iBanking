@@ -10,7 +10,7 @@ namespace iBanking.Models
 {
     public class Transactions
     {
-        public Transactions(string idAcc, string? typeTrans, double money, DateTime time, string? status)
+        public Transactions(Guid idAcc, string? typeTrans, double money, DateTime time, string? status)
         {
             this.idAcc = idAcc;
             this.typeTrans = typeTrans;
@@ -20,9 +20,9 @@ namespace iBanking.Models
         }
 
         [Key]
-        public string idTransaction { get; set; } = String.Empty;
+        public Guid idTransaction { get; set; } = Guid.NewGuid();
         [Required]
-        public string idAcc { get; set; }
+        public Guid idAcc { get; set; }
         [Required, MaxLength(100)]
         public string? typeTrans { get; set; } = string.Empty;
         [Required]

@@ -58,6 +58,52 @@ namespace iBanking.Service
             }
         }
 
+        public async Task<UserAuth?> CheckEmailAndUserName(string username, string email)
+        {
+            if (username == String.Empty || email == String.Empty)
+            {
+                logger.LogWarning("Ten dang nhap hoac email bi trong");
+                return null;
+            }
+            try
+            {
+                var checkUserName = await _userAuth.GetByUserName(username) ?? null;
+                if (checkUserName == null)
+                {
+                    logger.LogWarning("Ten dang nhap da khong ton tai");
+                    return null;
+                }
+
+                var checkBA = await _bankAcc.GetByIdAcc(checkUserName.idAcc) ?? null;
+
+                if (checkBA == null)
+                {
+                    logger.LogWarning("Tai khoan khong ton tai");
+                    return null;
+                }
+
+                var checkEmail = await _cus.GetById(checkBA.idCus) ?? null;
+
+                if (checkEmail == null)
+                {
+                    logger.LogWarning("Email da khong ton tai");
+                    return null;
+                }
+
+                if (checkUserName.username != username || checkEmail.email != email)
+                {
+                    logger.LogWarning("Ten dang nhap hoac email da ton tai");
+                    return null;
+                }
+                return checkUserName;
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex.Message, ex);
+                return null;
+            }
+        }
+
         public async Task<bool> CheckPass(string username, string password)
         {
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))

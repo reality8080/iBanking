@@ -127,14 +127,14 @@
   <data name="screenshot_17446384772" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\BackGround\screenshot_1744638477.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="historical512White" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Icon\White\historical512White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="exit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Icon\icon\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="avartar11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Avartar\avartar1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo FIT FA" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\logo FIT FA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="loginP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\BackGround\loginP.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="prepaidCards512White" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Icon\White\prepaidCards512White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -147,6 +147,9 @@
   </data>
   <data name="homeWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Icon\White\homeWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="historical512Gray1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Icon\Gray\historical512Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="avartar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Avartar\avartar1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,17 +175,11 @@
   <data name="prepaidCards512Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Icon\Gray\prepaidCards512Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="exit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Icon\icon\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo FIT FA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\logo FIT FA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="screenshot_1744638477" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\BackGround\screenshot_1744638477.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dollar512White" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Icon\White\dollar512White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dollar512White1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Icon\White\dollar512White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dollar512Gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Icon\Gray\dollar512Gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,7 +190,7 @@
   <data name="homeGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Icon\Gray\homeGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="loginP" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\BackGround\loginP.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="historical512White" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Icon\White\historical512White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

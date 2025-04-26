@@ -20,11 +20,11 @@ namespace iBanking
         //public static IServiceProvider? serviceProvider { get; private set; }
         public static void ConfigureServices(IServiceCollection services)
         {
-            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", @"ibanking-8080-firebase-adminsdk.json");
+            //Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", @"ibanking-8080-firebase-adminsdk.json");
 
-            var projectId = "ibanking-8080";
-            var db = FirestoreDb.Create(projectId);
-            services.AddSingleton(db);
+            //var projectId = "ibanking-8080";
+            //var db = FirestoreDb.Create(projectId);
+            //services.AddSingleton(db);
 
             services.AddDbContext<iBankContext>(options =>
             options.UseSqlServer("Data Source=(localdb)\\localThienPhu;Initial Catalog=iBanking;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False"));
@@ -45,6 +45,7 @@ namespace iBanking
             services.AddTransient<loginForm>();
             services.AddTransient<SignUp>();
             services.AddTransient<ForgotPass>();
+            services.AddTransient<OtpUControl>();
             // Dùng khi dùng dbcontext gián tiếp
             //services.AddSingleton<Form1>();
 
@@ -65,7 +66,7 @@ namespace iBanking
                 builder.AddDebug();
                 builder.AddConsole();
             });
-            services.AddScoped<IFire>
+            //services.AddScoped<IFire>
         }
 
     }

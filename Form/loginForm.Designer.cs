@@ -72,6 +72,7 @@
             layoutGP.BackColor = Color.White;
             layoutGP.BorderColor = Color.Black;
             layoutGP.BorderRadius = 30;
+            layoutGP.BorderThickness = 1;
             layoutGP.Controls.Add(guna2HtmlLabel1);
             layoutGP.Controls.Add(guna2Panel3);
             layoutGP.Controls.Add(passGTxb);
@@ -136,6 +137,7 @@
             passGTxb.ShadowDecoration.CustomizableEdges = customizableEdges4;
             passGTxb.Size = new Size(350, 38);
             passGTxb.TabIndex = 19;
+            passGTxb.UseSystemPasswordChar = true;
             // 
             // noAccountLLB
             // 

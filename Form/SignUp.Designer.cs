@@ -76,7 +76,9 @@
             // LayoutGPanel
             // 
             LayoutGPanel.BackColor = Color.Transparent;
-            LayoutGPanel.BorderRadius = 35;
+            LayoutGPanel.BorderColor = Color.Black;
+            LayoutGPanel.BorderRadius = 30;
+            LayoutGPanel.BorderThickness = 1;
             LayoutGPanel.Controls.Add(guna2HtmlLabel1);
             LayoutGPanel.Controls.Add(guna2Panel1);
             LayoutGPanel.Controls.Add(pwsGTxb);
@@ -141,6 +143,7 @@
             pwsGTxb.ShadowDecoration.CustomizableEdges = customizableEdges4;
             pwsGTxb.Size = new Size(383, 38);
             pwsGTxb.TabIndex = 20;
+            pwsGTxb.UseSystemPasswordChar = true;
             // 
             // pwdHGLB
             // 
@@ -318,10 +321,10 @@
             guna2PictureBox1.CustomizableEdges = customizableEdges22;
             guna2PictureBox1.Image = Properties.Resources.screenshot_17446384772;
             guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(541, 48);
+            guna2PictureBox1.Location = new Point(599, 48);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges23;
-            guna2PictureBox1.Size = new Size(604, 727);
+            guna2PictureBox1.Size = new Size(546, 727);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox1.TabIndex = 23;
             guna2PictureBox1.TabStop = false;

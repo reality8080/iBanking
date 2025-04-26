@@ -214,7 +214,7 @@ namespace iBanking.Repository
             }
         }
 
-        //public Task<bool> UpdateByIdAcc(Guid idAcc, UserAuth newUserAuth)
+        //public Task<bool> UpdateByIdAcc(String idAcc, UserAuth newUserAuth)
         //{
         //    throw new NotImplementedException();
         //}

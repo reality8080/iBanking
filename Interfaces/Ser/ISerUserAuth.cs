@@ -12,5 +12,6 @@ namespace iBanking.Interfaces.Ser
         public string randomNumBAcc();
         public Task<bool> addUaBaCr(string username,string email,string password, string typeAuth);
         public Task<bool> CheckPass(string username, string password);
+        public Task<UserAuth> CheckEmailAndUserName(string username, string email);
     }
 }

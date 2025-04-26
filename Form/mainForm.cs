@@ -46,19 +46,19 @@ namespace iBanking
 
         private void homeGbtn_Click(object sender, EventArgs e)
         {
-            setActiveBtns(homeGbtn, "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\White\\homeWhite.png");
+            setActiveBtns(homeGbtn,     "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\White\\homeWhite.png");
             tabControlBank.SelectedIndex = 0;
         }
 
         private void myBanksGbtn_Click(object sender, EventArgs e)
         {
-            setActiveBtns(myBanksGbtn, "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\White\\dollar512White.png");
+            setActiveBtns(myBanksGbtn,  "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\White\\dollar512White.png");
             tabControlBank.SelectedIndex = 1;
         }
 
         private void historyGbtn_Click(object sender, EventArgs e)
         {
-            setActiveBtns(historyGbtn, "D:\\2024 - 2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\White\\historical512White.png");
+            setActiveBtns(historyGbtn,  "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\White\\historical512White.png");
             tabControlBank.SelectedIndex = 2;
 
         }
@@ -104,9 +104,9 @@ namespace iBanking
 
         private string GetDefaultIconPath(Guna.UI2.WinForms.Guna2Button btn)
         {
-            if (btn == homeGbtn) return "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\Gray\\homeGray.png";
-            if (btn == myBanksGbtn) return "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\Gray\\dollar512Gray.png";
-            if (btn == historyGbtn) return "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\Gray\\historical512Gray.png";
+            if (btn == homeGbtn) return     "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\Gray\\homeGray.png";
+            if (btn == myBanksGbtn) return  "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\Gray\\dollar512Gray.png";
+            if (btn == historyGbtn) return  "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\Gray\\historical512Gray.png";
             if (btn == transferGBtn) return "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\Gray\\prepaidCards512Gray.png";
             if (btn == conncetBankGBtn) return "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\Gray\\cards-icon-size_512Gray.png";
             return "";
