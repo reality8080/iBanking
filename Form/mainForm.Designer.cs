@@ -255,7 +255,6 @@
             // 
             homeGbtn.BackColor = Color.Transparent;
             homeGbtn.BorderRadius = 5;
-            homeGbtn.Checked = true;
             homeGbtn.CustomizableEdges = customizableEdges3;
             guna2Transition1.SetDecoration(homeGbtn, Guna.UI2.AnimatorNS.DecorationType.None);
             homeGbtn.DisabledState.BorderColor = Color.DarkGray;
@@ -298,6 +297,7 @@
             myBanksGbtn.HoverState.BorderColor = Color.FromArgb(14, 126, 254);
             myBanksGbtn.HoverState.FillColor = Color.FromArgb(14, 126, 254);
             myBanksGbtn.HoverState.ForeColor = Color.White;
+            myBanksGbtn.HoverState.Image = Properties.Resources.dollar512White;
             myBanksGbtn.Image = Properties.Resources.dollar512Gray;
             myBanksGbtn.ImageAlign = HorizontalAlignment.Left;
             myBanksGbtn.ImageSize = new Size(30, 30);
@@ -357,6 +357,7 @@
             transferGBtn.HoverState.BorderColor = Color.FromArgb(14, 126, 254);
             transferGBtn.HoverState.FillColor = Color.FromArgb(14, 126, 254);
             transferGBtn.HoverState.ForeColor = Color.White;
+            transferGBtn.HoverState.Image = Properties.Resources.prepaidCards512White1;
             transferGBtn.Image = Properties.Resources.prepaidCards512Gray;
             transferGBtn.ImageAlign = HorizontalAlignment.Left;
             transferGBtn.ImageSize = new Size(30, 30);
@@ -463,7 +464,7 @@
             imageLogOut.CheckedState.ImageSize = new Size(64, 64);
             guna2Transition1.SetDecoration(imageLogOut, Guna.UI2.AnimatorNS.DecorationType.None);
             imageLogOut.HoverState.ImageSize = new Size(40, 40);
-            imageLogOut.Image = Properties.Resources.exit_icon_size_512;
+            imageLogOut.Image = (Image)resources.GetObject("imageLogOut.Image");
             imageLogOut.ImageOffset = new Point(0, 0);
             imageLogOut.ImageRotate = 0F;
             imageLogOut.ImageSize = new Size(30, 30);
@@ -503,6 +504,7 @@
             conncetBankGBtn.HoverState.BorderColor = Color.FromArgb(14, 126, 254);
             conncetBankGBtn.HoverState.FillColor = Color.FromArgb(14, 126, 254);
             conncetBankGBtn.HoverState.ForeColor = Color.White;
+            conncetBankGBtn.HoverState.Image = Properties.Resources.cards_icon_size_512White1;
             conncetBankGBtn.Image = Properties.Resources.cards_icon_size_512Gray;
             conncetBankGBtn.ImageAlign = HorizontalAlignment.Left;
             conncetBankGBtn.ImageSize = new Size(30, 30);
@@ -553,7 +555,7 @@
             guna2PictureBox1.BackColor = Color.Transparent;
             guna2PictureBox1.CustomizableEdges = customizableEdges21;
             guna2Transition1.SetDecoration(guna2PictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            guna2PictureBox1.Image = Properties.Resources.logo_FIT_FA;
+            guna2PictureBox1.Image = Properties.Resources.logo_FIT_FA1;
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(33, 8);
             guna2PictureBox1.Name = "guna2PictureBox1";

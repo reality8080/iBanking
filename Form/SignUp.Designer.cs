@@ -48,7 +48,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -298,13 +297,14 @@
             layoutPanel.ShadowDecoration.CustomizableEdges = customizableEdges21;
             layoutPanel.Size = new Size(1147, 51);
             layoutPanel.TabIndex = 22;
+            layoutPanel.MouseDown += layoutPanel_MouseDown;
             // 
             // exitGIBtn
             // 
             exitGIBtn.BackColor = Color.Transparent;
             exitGIBtn.CheckedState.ImageSize = new Size(64, 64);
             exitGIBtn.HoverState.ImageSize = new Size(25, 25);
-            exitGIBtn.Image = (Image)resources.GetObject("exitGIBtn.Image");
+            exitGIBtn.Image = Properties.Resources.exit;
             exitGIBtn.ImageOffset = new Point(0, 0);
             exitGIBtn.ImageRotate = 0F;
             exitGIBtn.ImageSize = new Size(20, 20);
@@ -315,6 +315,7 @@
             exitGIBtn.Size = new Size(30, 30);
             exitGIBtn.TabIndex = 18;
             exitGIBtn.UseTransparentBackground = true;
+            exitGIBtn.Click += exitGIBtn_Click_1;
             // 
             // guna2PictureBox1
             // 

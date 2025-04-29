@@ -105,7 +105,7 @@ namespace iBanking.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap cards_icon_size_512Gray {
             get {
-                object obj = ResourceManager.GetObject("avartar1", resourceCulture);
+                object obj = ResourceManager.GetObject("cards-icon-size_512Gray", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,19 @@ namespace iBanking.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap avartar11 {
+        internal static System.Drawing.Bitmap cards_icon_size_512White {
             get {
-                object obj = ResourceManager.GetObject("avartar11", resourceCulture);
+                object obj = ResourceManager.GetObject("cards-icon-size_512White", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cards_icon_size_512White1 {
+            get {
+                object obj = ResourceManager.GetObject("cards-icon-size_512White1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,6 +153,16 @@ namespace iBanking.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dollar512White {
+            get {
+                object obj = ResourceManager.GetObject("dollar512White", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exit {
             get {
                 object obj = ResourceManager.GetObject("exit", resourceCulture);
@@ -163,9 +183,9 @@ namespace iBanking.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap dollar512White {
+        internal static System.Drawing.Bitmap historical512Gray {
             get {
-                object obj = ResourceManager.GetObject("dollar512White", resourceCulture);
+                object obj = ResourceManager.GetObject("historical512Gray", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +213,9 @@ namespace iBanking.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap exit_icon_size_512 {
+        internal static System.Drawing.Bitmap homeGray {
             get {
-                object obj = ResourceManager.GetObject("exit-icon-size_512", resourceCulture);
+                object obj = ResourceManager.GetObject("homeGray", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +243,19 @@ namespace iBanking.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap historical512White {
+        internal static System.Drawing.Bitmap logo_FIT_FA {
             get {
-                object obj = ResourceManager.GetObject("historical512White", resourceCulture);
+                object obj = ResourceManager.GetObject("logo FIT FA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_FIT_FA1 {
+            get {
+                object obj = ResourceManager.GetObject("logo FIT FA1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -245,7 +275,7 @@ namespace iBanking.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap prepaidCards512Gray {
             get {
-                object obj = ResourceManager.GetObject("logo FIT FA", resourceCulture);
+                object obj = ResourceManager.GetObject("prepaidCards512Gray", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,9 +283,19 @@ namespace iBanking.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap minus {
+        internal static System.Drawing.Bitmap prepaidCards512White {
             get {
-                object obj = ResourceManager.GetObject("minus", resourceCulture);
+                object obj = ResourceManager.GetObject("prepaidCards512White", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap prepaidCards512White1 {
+            get {
+                object obj = ResourceManager.GetObject("prepaidCards512White1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

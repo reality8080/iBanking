@@ -236,7 +236,7 @@
             // 
             // layoutPanel
             // 
-            layoutPanel.BackColor = Color.Transparent;
+            layoutPanel.BackColor = Color.FromArgb(224, 224, 224);
             layoutPanel.Controls.Add(exitGIBtn);
             layoutPanel.CustomizableEdges = customizableEdges16;
             layoutPanel.Location = new Point(-1, -1);
@@ -244,7 +244,6 @@
             layoutPanel.ShadowDecoration.CustomizableEdges = customizableEdges17;
             layoutPanel.Size = new Size(1189, 50);
             layoutPanel.TabIndex = 24;
-            layoutPanel.UseTransparentBackground = true;
             layoutPanel.MouseDown += layoutPanel_MouseDown;
             // 
             // exitGIBtn
