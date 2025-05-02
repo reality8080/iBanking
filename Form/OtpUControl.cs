@@ -1,6 +1,7 @@
 ﻿using iBanking.Interfaces.Repo;
 using iBanking.Interfaces.Ser;
 using iBanking.Models;
+using iBanking.Models.Cuong;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,24 +19,22 @@ namespace iBanking.Form
         private readonly IServiceProvider _serviceProvider;
         //private readonly IRepoUserAuth _repoUserAuth;
         private readonly string _otpCode;
-        private readonly UserAuth _userAuth;
+        private readonly User _user;
         //private Guid _idAU;
         //public OtpUControl()
         //{
         //    InitializeComponent();
         //}
 
-        public OtpUControl(IServiceProvider _serviceProvider, UserAuth _ua, string _otpCode)
+        public OtpUControl(IServiceProvider _serviceProvider, User u, string _otpCode)
         {
             InitializeComponent();
             this._serviceProvider = _serviceProvider ?? throw new ArgumentNullException(nameof(_serviceProvider));
-            this._userAuth = _ua ?? throw new ArgumentNullException(nameof(_ua));
+            this._user = u ?? throw new ArgumentNullException(nameof(u));
             //this._repoUserAuth = _repoUserAuth ?? throw new ArgumentNullException(nameof(_repoUserAuth));
             //this._idAU = _idAU == Guid.Empty ? throw new ArgumentNullException(nameof(_idAU)) : _idAU;
             this._otpCode = _otpCode ?? throw new ArgumentNullException(nameof(_otpCode));
             otpCodeTxt.Text = _otpCode;
-
-
         }
 
         private void UserControl1_Load(object sender, EventArgs e)
@@ -58,7 +57,7 @@ namespace iBanking.Form
                     return;
                 }
                 //var ua=_repoUserAuth.GetByIdUser(_idAU);
-                MessageBox.Show($"OTP code is correct, please change your password {_userAuth.password}");
+                MessageBox.Show($"OTP code is correct, please change your password {this._user.Password}");
             }
             catch (Exception ex)
             {

@@ -23,6 +23,8 @@ namespace iBanking
             InitializeComponent();
             this._logger = _logger;
             _serviceProvider = serviceProvider;
+            var homeUC = new Home(_serviceProvider);
+            addUserControl(homeUC);
         }
 
         private void exitGImageBtn_MouseClick(object sender, MouseEventArgs e)
@@ -44,35 +46,45 @@ namespace iBanking
             }
         }
 
+        private void addUserControl(UserControl uc)
+        {
+            controlUserPanel.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            controlUserPanel.Controls.Add(uc);
+            uc.BringToFront();
+        }
+
         private void homeGbtn_Click(object sender, EventArgs e)
         {
             setActiveBtns(homeGbtn,     "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\White\\homeWhite.png");
-            tabControlBank.SelectedIndex = 0;
+            //tabControlBank.SelectedIndex = 0;
+            var homeUC=new Home(_serviceProvider);
+            addUserControl(homeUC);
         }
 
         private void myBanksGbtn_Click(object sender, EventArgs e)
         {
             setActiveBtns(myBanksGbtn,  "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\White\\dollar512White.png");
-            tabControlBank.SelectedIndex = 1;
+            //tabControlBank.SelectedIndex = 1;
         }
 
         private void historyGbtn_Click(object sender, EventArgs e)
         {
             setActiveBtns(historyGbtn,  "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\White\\historical512White.png");
-            tabControlBank.SelectedIndex = 2;
+            //tabControlBank.SelectedIndex = 2;
 
         }
 
         private void transferGBtn_Click(object sender, EventArgs e)
         {
             setActiveBtns(transferGBtn, "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\White\\prepaidCards512White.png");
-            tabControlBank.SelectedIndex = 3;
+            //tabControlBank.SelectedIndex = 3;
         }
 
         private void conncetBankGBtn_Click(object sender, EventArgs e)
         {
             setActiveBtns(conncetBankGBtn, "D:\\2024-2025\\HK2\\WindowsForm\\iBanking\\Resources\\Images\\Icon\\White\\cards-icon-size_512White.png");
-            tabControlBank.SelectedIndex = 4;
+            //tabControlBank.SelectedIndex = 4;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -149,6 +161,7 @@ namespace iBanking
                 if (result == DialogResult.Yes)
                 {
                     _logger.LogInformation("User logged out successfully.");
+                    MessageBox.Show("Logged out successfully.", "Log Out", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     var lForm = _serviceProvider.GetService<loginForm>();
                     this.Hide();
                     if (lForm != null)
@@ -159,6 +172,7 @@ namespace iBanking
                     else
                     {
                         _logger.LogWarning("Login form could not be created.");
+                        MessageBox.Show("Login form could not be created.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

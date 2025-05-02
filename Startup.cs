@@ -1,9 +1,9 @@
 ﻿using Google.Cloud.Firestore;
-using iBanking.Data;
 using iBanking.Form;
 using iBanking.Interfaces.Repo;
 using iBanking.Interfaces.Ser;
 using iBanking.Repository;
+using iBanking.Repository.Cuong;
 using iBanking.Service;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -20,25 +20,16 @@ namespace iBanking
         //public static IServiceProvider? serviceProvider { get; private set; }
         public static void ConfigureServices(IServiceCollection services)
         {
+            var configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .Build();
             //Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", @"ibanking-8080-firebase-adminsdk.json");
-
-            //var projectId = "ibanking-8080";
-            //var db = FirestoreDb.Create(projectId);
-            //services.AddSingleton(db);
-
-            services.AddDbContext<iBankContext>(options =>
-            options.UseSqlServer("Data Source=(localdb)\\localThienPhu;Initial Catalog=iBanking;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False"));
-
-            services.AddScoped(typeof(IRepoCus), typeof(RepoCustom));
-            services.AddScoped(typeof(IRepoBAcc), typeof(RepoBAcc));
-            services.AddScoped(typeof(IRepoBCard), typeof(RepoBCard));
-            services.AddScoped(typeof(IRepoLoans), typeof(RepoLoans));
-            services.AddScoped(typeof(IRepoTransHistory), typeof(RepoTransHistory));
-            services.AddScoped(typeof(IRepoUserAuth), typeof(RepoUserAuth));
-
-            services.AddScoped(typeof(ISerCustomer), typeof(SerCustomer));
-            services.AddScoped(typeof(ISerUserAuth), typeof(SerUserAuth));
-            services.AddScoped(typeof(ISerBAcc), typeof(SerBAcc));
+            var connectionString = configuration.GetConnectionString("MyDB");
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                throw new ArgumentNullException("Connection string is null or empty");
+            }
 
             // Dùng khi dùng trực tiếp DBcontext
             services.AddTransient<mainForm>();
@@ -46,21 +37,17 @@ namespace iBanking
             services.AddTransient<SignUp>();
             services.AddTransient<ForgotPass>();
             services.AddTransient<OtpUControl>();
+            services.AddTransient<Home>();
             // Dùng khi dùng dbcontext gián tiếp
-            //services.AddSingleton<Form1>();
+            services.AddScoped<IRepoUser>(provider =>
+            {
+                return new RepoUser(provider.GetRequiredService<ILogger<RepoUser>>(), connectionString);
+            });
+            services.AddScoped<ISerUser, SerUser>();
 
-            //return services.BuildServiceProvider();
 
-            //string jsonString = File.ReadAllText("config.json");
-            //var appConfig = JsonConvert.DeserializeObject<AppConfig>(jsonString);
-            //if (appConfig?.FirebaseConfig == null)
-            //{
-            //    throw new InvalidOperationException("Không thể đọc cấu hình Firebase từ config.json.");
-            //}
-            //services.AddSingleton(appConfig.FirebaseConfig);
-            //services.AddScoped<IAuthService, FirebaseAuthSer>();
+            //services.AddScoped<IRepoUser, UserService>();
 
-            //serviceProvider = services.BuildServiceProvider();
             services.AddLogging(builder =>
             {
                 builder.AddDebug();

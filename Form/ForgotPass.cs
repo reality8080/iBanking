@@ -17,20 +17,19 @@ namespace iBanking.Form
     public partial class ForgotPass : System.Windows.Forms.Form
     {
         private readonly IServiceProvider _serviceProvider;
-        private readonly ISerUserAuth _serUserAuth;
         //private readonly OtpUControl _otpUControl;
-        //private readonly IRepoUserAuth _repoUserAuth;
+        private readonly ISerUser _serUser;
 
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, IntPtr wParam, IntPtr lParam);
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
         //, IRepoUserAuth repoUserAuth
-        public ForgotPass(IServiceProvider _serviceProvider, ISerUserAuth _serUserAuth)
+        public ForgotPass(IServiceProvider _serviceProvider, ISerUser _serUser)
         {
             InitializeComponent();
             this._serviceProvider = _serviceProvider ?? throw new ArgumentNullException(nameof(_serviceProvider));
-            this._serUserAuth = _serUserAuth ?? throw new ArgumentNullException(nameof(_serUserAuth));
+            this._serUser = _serUser ?? throw new ArgumentNullException(nameof(_serUser));
             //this._repoUserAuth = repoUserAuth ?? throw new ArgumentNullException(nameof(repoUserAuth));
             otpPanel.Visible = false;
             //this._otpUControl = _otpUControl ?? throw new ArgumentNullException(nameof(_otpUControl));
@@ -70,10 +69,10 @@ namespace iBanking.Form
         {
             try
             {
-                var Check = await _serUserAuth.CheckEmailAndUserName(userNamegTBox.Text, gmailGTxb.Text);
+                var Check = await _serUser.CheckEmailAndUserName(userNamegTBox.Text, gmailGTxb.Text);
                 if (Check!=null)
                 {
-                    var otpCode = _serUserAuth.randomNumBAcc();
+                    var otpCode = _serUser.randomNumBAcc();
 
                     //_otpUControl = _serviceProvider.GetRequiredService<OtpUControl>();
                     var otpControl=new OtpUControl(_serviceProvider, Check, otpCode);

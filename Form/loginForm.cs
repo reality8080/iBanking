@@ -1,6 +1,8 @@
 ﻿using iBanking.Form;
 using iBanking.Interfaces.Ser;
-using iBanking.Service;
+
+//using iBanking.Interfaces.Ser;
+//using iBanking.Service;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
@@ -26,13 +28,13 @@ namespace iBanking
         public static extern bool ReleaseCapture();
 
         private readonly IServiceProvider _serviceProvider;
-        private readonly ISerUserAuth _auth;
+        private readonly ISerUser _serUser;
         private readonly ILogger<loginForm> _logger;
-        public loginForm(IServiceProvider _serviceProvider, ISerUserAuth auth, ILogger<loginForm> _logger)
+        public loginForm(IServiceProvider _serviceProvider, ISerUser _serUser, ILogger<loginForm> _logger)
         {
             InitializeComponent();
             this._serviceProvider = _serviceProvider ?? throw new ArgumentNullException(nameof(_serviceProvider));
-            _auth = auth ?? throw new ArgumentNullException(nameof(auth));
+            this._serUser = _serUser ?? throw new ArgumentNullException(nameof(_serUser));
             this._logger = _logger ?? throw new ArgumentNullException(nameof(_logger));
         }
 
@@ -48,16 +50,20 @@ namespace iBanking
                 if (string.IsNullOrEmpty(userNamegTBox.Text) || string.IsNullOrEmpty(passGTxb.Text))
                 {
                     _logger.LogWarning("Khong duoc de trong tai khoan hoac mat khau");
+                    MessageBox.Show("Khong duoc de trong tai khoan hoac mat khau");
                     return;
                 }
-                bool check = await _auth.CheckPass(userNamegTBox.Text, passGTxb.Text);
+                bool check = await _serUser.CheckPass(userNamegTBox.Text, passGTxb.Text);
                 if (!check)
                 {
-                    _logger.LogWarning("Khong dang nhap duoc");
+                    _logger.LogWarning("Dang nhap that bai");
+                    MessageBox.Show("Dang nhap that bai");
+
                     return;
                 }
 
                 _logger.LogInformation("Dang nhap thanh cong");
+
                 var form1 = _serviceProvider.GetService<mainForm>();
 
                 if (form1 != null)
@@ -67,7 +73,9 @@ namespace iBanking
                 }
                 else
                 {
-                    _logger.LogWarning("Form 1 co loi");
+                    _logger.LogWarning("Dang nhap that bai, loi tuyen tai");
+                    MessageBox.Show("Dang nhap that bai, loi truyen tai");
+
                 }
             }
             catch (Exception ex)
@@ -113,6 +121,7 @@ namespace iBanking
             else
             {
                 _logger.LogWarning("Form quen mat khau khong ton tai");
+                MessageBox.Show("Form quen mat khau khong ton tai");
             }
         }
 
@@ -128,6 +137,27 @@ namespace iBanking
             else
             {
                 _logger.LogWarning("Form dang ky khong ton tai");
+                MessageBox.Show("Form dang ky khong ton tai");
+            }
+        }
+
+        private void passGTxb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //if(e.KeyChar == (char)Keys.Enter)
+            //{
+            //    loginGBtn_Click(sender, e);
+            //}
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !(e.KeyChar == '_'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void userNamegTBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !(e.KeyChar == '_'))
+            {
+                e.Handled = true;
             }
         }
     }

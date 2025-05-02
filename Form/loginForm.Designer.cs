@@ -138,6 +138,7 @@
             passGTxb.Size = new Size(350, 38);
             passGTxb.TabIndex = 19;
             passGTxb.UseSystemPasswordChar = true;
+            passGTxb.KeyPress += passGTxb_KeyPress;
             // 
             // noAccountLLB
             // 
@@ -194,11 +195,12 @@
             userNamegTBox.Margin = new Padding(4, 5, 4, 5);
             userNamegTBox.Name = "userNamegTBox";
             userNamegTBox.PlaceholderForeColor = Color.Silver;
-            userNamegTBox.PlaceholderText = "Enter your Email";
+            userNamegTBox.PlaceholderText = "Enter UserName";
             userNamegTBox.SelectedText = "";
             userNamegTBox.ShadowDecoration.CustomizableEdges = customizableEdges8;
             userNamegTBox.Size = new Size(350, 38);
             userNamegTBox.TabIndex = 13;
+            userNamegTBox.KeyPress += userNamegTBox_KeyPress;
             // 
             // pwdHGLB
             // 

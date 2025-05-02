@@ -13,12 +13,12 @@ namespace iBanking.Form
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        private readonly ISerUserAuth _serUserAuth;
+        private readonly ISerUser _serUser;
         private readonly ILogger<SignUp> _logger;
-        public SignUp(ISerUserAuth _serUserAuth, ILogger<SignUp> _logger)
+        public SignUp(ISerUser _serUser, ILogger<SignUp> _logger)
         {
             InitializeComponent();
-            this._serUserAuth = _serUserAuth ?? throw new ArgumentNullException(nameof(_serUserAuth));
+            this._serUser = _serUser ?? throw new ArgumentNullException(nameof(_serUser));
             this._logger = _logger ?? throw new ArgumentNullException(nameof(_logger));
         }
 
@@ -26,7 +26,7 @@ namespace iBanking.Form
         {
             try
             {
-                bool create = await _serUserAuth.addUaBaCr(userNamegTBox.Text, emailGTBox.Text, pwsGTxb.Text, "Khach Hang");
+                bool create = await _serUser.createUser(userNamegTBox.Text, pwsGTxb.Text, emailGTBox.Text);
                 if (!create)
                 {
                     MessageBox.Show("Khong the tao tai khoan");
