@@ -1,5 +1,6 @@
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using iBanking.UserView;
 
 namespace iBanking
 {
@@ -13,17 +14,22 @@ namespace iBanking
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-
             ApplicationConfiguration.Initialize();
+            Application.SetCompatibleTextRenderingDefault(false);
 
             var builder = Host.CreateApplicationBuilder();
-            Startup.ConfigureServices(builder.Services);
+
+            // Đăng ký UserHomeForm vào DI container
+            builder.Services.AddSingleton<UserLogin>();
+
+            // Xây dựng host
             using var host = builder.Build();
-            using (var F1 = host.Services.GetRequiredService<Form1>()){
-                Application.Run(F1);
-            };
+
+            // Lấy instance của UserHomeForm từ DI container
+            var f1 = host.Services.GetRequiredService<UserLogin>();
+
+            // Chạy ứng dụng với form
+            Application.Run(f1);
         }
     }
 }
