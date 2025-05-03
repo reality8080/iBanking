@@ -130,11 +130,12 @@
             gmailGTxb.Location = new Point(66, 315);
             gmailGTxb.Margin = new Padding(4, 5, 4, 5);
             gmailGTxb.Name = "gmailGTxb";
-            gmailGTxb.PlaceholderText = "";
+            gmailGTxb.PlaceholderText = "Enter example@gmail.com";
             gmailGTxb.SelectedText = "";
             gmailGTxb.ShadowDecoration.CustomizableEdges = customizableEdges4;
             gmailGTxb.Size = new Size(361, 38);
             gmailGTxb.TabIndex = 23;
+            gmailGTxb.KeyPress += gmailGTxb_KeyPress;
             // 
             // gmailGLabel
             // 
@@ -175,11 +176,12 @@
             userNamegTBox.Location = new Point(66, 228);
             userNamegTBox.Margin = new Padding(4, 5, 4, 5);
             userNamegTBox.Name = "userNamegTBox";
-            userNamegTBox.PlaceholderText = "";
+            userNamegTBox.PlaceholderText = "Enter Your UserName";
             userNamegTBox.SelectedText = "";
             userNamegTBox.ShadowDecoration.CustomizableEdges = customizableEdges8;
             userNamegTBox.Size = new Size(361, 38);
             userNamegTBox.TabIndex = 18;
+            userNamegTBox.KeyPress += userNamegTBox_KeyPress;
             // 
             // userNameHGLb
             // 

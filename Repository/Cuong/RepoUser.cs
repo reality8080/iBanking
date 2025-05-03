@@ -38,13 +38,15 @@ namespace iBanking.Repository.Cuong
                     int result = command.ExecuteNonQuery();
                     if (result > 0)
                     {
-                        logger.LogInformation("User created successfully.");
+                        logger.LogInformation($"User {u.Username} created successfully.");
+                        MessageBox.Show($"User {u.Username} created successfully.");
                         return true;
 
                     }
                     else
                     {
-                        logger.LogError("Failed to create user.");
+                        logger.LogError($"Failed to create {u.Username}.");
+                        MessageBox.Show($"Failed to create {u.Username}.");
                         return false;
                     }
                 }
@@ -63,12 +65,14 @@ namespace iBanking.Repository.Cuong
                     int result = command.ExecuteNonQuery();
                     if (result > 0)
                     {
-                        logger.LogInformation("User deleted successfully.");
+                        logger.LogInformation($"User: {u.Username} deleted successfully.");
+                        MessageBox.Show($"User: {u.Username} deleted successfully.");
                         return true;
                     }
                     else
                     {
-                        logger.LogError("Failed to delete user.");
+                        logger.LogError($"Failed to delete {u.Username}.");
+                        MessageBox.Show($"Failed to delete {u.Username}.");
                         return false;
                     }
                 }
@@ -101,12 +105,14 @@ namespace iBanking.Repository.Cuong
                         }
                         if (users.Count == 0)
                         {
-                            logger.LogWarning("No users found.");
+                            logger.LogWarning("The database Empty");
+                            MessageBox.Show("The database Empty");
                             return Enumerable.Empty<User>();
                         }
                         else
                         {
                             logger.LogInformation($"{users.Count} users found.");
+                            MessageBox.Show($"{users.Count} users found.");
                             return users;
                         }
                     }
@@ -136,6 +142,8 @@ namespace iBanking.Repository.Cuong
                                 reader.GetString(4),
                                 reader.GetDateTime(5)
                             );
+                            logger.LogInformation($"User with ID {id} found.");
+                            MessageBox.Show($"User with ID {id} found.");
                             return user;
                         }
                         else
@@ -170,6 +178,8 @@ namespace iBanking.Repository.Cuong
                                 reader.GetString(4),
                                 reader.GetDateTime(5)
                             );
+                            logger.LogInformation($"User with username {username} found.");
+                            //MessageBox.Show($"User with username {username} found.");
                             return user;
                         }
                         else
@@ -198,12 +208,13 @@ namespace iBanking.Repository.Cuong
                     int result = command.ExecuteNonQuery();
                     if (result > 0)
                     {
-                        logger.LogInformation("User updated successfully.");
+                        logger.LogInformation($"User: {u.Username} updated successfully.");
+                        MessageBox.Show("User updated successfully.");
                         return true;
                     }
                     else
                     {
-                        logger.LogError("Failed to update user.");
+                        logger.LogError($"Failed to update {u.Username}.");
                         return false;
                     }
                 }

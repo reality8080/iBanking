@@ -24,6 +24,7 @@ namespace iBanking.Service
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(email))
             {
                 _logger.LogError("Username or email is null or empty");
+                MessageBox.Show("Username or email is null or empty");
                 return null;
             }
 
@@ -32,7 +33,8 @@ namespace iBanking.Service
                 var checkUser = await _repoUser.readUserByUsername(username);
                 if (checkUser == null)
                 {
-                    _logger.LogError("Username does not exist");
+                    _logger.LogError($"Username {username}, {email} does not exist");
+                    MessageBox.Show($"Username {username}, {email} does not exist");
                     return null;
                 }
                 _logger.LogInformation($"Username found - {username} - {email}");
@@ -40,7 +42,8 @@ namespace iBanking.Service
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error checking username and email");
+                _logger.LogError(ex.Message, "Error checking username and email");
+                MessageBox.Show(ex.Message);
                 return null;
             }
         }
@@ -49,7 +52,8 @@ namespace iBanking.Service
         {
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                _logger.LogError("Username or password is null or empty");
+                _logger.LogError($"Username: {username} or password: {password} is null or empty");
+                MessageBox.Show($"Username: {username} or password: {password} is null or empty");
                 return false;
             }
             try
@@ -58,19 +62,23 @@ namespace iBanking.Service
                 if (checkUser == null)
                 {
                     _logger.LogError("Username does not exist");
+                    MessageBox.Show("Username does not exist");
                     return false;
                 }
                 if (checkUser.Password != password)
                 {
                     _logger.LogError("Password is incorrect");
+                    MessageBox.Show("Password is incorrect");
                     return false;
                 }
                 _logger.LogInformation("Password is correct");
+                MessageBox.Show("Password is correct");
                 return true;
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error checking password");
+                MessageBox.Show(ex.Message);
                 return false;
             }
         }
@@ -79,7 +87,8 @@ namespace iBanking.Service
         {
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(email))
             {
-                _logger.LogError("Username, password or email is null or empty");
+                _logger.LogError($"Username: {username}, password: {password} or email: {email} is null or empty");
+                MessageBox.Show("Username, password or email is null or empty");
                 return false;
             }
 
@@ -89,21 +98,24 @@ namespace iBanking.Service
 
                 if (u == null)
                 {
-                    _logger.LogError("User is null");
+                    _logger.LogError($"Username:  {username}, password:  {password}  or email: {email} is null or empty ");
+                    MessageBox.Show("Username:  {username}, password:  {password}  or email: {email} is null or empty:");
                     return false;
                 }
                 var createed = await _repoUser.createUser(u);
                 if (createed == false)
                 {
-                     _logger.LogError("User is null");
+                     _logger.LogError("User not found");
                     return false;
                 }
-                _logger.LogInformation("User created successfully");
+                _logger.LogInformation($"User:{username} created successfully");
+                MessageBox.Show("User created successfully");
                 return true;
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error creating user");
+                MessageBox.Show(ex.Message);
                 return false;
             }
         }

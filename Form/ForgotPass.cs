@@ -1,6 +1,7 @@
 ﻿using iBanking.Interfaces.Repo;
 using iBanking.Interfaces.Ser;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,7 @@ namespace iBanking.Form
     {
         private readonly IServiceProvider _serviceProvider;
         //private readonly OtpUControl _otpUControl;
+        private readonly ILogger<ForgotPass> _logger;
         private readonly ISerUser _serUser;
 
         [DllImport("user32.dll")]
@@ -25,7 +27,7 @@ namespace iBanking.Form
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
         //, IRepoUserAuth repoUserAuth
-        public ForgotPass(IServiceProvider _serviceProvider, ISerUser _serUser)
+        public ForgotPass(IServiceProvider _serviceProvider, ISerUser _serUser,ILogger<ForgotPass> logger)
         {
             InitializeComponent();
             this._serviceProvider = _serviceProvider ?? throw new ArgumentNullException(nameof(_serviceProvider));
@@ -33,15 +35,18 @@ namespace iBanking.Form
             //this._repoUserAuth = repoUserAuth ?? throw new ArgumentNullException(nameof(repoUserAuth));
             otpPanel.Visible = false;
             //this._otpUControl = _otpUControl ?? throw new ArgumentNullException(nameof(_otpUControl));
+            this._logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
         private void exitGIBtn_Click(object sender, EventArgs e)
         {
+            this._logger.LogInformation("Exit application");
             Application.Exit();
         }
 
         private void exitGBtn_Click(object sender, EventArgs e)
         {
+            this._logger.LogInformation("Exit application");
             this.Close();
         }
 
@@ -70,12 +75,12 @@ namespace iBanking.Form
             try
             {
                 var Check = await _serUser.CheckEmailAndUserName(userNamegTBox.Text, gmailGTxb.Text);
-                if (Check!=null)
+                if (Check != null)
                 {
                     var otpCode = _serUser.randomNumBAcc();
 
                     //_otpUControl = _serviceProvider.GetRequiredService<OtpUControl>();
-                    var otpControl=new OtpUControl(_serviceProvider, Check, otpCode);
+                    var otpControl = new OtpUControl(_serviceProvider, Check, otpCode);
                     addUserControl(otpControl);
                     //MessageBox.Show($"OTP code: {otpCode}");
 
@@ -83,11 +88,29 @@ namespace iBanking.Form
                 else
                 {
                     MessageBox.Show("Invalid username or email");
+                    _logger.LogWarning("Invalid username or email");
                 }
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message, "Error taking OTP code");
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void userNamegTBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !(e.KeyChar == '_'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void gmailGTxb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !(e.KeyChar == '@') && !(e.KeyChar == '.'))
+            {
+                e.Handled = true;
             }
         }
     }

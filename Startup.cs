@@ -1,15 +1,14 @@
-﻿using Google.Cloud.Firestore;
-using iBanking.Form;
+﻿using iBanking.Form;
 using iBanking.Interfaces.Repo;
 using iBanking.Interfaces.Ser;
 using iBanking.Repository;
 using iBanking.Repository.Cuong;
 using iBanking.Service;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
+using Serilog;
+using Serilog.Formatting.Json;
 using System.Text.Json;
 
 
@@ -26,10 +25,38 @@ namespace iBanking
                 .Build();
             //Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", @"ibanking-8080-firebase-adminsdk.json");
             var connectionString = configuration.GetConnectionString("MyDB");
+
+
             if (string.IsNullOrEmpty(connectionString))
             {
                 throw new ArgumentNullException("Connection string is null or empty");
             }
+
+            //Log.Logger = new LoggerConfiguration()
+            //    .MinimumLevel.Information()
+            //    .WriteTo.File(
+            //        new JsonFormatter(),
+            //        "logs\\app.json",
+            //        rollingInterval: RollingInterval.Day,
+            //        shared: true,
+            //        flushToDiskInterval: TimeSpan.FromSeconds(1),
+            //        fileSizeLimitBytes: 10000000
+            //    )
+            //    .CreateLogger();
+
+            Log.Logger = new LoggerConfiguration()
+            .MinimumLevel.Information()
+            .WriteTo.File(
+                "logs\\app.txt",
+                rollingInterval: RollingInterval.Day,
+                shared: true,
+                flushToDiskInterval: TimeSpan.FromSeconds(1),
+                fileSizeLimitBytes: 10000000,
+                outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level}] ({SourceContext}) {Message}{NewLine}{Exception}"
+            )
+            .CreateLogger();
+
+
 
             // Dùng khi dùng trực tiếp DBcontext
             services.AddTransient<mainForm>();
@@ -48,10 +75,13 @@ namespace iBanking
 
             //services.AddScoped<IRepoUser, UserService>();
 
+
+
             services.AddLogging(builder =>
             {
                 builder.AddDebug();
                 builder.AddConsole();
+                builder.AddSerilog();
             });
             //services.AddScoped<IFire>
         }
