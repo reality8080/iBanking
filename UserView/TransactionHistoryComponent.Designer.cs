@@ -1,13 +1,13 @@
 ﻿namespace iBanking.UserView
 {
-    partial class DepositHistory
+    partial class TransactionHistoryComponent
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,41 +20,40 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            pnlDeposit = new FlowLayoutPanel();
+            pnlTransaction = new FlowLayoutPanel();
             SuspendLayout();
             // 
-            // pnlDeposit
+            // pnlTransaction
             // 
-            pnlDeposit.AutoScroll = true;
-            pnlDeposit.Dock = DockStyle.Fill;
-            pnlDeposit.Location = new Point(0, 0);
-            pnlDeposit.Name = "pnlDeposit";
-            pnlDeposit.Size = new Size(800, 450);
-            pnlDeposit.TabIndex = 0;
-            pnlDeposit.Paint += pnlDeposit_Paint;
+            pnlTransaction.AutoScroll = true;
+            pnlTransaction.BackColor = Color.FromArgb(240, 240, 240);
+            pnlTransaction.Dock = DockStyle.Fill;
+            pnlTransaction.Location = new Point(0, 0);
+            pnlTransaction.Name = "pnlTransaction";
+            pnlTransaction.Size = new Size(993, 674);
+            pnlTransaction.TabIndex = 1;
+            pnlTransaction.Paint += pnlTransaction_Paint;
             // 
-            // DepositHistory
+            // TransactionHistoryComponent
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(pnlDeposit);
-            Name = "DepositHistory";
-            Text = "DepositHistory";
-            Load += DepositHistory_Load;
+            Controls.Add(pnlTransaction);
+            Name = "TransactionHistoryComponent";
+            Size = new Size(993, 674);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private FlowLayoutPanel pnlDeposit;
+        private FlowLayoutPanel pnlTransaction;
     }
 }
