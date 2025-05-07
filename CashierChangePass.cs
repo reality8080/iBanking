@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,10 +22,8 @@ namespace iBanking
         public CashierChangePass(int id)
         {
             InitializeComponent();
-            
-            
-            
             cashierId = id;
+            SetRoundedRegion(20);
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)
@@ -99,6 +98,27 @@ namespace iBanking
                 txtConfirmPass.Text = "";
                 txtConfirmPass.PasswordChar = '*';
             }
+        }
+        private void SetRoundedRegion(int radius)
+        {
+            Rectangle bounds = new Rectangle(0, 0, this.Width, this.Height);
+            GraphicsPath path = new GraphicsPath();
+            int d = radius * 2;
+
+            path.StartFigure();
+            path.AddArc(bounds.X, bounds.Y, d, d, 180, 90);
+            path.AddArc(bounds.Right - d, bounds.Y, d, d, 270, 90);
+            path.AddArc(bounds.Right - d, bounds.Bottom - d, d, d, 0, 90);
+            path.AddArc(bounds.X, bounds.Bottom - d, d, d, 90, 90);
+            path.CloseFigure();
+
+            this.Region = new Region(path);
+        }
+
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            SetRoundedRegion(20);
         }
     }
 }

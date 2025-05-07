@@ -57,6 +57,7 @@
             // 
             // txtName
             // 
+            txtName.BorderRadius = 10;
             txtName.CustomizableEdges = customizableEdges1;
             txtName.DefaultText = "";
             txtName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -67,17 +68,18 @@
             txtName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtName.ForeColor = Color.Black;
             txtName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtName.Location = new Point(190, 337);
+            txtName.Location = new Point(39, 227);
             txtName.Margin = new Padding(6, 8, 6, 8);
             txtName.Name = "txtName";
             txtName.PlaceholderText = "";
             txtName.SelectedText = "";
             txtName.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtName.Size = new Size(393, 59);
+            txtName.Size = new Size(359, 58);
             txtName.TabIndex = 0;
             // 
             // txtEmail
             // 
+            txtEmail.BorderRadius = 10;
             txtEmail.CustomizableEdges = customizableEdges3;
             txtEmail.DefaultText = "";
             txtEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -88,37 +90,39 @@
             txtEmail.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtEmail.ForeColor = Color.Black;
             txtEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEmail.Location = new Point(190, 516);
+            txtEmail.Location = new Point(39, 333);
             txtEmail.Margin = new Padding(6, 8, 6, 8);
             txtEmail.Name = "txtEmail";
             txtEmail.PlaceholderText = "";
             txtEmail.SelectedText = "";
             txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtEmail.Size = new Size(393, 59);
+            txtEmail.Size = new Size(359, 58);
             txtEmail.TabIndex = 1;
             // 
             // btnSave
             // 
+            btnSave.Cursor = Cursors.Hand;
             btnSave.CustomizableEdges = customizableEdges5;
             btnSave.DisabledState.BorderColor = Color.DarkGray;
             btnSave.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnSave.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSave.FillColor = Color.SeaGreen;
+            btnSave.FillColor = Color.SteelBlue;
             btnSave.Font = new Font("Segoe UI Black", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSave.ForeColor = Color.White;
             btnSave.Image = (Image)resources.GetObject("btnSave.Image");
             btnSave.ImageSize = new Size(25, 25);
-            btnSave.Location = new Point(825, 639);
+            btnSave.Location = new Point(39, 432);
             btnSave.Name = "btnSave";
             btnSave.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnSave.Size = new Size(225, 56);
+            btnSave.Size = new Size(854, 56);
             btnSave.TabIndex = 4;
             btnSave.Text = "Lưu";
             btnSave.Click += btnSave_Click;
             // 
             // txtID
             // 
+            txtID.BorderRadius = 10;
             txtID.CustomizableEdges = customizableEdges7;
             txtID.DefaultText = "";
             txtID.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -129,18 +133,19 @@
             txtID.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtID.ForeColor = Color.Black;
             txtID.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtID.Location = new Point(190, 189);
+            txtID.Location = new Point(39, 112);
             txtID.Margin = new Padding(5, 6, 5, 6);
             txtID.Name = "txtID";
             txtID.PlaceholderText = "";
             txtID.ReadOnly = true;
             txtID.SelectedText = "";
             txtID.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            txtID.Size = new Size(393, 59);
+            txtID.Size = new Size(359, 58);
             txtID.TabIndex = 5;
             // 
             // txtSalary
             // 
+            txtSalary.BorderRadius = 10;
             txtSalary.CustomizableEdges = customizableEdges9;
             txtSalary.DefaultText = "";
             txtSalary.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -151,18 +156,19 @@
             txtSalary.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtSalary.ForeColor = Color.Black;
             txtSalary.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSalary.Location = new Point(825, 337);
+            txtSalary.Location = new Point(461, 227);
             txtSalary.Margin = new Padding(6, 8, 6, 8);
             txtSalary.Name = "txtSalary";
             txtSalary.PlaceholderText = "";
             txtSalary.ReadOnly = true;
             txtSalary.SelectedText = "";
             txtSalary.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            txtSalary.Size = new Size(393, 59);
+            txtSalary.Size = new Size(359, 58);
             txtSalary.TabIndex = 6;
             // 
             // txtStartAt
             // 
+            txtStartAt.BorderRadius = 10;
             txtStartAt.CustomizableEdges = customizableEdges11;
             txtStartAt.DefaultText = "";
             txtStartAt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -173,21 +179,22 @@
             txtStartAt.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtStartAt.ForeColor = Color.Black;
             txtStartAt.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtStartAt.Location = new Point(825, 189);
+            txtStartAt.Location = new Point(461, 112);
             txtStartAt.Margin = new Padding(6, 8, 6, 8);
             txtStartAt.Name = "txtStartAt";
             txtStartAt.PlaceholderText = "";
             txtStartAt.ReadOnly = true;
             txtStartAt.SelectedText = "";
             txtStartAt.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            txtStartAt.Size = new Size(393, 59);
+            txtStartAt.Size = new Size(359, 58);
             txtStartAt.TabIndex = 7;
             // 
             // guna2HtmlLabel1
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.Location = new Point(190, 149);
+            guna2HtmlLabel1.ForeColor = Color.FromArgb(28, 85, 208);
+            guna2HtmlLabel1.Location = new Point(39, 74);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(119, 27);
             guna2HtmlLabel1.TabIndex = 8;
@@ -197,7 +204,8 @@
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel2.Location = new Point(190, 289);
+            guna2HtmlLabel2.ForeColor = Color.FromArgb(28, 85, 208);
+            guna2HtmlLabel2.Location = new Point(39, 191);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(105, 25);
             guna2HtmlLabel2.TabIndex = 9;
@@ -207,7 +215,8 @@
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel3.Location = new Point(190, 468);
+            guna2HtmlLabel3.ForeColor = Color.FromArgb(28, 85, 208);
+            guna2HtmlLabel3.Location = new Point(39, 297);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(72, 25);
             guna2HtmlLabel3.TabIndex = 10;
@@ -217,7 +226,8 @@
             // 
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel4.Location = new Point(825, 151);
+            guna2HtmlLabel4.ForeColor = Color.FromArgb(28, 85, 208);
+            guna2HtmlLabel4.Location = new Point(461, 74);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             guna2HtmlLabel4.Size = new Size(112, 25);
             guna2HtmlLabel4.TabIndex = 11;
@@ -227,7 +237,8 @@
             // 
             guna2HtmlLabel5.BackColor = Color.Transparent;
             guna2HtmlLabel5.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel5.Location = new Point(825, 292);
+            guna2HtmlLabel5.ForeColor = Color.FromArgb(28, 85, 208);
+            guna2HtmlLabel5.Location = new Point(461, 182);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             guna2HtmlLabel5.Size = new Size(55, 25);
             guna2HtmlLabel5.TabIndex = 12;
@@ -237,7 +248,8 @@
             // 
             guna2HtmlLabel6.BackColor = Color.Transparent;
             guna2HtmlLabel6.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel6.Location = new Point(575, 46);
+            guna2HtmlLabel6.ForeColor = Color.FromArgb(28, 85, 208);
+            guna2HtmlLabel6.Location = new Point(39, 12);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             guna2HtmlLabel6.Size = new Size(350, 43);
             guna2HtmlLabel6.TabIndex = 13;
@@ -248,7 +260,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
-            ClientSize = new Size(1507, 906);
+            ClientSize = new Size(943, 581);
             Controls.Add(guna2HtmlLabel6);
             Controls.Add(guna2HtmlLabel5);
             Controls.Add(guna2HtmlLabel4);

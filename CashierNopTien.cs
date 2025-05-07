@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,7 @@ namespace iBanking
             cashierId = id;
             txtSoTien.ForeColor = Color.Gray;
             txtUserId.ForeColor = Color.Gray;
+            SetRoundedRegion(20);
         }
 
         private void btnXacThuc_Click(object sender, EventArgs e)
@@ -128,6 +130,39 @@ namespace iBanking
             {
                 txtUserId.Text = "";
                 txtUserId.ForeColor = Color.Black;
+            }
+        }
+        private void SetRoundedRegion(int radius)
+        {
+            Rectangle bounds = new Rectangle(0, 0, this.Width, this.Height);
+            GraphicsPath path = new GraphicsPath();
+            int d = radius * 2;
+
+            path.StartFigure();
+            path.AddArc(bounds.X, bounds.Y, d, d, 180, 90);
+            path.AddArc(bounds.Right - d, bounds.Y, d, d, 270, 90);
+            path.AddArc(bounds.Right - d, bounds.Bottom - d, d, d, 0, 90);
+            path.AddArc(bounds.X, bounds.Bottom - d, d, d, 90, 90);
+            path.CloseFigure();
+
+            this.Region = new Region(path);
+        }
+
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            SetRoundedRegion(20);
+        }
+
+        private void txtSoTien_TextChanged(object sender, EventArgs e)
+        {
+            if (long.TryParse(txtSoTien.Text.Replace(".", "").Replace(",", ""), out long soTien))
+            {
+                lblSoTien.Text = string.Format("{0:N0} VNĐ", soTien);
+            }
+            else
+            {
+                lblSoTien.Text = "Lỗi"; 
             }
         }
     }

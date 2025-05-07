@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 
 namespace iBanking
 {
@@ -22,6 +23,7 @@ namespace iBanking
             InitializeComponent();
             cashierId = id;
             LoadCashierInfo();
+            SetRoundedRegion(20);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -61,5 +63,27 @@ namespace iBanking
                 }
             }
         }
+        private void SetRoundedRegion(int radius)
+        {
+            Rectangle bounds = new Rectangle(0, 0, this.Width, this.Height);
+            GraphicsPath path = new GraphicsPath();
+            int d = radius * 2;
+
+            path.StartFigure();
+            path.AddArc(bounds.X, bounds.Y, d, d, 180, 90);
+            path.AddArc(bounds.Right - d, bounds.Y, d, d, 270, 90);
+            path.AddArc(bounds.Right - d, bounds.Bottom - d, d, d, 0, 90);
+            path.AddArc(bounds.X, bounds.Bottom - d, d, d, 90, 90);
+            path.CloseFigure();
+
+            this.Region = new Region(path);
+        }
+
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            SetRoundedRegion(20); 
+        }
+
     }
 }

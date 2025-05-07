@@ -43,20 +43,21 @@
             // 
             // btnXacNhan
             // 
+            btnXacNhan.Cursor = Cursors.Hand;
             btnXacNhan.CustomizableEdges = customizableEdges1;
             btnXacNhan.DisabledState.BorderColor = Color.DarkGray;
             btnXacNhan.DisabledState.CustomBorderColor = Color.DarkGray;
             btnXacNhan.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnXacNhan.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnXacNhan.FillColor = Color.SeaGreen;
+            btnXacNhan.FillColor = Color.SteelBlue;
             btnXacNhan.Font = new Font("Segoe UI Black", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnXacNhan.ForeColor = Color.White;
             btnXacNhan.Image = (Image)resources.GetObject("btnXacNhan.Image");
             btnXacNhan.ImageSize = new Size(30, 30);
-            btnXacNhan.Location = new Point(868, 440);
+            btnXacNhan.Location = new Point(107, 384);
             btnXacNhan.Name = "btnXacNhan";
             btnXacNhan.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnXacNhan.Size = new Size(225, 56);
+            btnXacNhan.Size = new Size(735, 56);
             btnXacNhan.TabIndex = 0;
             btnXacNhan.Text = "Xác nhận";
             btnXacNhan.Click += btnXacNhan_Click;
@@ -84,11 +85,11 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvTransactions.DefaultCellStyle = dataGridViewCellStyle3;
             dgvTransactions.GridColor = Color.FromArgb(231, 229, 255);
-            dgvTransactions.Location = new Point(225, 183);
+            dgvTransactions.Location = new Point(107, 146);
             dgvTransactions.Name = "dgvTransactions";
             dgvTransactions.RowHeadersVisible = false;
             dgvTransactions.RowHeadersWidth = 51;
-            dgvTransactions.Size = new Size(868, 206);
+            dgvTransactions.Size = new Size(735, 206);
             dgvTransactions.TabIndex = 1;
             dgvTransactions.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvTransactions.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -116,7 +117,8 @@
             // 
             lblCashier.BackColor = Color.Transparent;
             lblCashier.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCashier.Location = new Point(105, 43);
+            lblCashier.ForeColor = Color.FromArgb(28, 85, 208);
+            lblCashier.Location = new Point(50, 25);
             lblCashier.Name = "lblCashier";
             lblCashier.Size = new Size(93, 32);
             lblCashier.TabIndex = 2;
@@ -126,18 +128,19 @@
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel2.Location = new Point(225, 131);
+            guna2HtmlLabel2.ForeColor = Color.FromArgb(28, 85, 208);
+            guna2HtmlLabel2.Location = new Point(107, 108);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(358, 32);
+            guna2HtmlLabel2.Size = new Size(457, 32);
             guna2HtmlLabel2.TabIndex = 3;
-            guna2HtmlLabel2.Text = "Các giao dịch đã thực hiện hôm nay";
+            guna2HtmlLabel2.Text = "Thông tin các giao dịch đã thực hiện hôm nay";
             // 
             // CashierOpenShift
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
-            ClientSize = new Size(1507, 906);
+            ClientSize = new Size(916, 527);
             Controls.Add(guna2HtmlLabel2);
             Controls.Add(lblCashier);
             Controls.Add(dgvTransactions);

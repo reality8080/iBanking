@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,7 @@ namespace iBanking
             InitializeComponent();
             cashierId = id;
             dgvTransactions.AutoGenerateColumns = true;
+            SetRoundedRegion(20);
         }
         private string connectionString = "Data Source=USER\\SQLEXPRESS; Database=BANKING_APP; " +
                                   "User ID=sa; Password=123; MultipleActiveResultSets=True; " +
@@ -76,6 +78,27 @@ namespace iBanking
                 dgvTransactions.Columns["total"].HeaderText = "Số tiền nạp";
                 dgvTransactions.Columns["created_at"].HeaderText = "Thời gian nạp";
             }
+        }
+        private void SetRoundedRegion(int radius)
+        {
+            Rectangle bounds = new Rectangle(0, 0, this.Width, this.Height);
+            GraphicsPath path = new GraphicsPath();
+            int d = radius * 2;
+
+            path.StartFigure();
+            path.AddArc(bounds.X, bounds.Y, d, d, 180, 90);
+            path.AddArc(bounds.Right - d, bounds.Y, d, d, 270, 90);
+            path.AddArc(bounds.Right - d, bounds.Bottom - d, d, d, 0, 90);
+            path.AddArc(bounds.X, bounds.Bottom - d, d, d, 90, 90);
+            path.CloseFigure();
+
+            this.Region = new Region(path);
+        }
+
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            SetRoundedRegion(20);
         }
     }
 }

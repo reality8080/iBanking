@@ -48,6 +48,7 @@
             // 
             // txtOldPass
             // 
+            txtOldPass.BorderRadius = 10;
             txtOldPass.CustomizableEdges = customizableEdges1;
             txtOldPass.DefaultText = "Nhập mật khẩu cũ";
             txtOldPass.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -57,7 +58,7 @@
             txtOldPass.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtOldPass.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtOldPass.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtOldPass.Location = new Point(280, 156);
+            txtOldPass.Location = new Point(215, 79);
             txtOldPass.Margin = new Padding(4, 5, 4, 5);
             txtOldPass.Name = "txtOldPass";
             txtOldPass.PlaceholderText = "";
@@ -69,6 +70,7 @@
             // 
             // txtNewPass
             // 
+            txtNewPass.BorderRadius = 10;
             txtNewPass.CustomizableEdges = customizableEdges3;
             txtNewPass.DefaultText = "Nhập mật khẩu mới";
             txtNewPass.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -78,7 +80,7 @@
             txtNewPass.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtNewPass.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtNewPass.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtNewPass.Location = new Point(280, 281);
+            txtNewPass.Location = new Point(215, 204);
             txtNewPass.Margin = new Padding(4, 5, 4, 5);
             txtNewPass.Name = "txtNewPass";
             txtNewPass.PlaceholderText = "";
@@ -90,6 +92,7 @@
             // 
             // txtConfirmPass
             // 
+            txtConfirmPass.BorderRadius = 10;
             txtConfirmPass.CustomizableEdges = customizableEdges5;
             txtConfirmPass.DefaultText = "Nhập lại mật khẩu mới";
             txtConfirmPass.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -99,7 +102,7 @@
             txtConfirmPass.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtConfirmPass.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtConfirmPass.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtConfirmPass.Location = new Point(280, 399);
+            txtConfirmPass.Location = new Point(215, 322);
             txtConfirmPass.Margin = new Padding(4, 5, 4, 5);
             txtConfirmPass.Name = "txtConfirmPass";
             txtConfirmPass.PlaceholderText = "";
@@ -111,20 +114,21 @@
             // 
             // btnXacNhan
             // 
+            btnXacNhan.Cursor = Cursors.Hand;
             btnXacNhan.CustomizableEdges = customizableEdges7;
             btnXacNhan.DisabledState.BorderColor = Color.DarkGray;
             btnXacNhan.DisabledState.CustomBorderColor = Color.DarkGray;
             btnXacNhan.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnXacNhan.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnXacNhan.FillColor = Color.SeaGreen;
+            btnXacNhan.FillColor = Color.SteelBlue;
             btnXacNhan.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnXacNhan.ForeColor = Color.White;
             btnXacNhan.Image = (Image)resources.GetObject("btnXacNhan.Image");
             btnXacNhan.ImageSize = new Size(30, 30);
-            btnXacNhan.Location = new Point(561, 518);
+            btnXacNhan.Location = new Point(215, 445);
             btnXacNhan.Name = "btnXacNhan";
             btnXacNhan.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnXacNhan.Size = new Size(212, 56);
+            btnXacNhan.Size = new Size(509, 56);
             btnXacNhan.TabIndex = 3;
             btnXacNhan.Text = "Xác nhận";
             btnXacNhan.Click += btnXacNhan_Click;
@@ -133,7 +137,8 @@
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.Location = new Point(280, 115);
+            guna2HtmlLabel1.ForeColor = Color.FromArgb(28, 85, 208);
+            guna2HtmlLabel1.Location = new Point(215, 38);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(130, 33);
             guna2HtmlLabel1.TabIndex = 4;
@@ -143,7 +148,8 @@
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel2.Location = new Point(280, 234);
+            guna2HtmlLabel2.ForeColor = Color.FromArgb(28, 85, 208);
+            guna2HtmlLabel2.Location = new Point(215, 157);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(146, 33);
             guna2HtmlLabel2.TabIndex = 5;
@@ -153,7 +159,8 @@
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel3.Location = new Point(280, 358);
+            guna2HtmlLabel3.ForeColor = Color.FromArgb(28, 85, 208);
+            guna2HtmlLabel3.Location = new Point(215, 281);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(229, 33);
             guna2HtmlLabel3.TabIndex = 6;
@@ -164,7 +171,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
-            ClientSize = new Size(1507, 906);
+            ClientSize = new Size(943, 581);
             Controls.Add(guna2HtmlLabel3);
             Controls.Add(guna2HtmlLabel2);
             Controls.Add(guna2HtmlLabel1);

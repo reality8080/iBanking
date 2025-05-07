@@ -50,7 +50,8 @@
             // 
             lblCashier.BackColor = Color.Transparent;
             lblCashier.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCashier.Location = new Point(70, 39);
+            lblCashier.ForeColor = Color.FromArgb(28, 85, 208);
+            lblCashier.Location = new Point(70, 12);
             lblCashier.Name = "lblCashier";
             lblCashier.Size = new Size(92, 33);
             lblCashier.TabIndex = 0;
@@ -60,7 +61,8 @@
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel2.Location = new Point(190, 108);
+            guna2HtmlLabel2.ForeColor = Color.FromArgb(28, 85, 208);
+            guna2HtmlLabel2.Location = new Point(70, 74);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(475, 33);
             guna2HtmlLabel2.TabIndex = 1;
@@ -94,11 +96,11 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvTransactions.DefaultCellStyle = dataGridViewCellStyle3;
             dgvTransactions.GridColor = Color.FromArgb(231, 229, 255);
-            dgvTransactions.Location = new Point(190, 169);
+            dgvTransactions.Location = new Point(70, 113);
             dgvTransactions.Name = "dgvTransactions";
             dgvTransactions.RowHeadersVisible = false;
             dgvTransactions.RowHeadersWidth = 51;
-            dgvTransactions.Size = new Size(931, 211);
+            dgvTransactions.Size = new Size(794, 211);
             dgvTransactions.TabIndex = 2;
             dgvTransactions.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvTransactions.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -126,7 +128,8 @@
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel3.Location = new Point(190, 420);
+            guna2HtmlLabel3.ForeColor = Color.FromArgb(28, 85, 208);
+            guna2HtmlLabel3.Location = new Point(70, 343);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(169, 33);
             guna2HtmlLabel3.TabIndex = 3;
@@ -134,6 +137,7 @@
             // 
             // txtDoanhThu
             // 
+            txtDoanhThu.BorderRadius = 10;
             txtDoanhThu.CustomizableEdges = customizableEdges1;
             txtDoanhThu.DefaultText = "";
             txtDoanhThu.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -143,7 +147,7 @@
             txtDoanhThu.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtDoanhThu.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtDoanhThu.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtDoanhThu.Location = new Point(190, 462);
+            txtDoanhThu.Location = new Point(70, 385);
             txtDoanhThu.Margin = new Padding(4, 6, 4, 6);
             txtDoanhThu.Name = "txtDoanhThu";
             txtDoanhThu.PlaceholderText = "";
@@ -154,20 +158,21 @@
             // 
             // btnXacNhan
             // 
+            btnXacNhan.Cursor = Cursors.Hand;
             btnXacNhan.CustomizableEdges = customizableEdges3;
             btnXacNhan.DisabledState.BorderColor = Color.DarkGray;
             btnXacNhan.DisabledState.CustomBorderColor = Color.DarkGray;
             btnXacNhan.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnXacNhan.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnXacNhan.FillColor = Color.SeaGreen;
+            btnXacNhan.FillColor = Color.SteelBlue;
             btnXacNhan.Font = new Font("Segoe UI Black", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnXacNhan.ForeColor = Color.White;
             btnXacNhan.Image = (Image)resources.GetObject("btnXacNhan.Image");
             btnXacNhan.ImageSize = new Size(25, 25);
-            btnXacNhan.Location = new Point(896, 557);
+            btnXacNhan.Location = new Point(70, 466);
             btnXacNhan.Name = "btnXacNhan";
             btnXacNhan.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnXacNhan.Size = new Size(225, 56);
+            btnXacNhan.Size = new Size(794, 56);
             btnXacNhan.TabIndex = 5;
             btnXacNhan.Text = "Xác nhận";
             btnXacNhan.Click += btnXacNhan_Click;
@@ -177,7 +182,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
-            ClientSize = new Size(1507, 906);
+            ClientSize = new Size(943, 581);
             Controls.Add(btnXacNhan);
             Controls.Add(txtDoanhThu);
             Controls.Add(guna2HtmlLabel3);
