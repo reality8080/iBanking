@@ -19,7 +19,8 @@ namespace iBanking.Form
         private readonly IServiceProvider _serviceProvider;
         //private readonly IRepoUserAuth _repoUserAuth;
         private readonly string _otpCode;
-        private readonly User _user;
+        private readonly User? _user;
+        private readonly Employee? _employee;
         //private Guid _idAU;
         //public OtpUControl()
         //{
@@ -31,8 +32,15 @@ namespace iBanking.Form
             InitializeComponent();
             this._serviceProvider = _serviceProvider ?? throw new ArgumentNullException(nameof(_serviceProvider));
             this._user = u ?? throw new ArgumentNullException(nameof(u));
-            //this._repoUserAuth = _repoUserAuth ?? throw new ArgumentNullException(nameof(_repoUserAuth));
-            //this._idAU = _idAU == Guid.Empty ? throw new ArgumentNullException(nameof(_idAU)) : _idAU;
+            this._otpCode = _otpCode ?? throw new ArgumentNullException(nameof(_otpCode));
+            otpCodeTxt.Text = _otpCode;
+        }
+
+        public OtpUControl(IServiceProvider _serviceProvider, Employee e, string _otpCode)
+        {
+            InitializeComponent();
+            this._serviceProvider = _serviceProvider ?? throw new ArgumentNullException(nameof(_serviceProvider));
+            this._employee = e ?? throw new ArgumentNullException(nameof(e));
             this._otpCode = _otpCode ?? throw new ArgumentNullException(nameof(_otpCode));
             otpCodeTxt.Text = _otpCode;
         }
@@ -43,6 +51,17 @@ namespace iBanking.Form
         }
 
         private void loginGBtn_Click(object sender, EventArgs e)
+        {
+            if (_user != null)
+            {
+                 CheckUser();
+            }
+            if (_employee != null)
+            {
+                 CheckAdmin();
+            }
+        }
+        private void CheckUser()
         {
             try
             {
@@ -57,7 +76,30 @@ namespace iBanking.Form
                     return;
                 }
                 //var ua=_repoUserAuth.GetByIdUser(_idAU);
-                MessageBox.Show($"OTP code is correct, please change your password {this._user.Password}");
+                MessageBox.Show($"OTP code is correct, please change your password {this._user?.Password}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void CheckAdmin()
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(otpCodeTxt.Text))
+                {
+                    MessageBox.Show("Please enter OTP code");
+                    return;
+                }
+                if (otpCodeTxt.Text != _otpCode)
+                {
+                    MessageBox.Show("OTP code is incorrect");
+                    return;
+                }
+                //var ua=_repoUserAuth.GetByIdUser(_idAU);
+                MessageBox.Show($"OTP code is correct, please change your password {this._employee?.Password}");
             }
             catch (Exception ex)
             {

@@ -29,12 +29,14 @@ namespace iBanking
 
         private readonly IServiceProvider _serviceProvider;
         private readonly ISerUser _serUser;
+        private readonly ISerEmployee _serEmployee;
         private readonly ILogger<loginForm> _logger;
-        public loginForm(IServiceProvider _serviceProvider, ISerUser _serUser, ILogger<loginForm> _logger)
+        public loginForm(IServiceProvider _serviceProvider, ISerUser _serUser, ISerEmployee _serEmployee, ILogger<loginForm> _logger)
         {
             InitializeComponent();
             this._serviceProvider = _serviceProvider ?? throw new ArgumentNullException(nameof(_serviceProvider));
             this._serUser = _serUser ?? throw new ArgumentNullException(nameof(_serUser));
+            this._serEmployee = _serEmployee ?? throw new ArgumentNullException(nameof(_serEmployee));
             this._logger = _logger ?? throw new ArgumentNullException(nameof(_logger));
         }
 
@@ -45,44 +47,15 @@ namespace iBanking
 
         private async void loginGBtn_Click(object sender, EventArgs e)
         {
-            try
+            if (typeOfACCgCB.Text == "User")
             {
-                if (string.IsNullOrEmpty(userNamegTBox.Text) || string.IsNullOrEmpty(passGTxb.Text))
-                {
-                    _logger.LogWarning("Khong duoc de trong tai khoan hoac mat khau");
-                    MessageBox.Show("Khong duoc de trong tai khoan hoac mat khau");
-                    return;
-                }
-                bool check = await _serUser.CheckPass(userNamegTBox.Text, passGTxb.Text);
-                if (!check)
-                {
-                    _logger.LogWarning("Dang nhap that bai");
-                    MessageBox.Show("Dang nhap that bai");
-
-                    return;
-                }
-
-                _logger.LogInformation("Dang nhap thanh cong");
-
-                var form1 = _serviceProvider.GetService<mainForm>();
-
-                if (form1 != null)
-                {
-                    this.Hide();
-                    _serviceProvider.GetService<mainForm>()?.Show();
-                }
-                else
-                {
-                    _logger.LogWarning("Dang nhap that bai, loi tuyen tai");
-                    MessageBox.Show("Dang nhap that bai, loi truyen tai");
-
-                }
+                await userLogin();
             }
-            catch (Exception ex)
+            else
             {
-                _logger.LogWarning(ex.Message);
-                return;
+                await employeeLogin();
             }
+            typeOfACCgCB.Text = string.Empty;
         }
 
         private void loginForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -125,22 +98,6 @@ namespace iBanking
             }
         }
 
-        private void noAccountLLB_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-            var signUpForm = _serviceProvider.GetService<SignUp>();
-            if (signUpForm != null)
-            {
-                signUpForm.FormClosed += (s, args) => this.Show();
-                signUpForm.Show();
-            }
-            else
-            {
-                _logger.LogWarning("Form dang ky khong ton tai");
-                MessageBox.Show("Form dang ky khong ton tai");
-            }
-        }
-
         private void passGTxb_KeyPress(object sender, KeyPressEventArgs e)
         {
             //if(e.KeyChar == (char)Keys.Enter)
@@ -158,6 +115,90 @@ namespace iBanking
             if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !(e.KeyChar == '_'))
             {
                 e.Handled = true;
+            }
+        }
+        private async Task employeeLogin()
+        {
+            if (string.IsNullOrEmpty(idgTBox.Text) || string.IsNullOrEmpty(passGTxb.Text))
+            {
+                _logger.LogWarning("Khong duoc de trong tai khoan hoac mat khau");
+                MessageBox.Show("Khong duoc de trong tai khoan hoac mat khau");
+                return;
+            }
+            
+            try
+            {
+                bool check = await _serEmployee.CheckPass(idgTBox.Text, passGTxb.Text);
+                if (!check)
+                {
+                    _logger.LogWarning("Dang nhap that bai");
+                    MessageBox.Show("Dang nhap that bai");
+
+                    return;
+                }
+
+                _logger.LogInformation("Dang nhap thanh cong");
+
+                var form1 = _serviceProvider.GetService<mainForm>();
+
+                if (form1 != null)
+                {
+                    this.Hide();
+                    _serviceProvider.GetService<mainForm>()?.Show();
+                }
+                else
+                {
+                    _logger.LogWarning("Dang nhap that bai, loi tuyen tai");
+                    MessageBox.Show("Dang nhap that bai, loi truyen tai");
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning(ex.Message);
+                return;
+            }
+        }
+        private async Task userLogin()
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(idgTBox.Text) || string.IsNullOrEmpty(passGTxb.Text))
+                {
+                    _logger.LogWarning("Khong duoc de trong tai khoan hoac mat khau");
+                    MessageBox.Show("Khong duoc de trong tai khoan hoac mat khau");
+                    return;
+                }
+                bool check = await _serUser.CheckPass(idgTBox.Text, passGTxb.Text);
+                if (!check)
+                {
+                    _logger.LogWarning("Dang nhap that bai");
+                    MessageBox.Show("Dang nhap that bai");
+
+                    return;
+                }
+
+                _logger.LogInformation("Dang nhap thanh cong");
+
+                var form1 = _serviceProvider.GetService<mainForm>();
+
+                if (form1 != null)
+                {
+                    this.Hide();
+                    _serviceProvider.GetService<mainForm>()?.Show();
+                }
+                else
+                {
+                    _logger.LogWarning("Dang nhap that bai, loi tuyen tai");
+                    MessageBox.Show("Dang nhap that bai, loi truyen tai");
+
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning(ex.Message);
+                return;
             }
         }
     }

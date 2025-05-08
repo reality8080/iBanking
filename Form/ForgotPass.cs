@@ -21,13 +21,14 @@ namespace iBanking.Form
         //private readonly OtpUControl _otpUControl;
         private readonly ILogger<ForgotPass> _logger;
         private readonly ISerUser _serUser;
+        private readonly ISerEmployee _serEmployee;
 
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, IntPtr wParam, IntPtr lParam);
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
         //, IRepoUserAuth repoUserAuth
-        public ForgotPass(IServiceProvider _serviceProvider, ISerUser _serUser,ILogger<ForgotPass> logger)
+        public ForgotPass(IServiceProvider _serviceProvider, ISerUser _serUser, ILogger<ForgotPass> logger, ISerEmployee serEmployee)
         {
             InitializeComponent();
             this._serviceProvider = _serviceProvider ?? throw new ArgumentNullException(nameof(_serviceProvider));
@@ -36,6 +37,7 @@ namespace iBanking.Form
             otpPanel.Visible = false;
             //this._otpUControl = _otpUControl ?? throw new ArgumentNullException(nameof(_otpUControl));
             this._logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _serEmployee = serEmployee ?? throw new ArgumentNullException(nameof(serEmployee));
         }
 
         private void exitGIBtn_Click(object sender, EventArgs e)
@@ -72,6 +74,68 @@ namespace iBanking.Form
 
         private async void takeOTPCodeBtn_Click(object sender, EventArgs e)
         {
+            if ((typeOfACCgCB.SelectedItem?.ToString() == "Admin") || (typeOfACCgCB.SelectedItem?.ToString() == "Employee"))
+            {
+                if (!string.IsNullOrEmpty(idManaTXT.Text))
+                {
+                    MessageBox.Show("You should require the Admin to return new Password", "Warnning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    _logger.LogInformation($"Someone: {userNamegTBox.Text}, Manager: {idManaTXT.Text} have required a new Password");
+                    return;
+                }
+                await adminForgot();
+            }
+            else
+            {
+                await userForgot();
+            }
+
+        }
+
+        private void userNamegTBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !(e.KeyChar == '_'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void gmailGTxb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !(e.KeyChar == '@') && !(e.KeyChar == '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private async Task adminForgot()
+        {
+            try
+            {
+                var check = await _serEmployee.CheckEmailAndEmployeeName(userNamegTBox.Text, gmailGTxb.Text, Convert.ToInt32(idManaTXT.Text));
+                if (check != null)
+                {
+                    var otpCode = _serUser.randomNumBAcc();
+
+                    //_otpUControl = _serviceProvider.GetRequiredService<OtpUControl>();
+                    var otpControl = new OtpUControl(_serviceProvider, check, otpCode);
+                    addUserControl(otpControl);
+                    //MessageBox.Show($"OTP code: {otpCode}");
+
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or email");
+                    _logger.LogWarning("Invalid username or email");
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message, "Error taking OTP code");
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private async Task userForgot()
+        {
             try
             {
                 var Check = await _serUser.CheckEmailAndUserName(userNamegTBox.Text, gmailGTxb.Text);
@@ -98,19 +162,15 @@ namespace iBanking.Form
             }
         }
 
-        private void userNamegTBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void typeOfACCgCB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !(e.KeyChar == '_'))
+            if ((typeOfACCgCB.SelectedItem?.ToString() == "Admin") || (typeOfACCgCB.SelectedItem?.ToString() == "User"))
             {
-                e.Handled = true;
+                idManaTXT.Enabled = false;
             }
-        }
-
-        private void gmailGTxb_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !(e.KeyChar == '@') && !(e.KeyChar == '.'))
+            else
             {
-                e.Handled = true;
+                idManaTXT.Enabled = true;
             }
         }
     }

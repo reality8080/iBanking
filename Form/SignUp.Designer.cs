@@ -88,7 +88,6 @@
             exitGIBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             typeOfAccount = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             LayoutGPanel.SuspendLayout();
             layoutPanel.SuspendLayout();
@@ -444,12 +443,10 @@
             // 
             // guna2PictureBox1
             // 
-            guna2PictureBox1.CustomizableEdges = customizableEdges30;
             guna2PictureBox1.Image = Properties.Resources.screenshot_17446384772;
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(599, 48);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges31;
             guna2PictureBox1.Size = new Size(546, 727);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox1.TabIndex = 23;
@@ -468,22 +465,6 @@
             // 
             // guna2ComboBox1
             // 
-            guna2ComboBox1.BackColor = Color.Transparent;
-            guna2ComboBox1.BorderRadius = 10;
-            guna2ComboBox1.CustomizableEdges = customizableEdges3;
-            guna2ComboBox1.DrawMode = DrawMode.OwnerDrawFixed;
-            guna2ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            guna2ComboBox1.FocusedColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2ComboBox1.ForeColor = Color.FromArgb(102, 112, 133);
-            guna2ComboBox1.ItemHeight = 30;
-            guna2ComboBox1.Items.AddRange(new object[] { "User", "Admin", "Cashier" });
-            guna2ComboBox1.Location = new Point(52, 329);
-            guna2ComboBox1.Name = "guna2ComboBox1";
-            guna2ComboBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2ComboBox1.Size = new Size(383, 36);
-            guna2ComboBox1.TabIndex = 24;
             // 
             // guna2Panel2
             // 

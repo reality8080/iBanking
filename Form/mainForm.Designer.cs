@@ -65,6 +65,7 @@
             transferGBtn = new Guna.UI2.WinForms.Guna2Button();
             searchTXT = new Guna.UI2.WinForms.Guna2TextBox();
             controlPageGunaPanel = new Guna.UI2.WinForms.Guna2Panel();
+            newAccountLLB = new LinkLabel();
             userNameGHLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             nameGHLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             avatarGunaCPB = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -273,6 +274,7 @@
             controlPageGunaPanel.BackColor = Color.White;
             controlPageGunaPanel.BorderColor = Color.FromArgb(102, 112, 133);
             controlPageGunaPanel.BorderThickness = 1;
+            controlPageGunaPanel.Controls.Add(newAccountLLB);
             controlPageGunaPanel.Controls.Add(userNameGHLabel);
             controlPageGunaPanel.Controls.Add(nameGHLabel);
             controlPageGunaPanel.Controls.Add(avatarGunaCPB);
@@ -291,6 +293,20 @@
             controlPageGunaPanel.ShadowDecoration.CustomizableEdges = customizableEdges20;
             controlPageGunaPanel.Size = new Size(284, 950);
             controlPageGunaPanel.TabIndex = 0;
+            // 
+            // newAccountLLB
+            // 
+            newAccountLLB.AutoSize = true;
+            guna2Transition1.SetDecoration(newAccountLLB, Guna.UI2.AnimatorNS.DecorationType.None);
+            newAccountLLB.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold);
+            newAccountLLB.LinkColor = Color.FromArgb(14, 126, 254);
+            newAccountLLB.Location = new Point(63, 769);
+            newAccountLLB.Name = "newAccountLLB";
+            newAccountLLB.Size = new Size(156, 25);
+            newAccountLLB.TabIndex = 19;
+            newAccountLLB.TabStop = true;
+            newAccountLLB.Text = "Đăng kí tài khoản";
+            newAccountLLB.LinkClicked += newAccountLLB_LinkClicked;
             // 
             // userNameGHLabel
             // 
@@ -518,5 +534,6 @@
         private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
         private ImageList iconIL;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel controlUserPanel;
+        private LinkLabel newAccountLLB;
     }
 }

@@ -14,9 +14,9 @@ namespace iBanking.Models.Cuong
         private string _password;
         private string _email;
         private DateTime _createdAt;
-        private int manager;
+        private int? _manager;
 
-        public Employee(int id, string username, decimal salary, string password, string email, DateTime createdAt, int manager)
+        public Employee(int id, string username, string password, decimal salary, string email, DateTime createdAt, int? manager)
         {
             _id = id;
             _username = username;
@@ -24,7 +24,16 @@ namespace iBanking.Models.Cuong
             _password = password;
             _email = email;
             _createdAt = createdAt;
-            this.manager = manager;
+            this._manager = manager;
+        }
+
+        public Employee( string username, string password, string email, DateTime createdAt, int? manager)
+        {
+            _username = username;
+            _password = password;
+            _email = email;
+            _createdAt = createdAt;
+            _manager = manager;
         }
 
         public int Id { get => _id; set => _id = value; }
@@ -33,6 +42,6 @@ namespace iBanking.Models.Cuong
         public string Password { get => _password; set => _password = value; }
         public string Email { get => _email; set => _email = value; }
         public DateTime CreatedAt { get => _createdAt; set => _createdAt = value; }
-        public int Manager { get => manager; set => manager = value; }
+        public int? Manager { get => _manager; set => _manager = value; }
     }
 }

@@ -14,8 +14,8 @@ namespace iBanking.Repository.Cuong
 {
     public class RepoUser : IRepoUser
     {
-        private string connectionString;
-        private ILogger<RepoUser> logger;
+        private readonly string connectionString;
+        private readonly ILogger<RepoUser> logger;
 
         public RepoUser(ILogger<RepoUser> logger, string connectionString)
         {
@@ -201,7 +201,7 @@ namespace iBanking.Repository.Cuong
                 using (SqlCommand command = new SqlCommand(query, conn))
                 {
                     command.Parameters.AddWithValue("@Id", id);
-                    command.Parameters.AddWithValue("@Username", u.Username);
+                    command.Parameters.AddWithValue("@name", u.Username);
                     command.Parameters.AddWithValue("@Password", u.Password);
                     command.Parameters.AddWithValue("@Balance", u.Balance);
                     command.Parameters.AddWithValue("@Email", u.Email);

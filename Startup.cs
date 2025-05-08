@@ -26,7 +26,6 @@ namespace iBanking
             //Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", @"ibanking-8080-firebase-adminsdk.json");
             var connectionString = configuration.GetConnectionString("MyDB");
 
-
             if (string.IsNullOrEmpty(connectionString))
             {
                 throw new ArgumentNullException("Connection string is null or empty");
@@ -56,8 +55,6 @@ namespace iBanking
             )
             .CreateLogger();
 
-
-
             // Dùng khi dùng trực tiếp DBcontext
             services.AddTransient<mainForm>();
             services.AddTransient<loginForm>();
@@ -70,7 +67,14 @@ namespace iBanking
             {
                 return new RepoUser(provider.GetRequiredService<ILogger<RepoUser>>(), connectionString);
             });
+
+            services.AddScoped<IRepoEmployee>(provider =>
+            {
+                return new RepoEmployee(connectionString, provider.GetRequiredService<ILogger<RepoEmployee>>());
+            });
+
             services.AddScoped<ISerUser, SerUser>();
+            services.AddScoped<ISerEmployee, SerEmployee>();
 
 
             //services.AddScoped<IRepoUser, UserService>();
