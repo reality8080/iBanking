@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace iBanking.Manager
 {
-    public partial class ManageHome : Form
+    public partial class ManageHome : System.Windows.Forms.Form
     {
      
         public int manager;
@@ -65,8 +65,8 @@ namespace iBanking.Manager
             ManagerChangePass managerChangePass = new ManagerChangePass(this.manager);
             OpenChildForm(managerChangePass);
         }
-        private Form currentFormChild;
-        private void OpenChildForm(Form childForm)
+        private System.Windows.Forms.Form currentFormChild;
+        private void OpenChildForm(System.Windows.Forms.Form childForm)
         {
             if (childForm == null) throw new ArgumentNullException(nameof(childForm));
 

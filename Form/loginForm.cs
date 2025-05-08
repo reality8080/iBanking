@@ -33,7 +33,8 @@ namespace iBanking
         private readonly ISerEmployee _serEmployee;
         private readonly ILogger<loginForm> _logger;
         private readonly IRepoUser _repoUser;
-        public loginForm(IServiceProvider _serviceProvider, ISerUser _serUser, ISerEmployee _serEmployee, ILogger<loginForm> _logger, IRepoUser _repoUser)
+        private readonly IRepoEmployee _repoEmployee;
+        public loginForm(IServiceProvider _serviceProvider, ISerUser _serUser, ISerEmployee _serEmployee, ILogger<loginForm> _logger, IRepoUser _repoUser, IRepoEmployee repoEmployee)
         {
             InitializeComponent();
             this._serviceProvider = _serviceProvider ?? throw new ArgumentNullException(nameof(_serviceProvider));
@@ -41,6 +42,7 @@ namespace iBanking
             this._serEmployee = _serEmployee ?? throw new ArgumentNullException(nameof(_serEmployee));
             this._logger = _logger ?? throw new ArgumentNullException(nameof(_logger));
             this._repoUser = _repoUser ?? throw new ArgumentNullException(nameof(_repoUser));
+            _repoEmployee = repoEmployee??throw new ArgumentNullException(nameof(repoEmployee));
         }
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
@@ -143,15 +145,15 @@ namespace iBanking
                 _logger.LogInformation("Dang nhap thanh cong");
 
                 //var form1 = _serviceProvider.GetService<mainForm>();
-                User user = await _repoUser.readUserById(Convert.ToInt32(idgTBox.Text));
+                Employee user = await _repoEmployee.readEmployeeById(Convert.ToInt32(idgTBox.Text));
+                var f1 = _serviceProvider.GetRequiredService<CashierHome>();
 
-                var form1 = new Home(user, _serviceProvider);
-
-                if (form1 != null)
+                if (f1 != null)
                 {
                     this.Hide();
                     //_serviceProvider.GetService<mainForm>()?.Show();
-                    form1.Show();
+                    f1.Show();
+
                 }
                 else
                 {

@@ -62,6 +62,8 @@ namespace iBanking
             services.AddTransient<SignUp>();
             services.AddTransient<ForgotPass>();
             services.AddTransient<OtpUControl>();
+            services.AddTransient<CashierHome>();
+
             // Dùng khi dùng dbcontext gián tiếp
             services.AddScoped<IRepoUser>(provider =>
             {

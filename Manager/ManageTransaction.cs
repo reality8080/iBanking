@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace iBanking.Manager
 {
-    public partial class ManageTransaction : Form
+    public partial class ManageTransaction : System.Windows.Forms.Form
     {
         private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB; Database=BANKINGAPP; user id=sa; Password=123456789;";
         public ManageTransaction()

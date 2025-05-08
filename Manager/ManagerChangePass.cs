@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace iBanking.Manager
 {
-    public partial class ManagerChangePass : Form
+    public partial class ManagerChangePass : System.Windows.Forms.Form
     {
         public Employee employee;
         private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB; Database=BANKINGAPP;user id=sa;Password=123456789;MultipleActiveResultSets=True;";

@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace iBanking.Manager
 {
-    public partial class ManagerInfo : Form
+    public partial class ManagerInfo : System.Windows.Forms.Form
     {
         private int manager;
         private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB; Database=BANKINGAPP;user id=sa;Password=123456789;MultipleActiveResultSets=True;";

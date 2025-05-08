@@ -14,7 +14,7 @@ using static TheArtOfDevHtmlRenderer.Adapters.RGraphicsPath;
 
 namespace iBanking.Manager
 {
-    public partial class ManageDeposit : Form
+    public partial class ManageDeposit : System.Windows.Forms.Form
     {
         private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB; Database=BANKINGAPP" +
             ";user id=sa;Password=123456789;MultipleActiveResultSets=True;";

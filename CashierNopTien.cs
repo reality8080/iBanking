@@ -12,11 +12,10 @@ using System.Windows.Forms;
 
 namespace iBanking
 {
-    public partial class CashierNopTien : Form
+    public partial class CashierNopTien : System.Windows.Forms.Form
     {
         private int cashierId;
-        private string connectionString = "Data Source=USER\\SQLEXPRESS; Database=BANKING_APP; " +
-                                  "User ID=sa; Password=123; Encrypt=False; TrustServerCertificate=True;";
+        private string connectionString = "Data Source=(localdb)\\localThienPhu;Initial Catalog=BANKING_APP;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
         public CashierNopTien(int id)
         {
             InitializeComponent();

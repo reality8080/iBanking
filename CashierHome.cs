@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace iBanking
 {
-    public partial class CashierHome : Form
+    public partial class CashierHome : System.Windows.Forms.Form
     {
         public CashierHome()
         {
@@ -46,8 +46,8 @@ namespace iBanking
             CashierChangePass cashierChangePass = new CashierChangePass(2); //dang gia su la 2
             OpenChildForm(cashierChangePass);
         }
-        private Form currentFormChild;
-        private void OpenChildForm(Form childForm)
+        private System.Windows.Forms.Form currentFormChild;
+        private void OpenChildForm(System.Windows.Forms.Form childForm)
         {
             if (childForm == null) throw new ArgumentNullException(nameof(childForm));
 
