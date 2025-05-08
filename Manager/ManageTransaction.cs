@@ -9,12 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace iBanking.Manager
 {
     public partial class ManageTransaction : System.Windows.Forms.Form
     {
-        private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB; Database=BANKINGAPP; user id=sa; Password=123456789;";
+        private string connectionString = "Data Source=(localdb)\\localThienPhu;Initial Catalog = BANKING_APP; Integrated Security = True; Connect Timeout = 30; Encrypt=False;Trust Server Certificate=False;Application Intent = ReadWrite; Multi Subnet Failover=False";
         public ManageTransaction()
         {
             InitializeComponent();

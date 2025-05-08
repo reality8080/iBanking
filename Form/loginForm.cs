@@ -1,6 +1,7 @@
 ﻿using iBanking.Form;
 using iBanking.Interfaces.Repo;
 using iBanking.Interfaces.Ser;
+using iBanking.Manager;
 using iBanking.NewModels;
 using iBanking.UserView;
 using Microsoft.Extensions.DependencyInjection;
@@ -56,9 +57,13 @@ namespace iBanking
             {
                 await userLogin();
             }
-            else
+            else if(typeOfACCgCB.Text == "Employee")
             {
                 await employeeLogin();
+            }
+            else
+            {
+                await managerLogin();
             }
             typeOfACCgCB.Text = string.Empty;
         }
@@ -145,7 +150,7 @@ namespace iBanking
                 _logger.LogInformation("Dang nhap thanh cong");
 
                 //var form1 = _serviceProvider.GetService<mainForm>();
-                Employee user = await _repoEmployee.readEmployeeById(Convert.ToInt32(idgTBox.Text));
+                Employee e = await _repoEmployee.readEmployeeById(Convert.ToInt32(idgTBox.Text));
                 var f1 = _serviceProvider.GetRequiredService<CashierHome>();
 
                 if (f1 != null)
@@ -202,6 +207,53 @@ namespace iBanking
                     this.Hide();
                     //_serviceProvider.GetService<Home>()?.Show();
                     form1.Show();
+                }
+                else
+                {
+                    _logger.LogWarning("Dang nhap that bai, loi tuyen tai");
+                    MessageBox.Show("Dang nhap that bai, loi truyen tai");
+
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning(ex.Message);
+                return;
+            }
+        }
+
+        private async Task managerLogin()
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(idgTBox.Text) || string.IsNullOrEmpty(passGTxb.Text))
+                {
+                    _logger.LogWarning("Khong duoc de trong tai khoan hoac mat khau");
+                    MessageBox.Show("Khong duoc de trong tai khoan hoac mat khau");
+                    return;
+                }
+
+                bool check = await _serUser.CheckPass(idgTBox.Text, passGTxb.Text);
+                if (!check)
+                {
+                    _logger.LogWarning("Dang nhap that bai");
+                    MessageBox.Show("Dang nhap that bai");
+
+                    return;
+                }
+
+                _logger.LogInformation("Dang nhap thanh cong");
+                //Employee e = await _repoEmployee.readEmployeeById(Convert.ToInt32(idgTBox.Text));
+
+                var mform = new ManageHome(Convert.ToInt32(idgTBox.Text)); 
+
+                // Chạy ứng dụng với form
+
+                if (mform != null)
+                {
+                    this.Hide();
+                    //_serviceProvider.GetService<Home>()?.Show();
+                    mform.Show();
                 }
                 else
                 {

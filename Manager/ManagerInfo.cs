@@ -7,7 +7,7 @@ namespace iBanking.Manager
     public partial class ManagerInfo : System.Windows.Forms.Form
     {
         private int manager;
-        private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB; Database=BANKINGAPP;user id=sa;Password=123456789;MultipleActiveResultSets=True;";
+        private string connectionString = "Data Source=(localdb)\\localThienPhu;Initial Catalog=BANKING_APP;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
 
         public ManagerInfo(int id)
         {

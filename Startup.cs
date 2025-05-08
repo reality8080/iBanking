@@ -1,6 +1,7 @@
 ﻿using iBanking.Form;
 using iBanking.Interfaces.Repo;
 using iBanking.Interfaces.Ser;
+using iBanking.Manager;
 using iBanking.Repository;
 using iBanking.Repository.Cuong;
 using iBanking.Service;
@@ -63,6 +64,7 @@ namespace iBanking
             services.AddTransient<ForgotPass>();
             services.AddTransient<OtpUControl>();
             services.AddTransient<CashierHome>();
+            services.AddTransient<ManageHome>();
 
             // Dùng khi dùng dbcontext gián tiếp
             services.AddScoped<IRepoUser>(provider =>
