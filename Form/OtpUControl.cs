@@ -1,7 +1,6 @@
 ﻿using iBanking.Interfaces.Repo;
 using iBanking.Interfaces.Ser;
-using iBanking.Models;
-using iBanking.Models.Cuong;
+using iBanking.NewModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

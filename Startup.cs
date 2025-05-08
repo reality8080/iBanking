@@ -4,6 +4,7 @@ using iBanking.Interfaces.Ser;
 using iBanking.Repository;
 using iBanking.Repository.Cuong;
 using iBanking.Service;
+using iBanking.UserView;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -56,12 +57,11 @@ namespace iBanking
             .CreateLogger();
 
             // Dùng khi dùng trực tiếp DBcontext
-            services.AddTransient<mainForm>();
+            //services.AddTransient<mainForm>();
             services.AddTransient<loginForm>();
             services.AddTransient<SignUp>();
             services.AddTransient<ForgotPass>();
             services.AddTransient<OtpUControl>();
-            services.AddTransient<Home>();
             // Dùng khi dùng dbcontext gián tiếp
             services.AddScoped<IRepoUser>(provider =>
             {

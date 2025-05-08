@@ -12,11 +12,13 @@ using Microsoft.Data.SqlClient;
 
 namespace iBanking.UserView
 {
-    public partial class Information : Form
+    public partial class Information : System.Windows.Forms.Form
     {
         public User user;
-        private string connectionString = "Server=LAPTOP-MRP876OS\\SQLEXPRESS;Database=BANKING_APP;Trusted_Connection=True;TrustServerCertificate=True;";
-        public Information(User user)
+        private string connectionString = "Data Source=(localdb)\\localThienPhu;Initial Catalog=BANKING_APP;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+        private readonly IServiceProvider _serviceProvider;
+
+        public Information(User user, IServiceProvider serviceProvider)
         {
             InitializeComponent();
             this.user = user;
@@ -25,6 +27,7 @@ namespace iBanking.UserView
             txtBalance.Text = user.Balance.ToString();
             txtEmail.Text = user.Email.ToString();
             txtStartAt.Text = user.CreatedAt.ToString();
+            _serviceProvider = serviceProvider;
         }
 
         private void Information_Load(object sender, EventArgs e)
@@ -77,7 +80,7 @@ namespace iBanking.UserView
                             // Cập nhật lại đối tượng user
                             user.Name = newName;
                             user.Email = newEmail;
-                            Home home = new Home(this.user);
+                            Home home = new Home(this.user, _serviceProvider);
                             home.Show();
                             this.Hide();
                         }

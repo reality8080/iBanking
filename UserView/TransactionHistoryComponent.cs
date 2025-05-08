@@ -16,12 +16,15 @@ namespace iBanking.UserView
     {
         public User user;
         public List<Transaction> transactions;
-        public TransactionHistoryComponent(User user)
+        private readonly IServiceProvider _serviceProvider;
+
+        public TransactionHistoryComponent(User user, IServiceProvider serviceProvider)
         {
             this.user = user;
             this.transactions = new List<Transaction>();
             InitializeComponent();
             LoadTransaction();
+            _serviceProvider = serviceProvider;
         }
         private void LoadTransaction()
         {

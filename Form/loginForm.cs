@@ -1,9 +1,10 @@
 ﻿using iBanking.Form;
+using iBanking.Interfaces.Repo;
 using iBanking.Interfaces.Ser;
-
-//using iBanking.Interfaces.Ser;
-//using iBanking.Service;
+using iBanking.NewModels;
+using iBanking.UserView;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -31,13 +32,15 @@ namespace iBanking
         private readonly ISerUser _serUser;
         private readonly ISerEmployee _serEmployee;
         private readonly ILogger<loginForm> _logger;
-        public loginForm(IServiceProvider _serviceProvider, ISerUser _serUser, ISerEmployee _serEmployee, ILogger<loginForm> _logger)
+        private readonly IRepoUser _repoUser;
+        public loginForm(IServiceProvider _serviceProvider, ISerUser _serUser, ISerEmployee _serEmployee, ILogger<loginForm> _logger, IRepoUser _repoUser)
         {
             InitializeComponent();
             this._serviceProvider = _serviceProvider ?? throw new ArgumentNullException(nameof(_serviceProvider));
             this._serUser = _serUser ?? throw new ArgumentNullException(nameof(_serUser));
             this._serEmployee = _serEmployee ?? throw new ArgumentNullException(nameof(_serEmployee));
             this._logger = _logger ?? throw new ArgumentNullException(nameof(_logger));
+            this._repoUser = _repoUser ?? throw new ArgumentNullException(nameof(_repoUser));
         }
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
@@ -139,12 +142,16 @@ namespace iBanking
 
                 _logger.LogInformation("Dang nhap thanh cong");
 
-                var form1 = _serviceProvider.GetService<mainForm>();
+                //var form1 = _serviceProvider.GetService<mainForm>();
+                User user = await _repoUser.readUserById(Convert.ToInt32(idgTBox.Text));
+
+                var form1 = new Home(user, _serviceProvider);
 
                 if (form1 != null)
                 {
                     this.Hide();
-                    _serviceProvider.GetService<mainForm>()?.Show();
+                    //_serviceProvider.GetService<mainForm>()?.Show();
+                    form1.Show();
                 }
                 else
                 {
@@ -170,6 +177,7 @@ namespace iBanking
                     MessageBox.Show("Khong duoc de trong tai khoan hoac mat khau");
                     return;
                 }
+
                 bool check = await _serUser.CheckPass(idgTBox.Text, passGTxb.Text);
                 if (!check)
                 {
@@ -180,13 +188,18 @@ namespace iBanking
                 }
 
                 _logger.LogInformation("Dang nhap thanh cong");
+                User user = await _repoUser.readUserById(Convert.ToInt32( idgTBox.Text));
 
-                var form1 = _serviceProvider.GetService<mainForm>();
+
+                var form1 = new Home(user, _serviceProvider);
+
+                // Chạy ứng dụng với form
 
                 if (form1 != null)
                 {
                     this.Hide();
-                    _serviceProvider.GetService<mainForm>()?.Show();
+                    //_serviceProvider.GetService<Home>()?.Show();
+                    form1.Show();
                 }
                 else
                 {

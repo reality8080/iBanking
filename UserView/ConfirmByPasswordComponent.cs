@@ -18,13 +18,16 @@ namespace iBanking.UserView
         public User payee;
         public int count = 0;
         public Home home;
-        public ConfirmByPasswordComponent(Home home, Transaction transaction, User user, User payee)
+        private readonly IServiceProvider _serviceProvider;
+
+        public ConfirmByPasswordComponent(Home home, Transaction transaction, User user, User payee, IServiceProvider serviceProvider)
         {
             InitializeComponent();
             this.transaction = transaction;
             this.user = user;
             this.payee = payee;
             this.home = home;
+            _serviceProvider = serviceProvider;
         }
 
         private void txtPass_TextChanged(object sender, EventArgs e)
@@ -56,7 +59,7 @@ namespace iBanking.UserView
                     );
                 // Xóa giao dịch trong CSDL
                 this.transaction = transaction.Del();
-                UserLogin userLogin = new UserLogin();
+                UserLogin userLogin = new UserLogin(_serviceProvider);
                 userLogin.Show();
                 this.Hide();
                 return;
@@ -65,7 +68,7 @@ namespace iBanking.UserView
             this.user.BalanceChange(-transaction.Total);
             this.payee.BalanceChange(transaction.Total);
             this.home.pnlMain.Controls.Clear();
-            TransactionHistoryComponent transactionHistoryComponent = new TransactionHistoryComponent(this.user);
+            TransactionHistoryComponent transactionHistoryComponent = new TransactionHistoryComponent(this.user,_serviceProvider);
             transactionHistoryComponent.Dock = DockStyle.Fill;
             this.home.pnlMain.Controls.Add(transactionHistoryComponent);
         }

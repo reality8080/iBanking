@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using iBanking.LIB;
 using iBanking.UserView;
 using Microsoft.Data.SqlClient;
 using Microsoft.VisualBasic.ApplicationServices;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static Guna.UI2.Native.WinApi;
 
 namespace iBanking.NewModels
@@ -22,6 +24,16 @@ namespace iBanking.NewModels
         {
             this.Balance = 0;
         }
+
+        public User(int id, string username, string password, decimal balance, string email, DateTime createdAt):base( id,  username,  password,  email,  createdAt)
+        {
+            Balance= balance;
+        }
+
+        public User(string username, string password, string email):base(username,password,email)
+        {
+        }
+
         #endregion
         #region Methods
         public override string ToString()

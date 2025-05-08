@@ -1,5 +1,5 @@
 ﻿using iBanking.Interfaces.Repo;
-using iBanking.Models.Cuong;
+using iBanking.NewModels;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Logging;
 using System;
@@ -31,14 +31,14 @@ namespace iBanking.Repository.Cuong
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
 
-                    command.Parameters.AddWithValue("@name", e.Username);
+                    command.Parameters.AddWithValue("@name", e.Name);
                     command.Parameters.AddWithValue("@password", e.Password);
                     command.Parameters.AddWithValue("@salary", e.Salary);
                     command.Parameters.AddWithValue("@email", e.Email);
                     command.Parameters.AddWithValue("@start_at", e.CreatedAt);
-                    if (e.Manager != null)
+                    if (e.ManagerId != null)
                     {
-                        command.Parameters.AddWithValue("@manager", e.Manager);
+                        command.Parameters.AddWithValue("@manager", e.ManagerId);
                     }
                     else
                     {
@@ -47,15 +47,15 @@ namespace iBanking.Repository.Cuong
                     int result = command.ExecuteNonQuery();
                     if (result > 0)
                     {
-                        logger.LogInformation($"User {e.Username} created successfully.");
-                        MessageBox.Show($"User {e.Username} created successfully.");
+                        logger.LogInformation($"User {e.Name} created successfully.");
+                        MessageBox.Show($"User {e.Name} created successfully.");
                         return true;
 
                     }
                     else
                     {
-                        logger.LogError($"Failed to create {e.Username}.");
-                        MessageBox.Show($"Failed to create {e.Username}.");
+                        logger.LogError($"Failed to create {e.Name}.");
+                        MessageBox.Show($"Failed to create {e.Name}.");
                         return false;
                     }
                 }
@@ -74,14 +74,14 @@ namespace iBanking.Repository.Cuong
                     int result = command.ExecuteNonQuery();
                     if (result > 0)
                     {
-                        logger.LogInformation($"User: {e.Username} deleted successfully.");
-                        MessageBox.Show($"User: {e.Username} deleted successfully.");
+                        logger.LogInformation($"User: {e.Name} deleted successfully.");
+                        MessageBox.Show($"User: {e.Name} deleted successfully.");
                         return true;
                     }
                     else
                     {
-                        logger.LogError($"Failed to delete {e.Username}.");
-                        MessageBox.Show($"Failed to delete {e.Username}.");
+                        logger.LogError($"Failed to delete {e.Name}.");
+                        MessageBox.Show($"Failed to delete {e.Name}.");
                         return false;
                     }
                 }
@@ -224,22 +224,22 @@ namespace iBanking.Repository.Cuong
                 string query = "UPDATE [User] SET name = @name, password = @password, salary = @salary, email = @email,start_at=@start_at,manager=@manager WHERE id = @id";
                 using (SqlCommand command = new SqlCommand(query, conn))
                 {
-                    command.Parameters.AddWithValue("@name", e.Username);
+                    command.Parameters.AddWithValue("@name", e.Name);
                     command.Parameters.AddWithValue("@password", e.Password);
                     command.Parameters.AddWithValue("@salary", e.Salary);
                     command.Parameters.AddWithValue("@email", e.Email);
                     command.Parameters.AddWithValue("@start_at", e.CreatedAt);
-                    command.Parameters.AddWithValue("@manager", e.Manager);
+                    command.Parameters.AddWithValue("@manager", e.ManagerId);
                     int result = command.ExecuteNonQuery();
                     if (result > 0)
                     {
-                        logger.LogInformation($"User: {e.Username} updated successfully.");
+                        logger.LogInformation($"User: {e.Name} updated successfully.");
                         MessageBox.Show("User updated successfully.");
                         return true;
                     }
                     else
                     {
-                        logger.LogError($"Failed to update {e.Username}.");
+                        logger.LogError($"Failed to update {e.Name}.");
                         return false;
                     }
                 }

@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.7" />
+    <PackageReference Include="Krypton.Toolkit" Version="95.25.4.111" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.2" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.4" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.4" />
@@ -53,6 +54,7 @@
 
   <ItemGroup>
     <Folder Include="Interfaces\Help\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>

@@ -13,19 +13,22 @@ using Microsoft.Data.SqlClient;
 
 namespace iBanking.UserView
 {
-    public partial class Bank : Form
+    public partial class Bank : System.Windows.Forms.Form
     {
         public User user;
         public User payee;
         public decimal total;
         public string content;
         public Transaction transaction;
-        private string connectionString = "Server=LAPTOP-MRP876OS\\SQLEXPRESS;Database=BANKING_APP;Trusted_Connection=True;TrustServerCertificate=True;";
-        public Bank()
+        private string connectionString = "Data Source=(localdb)\\localThienPhu;Initial Catalog=BANKING_APP;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+        private readonly IServiceProvider _serviceProvider;
+
+        public Bank(IServiceProvider _serviceProvider)
         {
             InitializeComponent();
+            this._serviceProvider = _serviceProvider;
         }
-        public Bank(User user)
+        public Bank(User user,IServiceProvider _serviceProvider)
         {
             InitializeComponent();
             this.user = user;
@@ -33,6 +36,7 @@ namespace iBanking.UserView
             this.btnBank.Enabled = false;
             this.txtContent.Text = user.Name + "Chuyển khoản";
             this.content = this.txtContent.Text;
+            this._serviceProvider= _serviceProvider;
         }
 
         private void Bank_Load(object sender, EventArgs e)
@@ -52,7 +56,7 @@ namespace iBanking.UserView
             //this.payee.BalanceChange(total);
             if (transaction != null)
             {
-                ConfirmByPassword confirmByPassword = new ConfirmByPassword(transaction, user, payee);
+                ConfirmByPassword confirmByPassword = new ConfirmByPassword(transaction, user, payee,_serviceProvider);
                 confirmByPassword.Show();
                 this.Hide();
             }

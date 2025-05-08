@@ -1,5 +1,6 @@
 using iBanking.Form;
 using iBanking.Properties;
+using iBanking.UserView;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System.Runtime.InteropServices;
@@ -24,8 +25,8 @@ namespace iBanking
             InitializeComponent();
             this._logger = _logger;
             _serviceProvider = serviceProvider;
-            var homeUC = new Home(_serviceProvider);
-            addUserControl(homeUC);
+            //var homeUC = new Home(_serviceProvider);
+            //addUserControl(homeUC);
         }
 
         private void exitGImageBtn_MouseClick(object sender, MouseEventArgs e)
@@ -59,8 +60,8 @@ namespace iBanking
         {
             setActiveBtns(homeGbtn, "D:\\2024-2025\\HK2\\WindowsForm\\Form\\Resources\\Images\\Icon\\White\\homeWhite.png");
             //tabControlBank.SelectedIndex = 0;
-            var homeUC = new Home(_serviceProvider);
-            addUserControl(homeUC);
+            //var homeUC = new Home(_serviceProvider);
+            //addUserControl(homeUC);
         }
 
         private void myBanksGbtn_Click(object sender, EventArgs e)

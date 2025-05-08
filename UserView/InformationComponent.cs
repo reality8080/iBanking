@@ -16,7 +16,9 @@ namespace iBanking.UserView
     public partial class InformationComponent : UserControl
     {
         public User user;
-        public InformationComponent(User user)
+        private readonly IServiceProvider _serviceProvider;
+
+        public InformationComponent(User user,IServiceProvider serviceProvider)
         {
             InitializeComponent();
             this.user = user;
@@ -25,6 +27,7 @@ namespace iBanking.UserView
             txtBalance.Text = user.Balance.ToString();
             txtEmail.Text = user.Email.ToString();
             txtStartAt.Text = user.CreatedAt.ToString();
+            _serviceProvider= serviceProvider;
         }
 
         private void InformationComponent_Load(object sender, EventArgs e)
@@ -77,7 +80,7 @@ namespace iBanking.UserView
                             // Cập nhật lại đối tượng user
                             user.Name = newName;
                             user.Email = newEmail;
-                            Home home = new Home(this.user);
+                            Home home = new Home(this.user,_serviceProvider);
                             home.Show();
                             this.Hide();
                         }

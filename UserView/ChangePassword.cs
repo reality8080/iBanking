@@ -12,14 +12,17 @@ using Microsoft.Data.SqlClient;
 
 namespace iBanking.UserView
 {
-    public partial class ChangePassword : Form
+    public partial class ChangePassword : System.Windows.Forms.Form
     {
-        private string connectionString = "Server=LAPTOP-MRP876OS\\SQLEXPRESS;Database=BANKING_APP;Trusted_Connection=True;TrustServerCertificate=True;";
+        private string connectionString = "Data Source=(localdb)\\localThienPhu;Initial Catalog=BANKING_APP;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
         public User user;
-        public ChangePassword(User user)
+        private readonly IServiceProvider _serviceProvider;
+
+        public ChangePassword(User user, IServiceProvider serviceProvider)
         {
             InitializeComponent();
             this.user = user;
+            _serviceProvider = serviceProvider;
         }
 
         private void ChangePassword_Load(object sender, EventArgs e)
@@ -90,7 +93,7 @@ namespace iBanking.UserView
 
                             // Cập nhật lại đối tượng user
                             user.Password = newPassword;
-                            UserLogin userLogin = new UserLogin();
+                            UserLogin userLogin = new UserLogin(_serviceProvider);
                             userLogin.Show();
                             this.Hide();
                         }

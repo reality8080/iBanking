@@ -16,11 +16,14 @@ namespace iBanking.UserView
     public partial class ChangePasswordComponent : UserControl
     {
         public User user;
+        private readonly IServiceProvider _serviceProvider;
 
-        public ChangePasswordComponent(User user)
+
+        public ChangePasswordComponent(User user,IServiceProvider serviceProvider)
         {
             this.user = user;
             InitializeComponent();
+            _serviceProvider = serviceProvider;
         }
 
         private void ChangePasswordComponent_Load(object sender, EventArgs e)
@@ -91,7 +94,7 @@ namespace iBanking.UserView
 
                             // Cập nhật lại đối tượng user
                             user.Password = newPassword;
-                            UserLogin userLogin = new UserLogin();
+                            UserLogin userLogin = new UserLogin(_serviceProvider);
                             userLogin.Show();
                             this.Hide();
                         }

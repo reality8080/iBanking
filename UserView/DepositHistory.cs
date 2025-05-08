@@ -8,13 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
-using iBanking.Models;
 using iBanking.NewModels;
 using Microsoft.Data.SqlClient;
 
 namespace iBanking.UserView
 {
-    public partial class DepositHistory : Form
+    public partial class DepositHistory : System.Windows.Forms.Form
     {
         public User user;
         public List<Deposit> deposits;

@@ -16,6 +16,8 @@ namespace iBanking.UserView
     {
         public User user;
         public Home home;
+        private readonly IServiceProvider _serviceProvider;
+
         public HomeComponent(Home home, User user)
         {
             InitializeComponent();
@@ -55,7 +57,7 @@ namespace iBanking.UserView
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
             this.home.pnlMain.Controls.Clear();
-            ChangePasswordComponent changePasswordComponent = new ChangePasswordComponent(this.user);
+            ChangePasswordComponent changePasswordComponent = new ChangePasswordComponent(this.user,_serviceProvider);
             changePasswordComponent.Dock = DockStyle.Fill;
             this.home.pnlMain.Controls.Add(changePasswordComponent);
         }
@@ -63,7 +65,7 @@ namespace iBanking.UserView
         private void guna2CircleButton3_Click(object sender, EventArgs e)
         {
             this.home.pnlMain.Controls.Clear();
-            InformationComponent informationComponent = new InformationComponent(this.user);
+            InformationComponent informationComponent = new InformationComponent(this.user,_serviceProvider);
             informationComponent.Dock = DockStyle.Fill;
             this.home.pnlMain.Controls.Add(informationComponent);
         }
@@ -71,7 +73,7 @@ namespace iBanking.UserView
         private void btnBank2_Click(object sender, EventArgs e)
         {
             this.home.pnlMain.Controls.Clear();
-            BankComponent bankComponent = new BankComponent(this.home, this.user);
+            BankComponent bankComponent = new BankComponent(this.home, this.user, _serviceProvider);
             bankComponent.Dock = DockStyle.Fill;
             this.home.pnlMain.Controls.Add(bankComponent);
         }
@@ -79,7 +81,7 @@ namespace iBanking.UserView
         private void guna2CircleButton4_Click(object sender, EventArgs e)
         {
             this.home.pnlMain.Controls.Clear();
-            TransactionHistoryComponent transactionHistory = new TransactionHistoryComponent(this.user);
+            TransactionHistoryComponent transactionHistory = new TransactionHistoryComponent(this.user, _serviceProvider);
             transactionHistory.Dock = DockStyle.Fill;
             this.home.pnlMain.Controls.Add(transactionHistory);
         }

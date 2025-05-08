@@ -1,6 +1,6 @@
 ﻿using iBanking.Interfaces.Repo;
 using iBanking.Interfaces.Ser;
-using iBanking.Models.Cuong;
+using iBanking.NewModels;
 using iBanking.Repository.Cuong;
 using Microsoft.Extensions.Logging;
 using System;

@@ -1,5 +1,5 @@
 ﻿using iBanking.Interfaces.Repo;
-using iBanking.Models.Cuong;
+using iBanking.NewModels;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -31,22 +31,22 @@ namespace iBanking.Repository.Cuong
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                    
-                    command.Parameters.AddWithValue("@name", u.Username);
+                    command.Parameters.AddWithValue("@name",u.Name);
                     command.Parameters.AddWithValue("@password", u.Password);
                     command.Parameters.AddWithValue("@email", u.Email);
                     command.Parameters.AddWithValue("@createdAt", u.CreatedAt);
                     int result = command.ExecuteNonQuery();
                     if (result > 0)
                     {
-                        logger.LogInformation($"User {u.Username} created successfully.");
-                        MessageBox.Show($"User {u.Username} created successfully.");
+                        logger.LogInformation($"User {u.Name} created successfully.");
+                        MessageBox.Show($"User {u.Name} created successfully.");
                         return true;
 
                     }
                     else
                     {
-                        logger.LogError($"Failed to create {u.Username}.");
-                        MessageBox.Show($"Failed to create {u.Username}.");
+                        logger.LogError($"Failed to create {u.Name}.");
+                        MessageBox.Show($"Failed to create {u.Name}.");
                         return false;
                     }
                 }
@@ -65,14 +65,14 @@ namespace iBanking.Repository.Cuong
                     int result = command.ExecuteNonQuery();
                     if (result > 0)
                     {
-                        logger.LogInformation($"User: {u.Username} deleted successfully.");
-                        MessageBox.Show($"User: {u.Username} deleted successfully.");
+                        logger.LogInformation($"User: {u.Name} deleted successfully.");
+                        MessageBox.Show($"User: {u.Name} deleted successfully.");
                         return true;
                     }
                     else
                     {
-                        logger.LogError($"Failed to delete {u.Username}.");
-                        MessageBox.Show($"Failed to delete {u.Username}.");
+                        logger.LogError($"Failed to delete {u.Name}.");
+                        MessageBox.Show($"Failed to delete {u.Name}.");
                         return false;
                     }
                 }
@@ -201,20 +201,20 @@ namespace iBanking.Repository.Cuong
                 using (SqlCommand command = new SqlCommand(query, conn))
                 {
                     command.Parameters.AddWithValue("@Id", id);
-                    command.Parameters.AddWithValue("@name", u.Username);
+                    command.Parameters.AddWithValue("@name",u.Name);
                     command.Parameters.AddWithValue("@Password", u.Password);
                     command.Parameters.AddWithValue("@Balance", u.Balance);
                     command.Parameters.AddWithValue("@Email", u.Email);
                     int result = command.ExecuteNonQuery();
                     if (result > 0)
                     {
-                        logger.LogInformation($"User: {u.Username} updated successfully.");
+                        logger.LogInformation($"User: {u.Name} updated successfully.");
                         MessageBox.Show("User updated successfully.");
                         return true;
                     }
                     else
                     {
-                        logger.LogError($"Failed to update {u.Username}.");
+                        logger.LogError($"Failed to update {u.Name}.");
                         return false;
                     }
                 }

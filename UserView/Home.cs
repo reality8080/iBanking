@@ -9,13 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using iBanking.LIB;
 using iBanking.NewModels;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace iBanking.UserView
 {
-    public partial class Home : Form
+    public partial class Home : System.Windows.Forms.Form
     {
         public User user;
-        public Home(User user)
+        private readonly IServiceProvider _serviceProvider;
+
+        public Home(User user, IServiceProvider serviceProvider)
         {
             this.user = user;
             InitializeComponent();
@@ -28,6 +31,7 @@ namespace iBanking.UserView
             HomeComponent homeComponent = new HomeComponent(this, this.user);
             homeComponent.Dock = DockStyle.Fill;
             pnlMain.Controls.Add(homeComponent);
+            _serviceProvider = serviceProvider??throw new ArgumentNullException(nameof(serviceProvider));
         }
         private void Home_Load(object sender, EventArgs e)
         {
@@ -37,7 +41,7 @@ namespace iBanking.UserView
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             pnlMain.Controls.Clear();
-            BankComponent bankComponent = new BankComponent(this, this.user);
+            BankComponent bankComponent = new BankComponent(this, this.user,_serviceProvider);
             bankComponent.Dock = DockStyle.Fill;
             pnlMain.Controls.Add(bankComponent);
         }
@@ -45,7 +49,7 @@ namespace iBanking.UserView
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             pnlMain.Controls.Clear();
-            InformationComponent informationComponent = new InformationComponent(this.user);
+            InformationComponent informationComponent = new InformationComponent(this.user, _serviceProvider);
             informationComponent.Dock = DockStyle.Fill;
             pnlMain.Controls.Add(informationComponent);
         }
@@ -53,7 +57,7 @@ namespace iBanking.UserView
         private void guna2Button3_Click(object sender, EventArgs e)
         {
             pnlMain.Controls.Clear();
-            ChangePasswordComponent changePasswordComponent = new ChangePasswordComponent(this.user);
+            ChangePasswordComponent changePasswordComponent = new ChangePasswordComponent(this.user, _serviceProvider);
             changePasswordComponent.Dock = DockStyle.Fill;
             pnlMain.Controls.Add(changePasswordComponent);
         }
@@ -61,14 +65,14 @@ namespace iBanking.UserView
         private void guna2Button4_Click(object sender, EventArgs e)
         {
             pnlMain.Controls.Clear();
-            TransactionHistoryComponent transactionHistoryComponent = new TransactionHistoryComponent(this.user);
+            TransactionHistoryComponent transactionHistoryComponent = new TransactionHistoryComponent(this.user, _serviceProvider);
             transactionHistoryComponent.Dock = DockStyle.Fill;
             pnlMain.Controls.Add(transactionHistoryComponent);
         }
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            UserLogin userLogin = new UserLogin();
+            UserLogin userLogin = new UserLogin(_serviceProvider);
             userLogin.Show();
             this.Hide();
         }
@@ -107,21 +111,21 @@ namespace iBanking.UserView
 
         private void btnBank2_Click(object sender, EventArgs e)
         {
-            Bank bank = new Bank(this.user);
+            Bank bank = new Bank(this.user, _serviceProvider);
             bank.Show();
             this.Hide();
         }
 
         private void guna2CircleButton3_Click(object sender, EventArgs e)
         {
-            Information information = new Information(this.user);
+            Information information = new Information(this.user, _serviceProvider);
             information.Show();
             this.Hide();
         }
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
-            ChangePassword changePassword = new ChangePassword(this.user);
+            ChangePassword changePassword = new ChangePassword(this.user, _serviceProvider);
             changePassword.Show();
             this.Hide();
         }
@@ -150,9 +154,18 @@ namespace iBanking.UserView
 
         private void guna2PictureBox2_Click(object sender, EventArgs e)
         {
-            UserLogin userLogin = new UserLogin();
-            userLogin.Show();
-            this.Close();
+            var login = _serviceProvider.GetService<loginForm>();
+            this.Hide();
+            if (login != null)
+            {
+                login.FormClosed += (s, args) => this.Close();
+                login.Show();
+            }
+            else
+            {
+                //_logger.LogWarning("Login form could not be created.");
+                MessageBox.Show("Login form could not be created.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

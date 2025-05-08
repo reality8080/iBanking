@@ -20,10 +20,12 @@ namespace iBanking
             var builder = Host.CreateApplicationBuilder();
 
             // Đăng ký UserHomeForm vào DI container
-            builder.Services.AddSingleton<UserLogin>();
+            //builder.Services.AddSingleton<UserLogin>();
+            Startup.ConfigureServices(builder.Services);
 
             // Xây dựng host
             using var host = builder.Build();
+
             using (var lF = host.Services.GetRequiredService<loginForm>()){
                 Application.Run(lF);
             };

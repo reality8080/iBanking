@@ -12,7 +12,7 @@ using static Guna.UI2.Native.WinApi;
 
 namespace iBanking.UserView
 {
-    public partial class TransactionHistory : Form
+    public partial class TransactionHistory : System.Windows.Forms.Form
     {
         public User user;
         public List<Transaction> transactions;

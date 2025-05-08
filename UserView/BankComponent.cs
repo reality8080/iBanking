@@ -21,7 +21,9 @@ namespace iBanking.UserView
         public string content;
         public Home home;
         public Transaction transaction;
-        public BankComponent(Home home, User user)
+        private readonly IServiceProvider _serviceProvider;
+
+        public BankComponent(Home home, User user,IServiceProvider serviceProvider)
         {
             InitializeComponent();
             this.user = user;
@@ -30,6 +32,7 @@ namespace iBanking.UserView
             this.txtContent.Text = user.Name + " chuyển khoản";
             this.content = this.txtContent.Text;
             this.home = home;
+            _serviceProvider = serviceProvider;
         }
         private Transaction CreateNewTransaction()
         {
@@ -94,7 +97,7 @@ namespace iBanking.UserView
             if (transaction != null)
             {
                 this.home.pnlMain.Controls.Clear();
-                ConfirmByPasswordComponent confirmByPasswordComponent = new ConfirmByPasswordComponent(this.home, this.transaction, this.user, this.payee);
+                ConfirmByPasswordComponent confirmByPasswordComponent = new ConfirmByPasswordComponent(this.home, this.transaction, this.user, this.payee, _serviceProvider);
                 confirmByPasswordComponent.Dock = DockStyle.Fill;
                 this.home.pnlMain.Controls.Add(confirmByPasswordComponent);
             }

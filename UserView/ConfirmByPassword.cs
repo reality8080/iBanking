@@ -11,22 +11,27 @@ using iBanking.NewModels;
 
 namespace iBanking.UserView
 {
-    public partial class ConfirmByPassword : Form
+    public partial class ConfirmByPassword : System.Windows.Forms.Form
     {
         public Transaction transaction;
         public User user;
         public User payee;
         public int count = 0;
-        public ConfirmByPassword()
+        private readonly IServiceProvider _serviceProvider;
+
+        public ConfirmByPassword(IServiceProvider serviceProvider)
         {
             InitializeComponent();
+            _serviceProvider = serviceProvider;
         }
-        public ConfirmByPassword(Transaction transaction, User user, User payee)
+        public ConfirmByPassword(Transaction transaction, User user, User payee,IServiceProvider serviceProvider)
+
         {
             InitializeComponent();
             this.transaction = transaction;
             this.user = user;
             this.payee = payee;
+            _serviceProvider= serviceProvider;
         }
 
         private void ConfirmByPassword_Load(object sender, EventArgs e)
@@ -58,7 +63,7 @@ namespace iBanking.UserView
                     );
                 // Xóa giao dịch trong CSDL
                 this.transaction = transaction.Del();
-                UserLogin userLogin = new UserLogin();
+                UserLogin userLogin = new UserLogin(_serviceProvider);
                 userLogin.Show();
                 this.Hide();
                 return;

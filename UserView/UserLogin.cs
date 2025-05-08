@@ -12,13 +12,16 @@ using Microsoft.Data.SqlClient;
 
 namespace iBanking.UserView
 {
-    public partial class UserLogin : Form
+    public partial class UserLogin : System.Windows.Forms.Form
     {
-        private string connectionString = "Server=LAPTOP-MRP876OS\\SQLEXPRESS;Database=BANKING_APP;Trusted_Connection=True;TrustServerCertificate=True;";
-        public UserLogin()
+        private string connectionString = "Data Source=(localdb)\\localThienPhu;Initial Catalog=BANKING_APP;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+        private readonly IServiceProvider _serviceProvider;
+
+        public UserLogin(IServiceProvider _serviceProvider)
         {
             InitializeComponent();
             txtPassword.PasswordChar = '*';
+            this._serviceProvider = _serviceProvider;
         }
 
         private void UserLogin_Load(object sender, EventArgs e)
@@ -98,7 +101,7 @@ namespace iBanking.UserView
                 MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Chuyển hướng đến UserHomeForm và truyền đối tượng User
-                Home userHomeForm = new Home(loggedInUser);
+                Home userHomeForm = new Home(loggedInUser,_serviceProvider);
                 userHomeForm.Show();
                 this.Hide(); // Ẩn form đăng nhập
             }
