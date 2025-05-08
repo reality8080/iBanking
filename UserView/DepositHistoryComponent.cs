@@ -8,17 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
-using iBanking.Models;
 using iBanking.NewModels;
-using Microsoft.Data.SqlClient;
 
 namespace iBanking.UserView
 {
-    public partial class DepositHistory : Form
+    public partial class DepositHistoryComponent : UserControl
     {
         public User user;
         public List<Deposit> deposits;
-        public DepositHistory(User user)
+        public DepositHistoryComponent(User user)
         {
             InitializeComponent();
             this.user = user;
@@ -34,12 +32,12 @@ namespace iBanking.UserView
 
                 Guna2Panel panel = new Guna2Panel
                 {
-                    
+
                     Height = 100,
                     BorderRadius = 20,
                     FillColor = ColorTranslator.FromHtml("#00A9FF"),
-                    Padding = new Padding(10),
-                    Margin = new Padding(5),
+                    Padding = new Padding(15),
+                    Margin = new Padding(15),
                     BackColor = Color.Transparent,
                     Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right
                 };
@@ -74,12 +72,8 @@ namespace iBanking.UserView
             }
         }
 
+
         private void pnlDeposit_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void DepositHistory_Load(object sender, EventArgs e)
         {
 
         }
