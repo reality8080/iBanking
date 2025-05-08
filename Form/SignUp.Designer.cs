@@ -34,8 +34,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            //Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            //Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -57,6 +57,12 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            //Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            //Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            //Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            //Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            //Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            //Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             LayoutGPanel = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -76,6 +82,9 @@
             layoutPanel = new Guna.UI2.WinForms.Guna2Panel();
             exitGIBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            typeOfAccount = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             LayoutGPanel.SuspendLayout();
             layoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
@@ -250,6 +259,8 @@
             emailGTBox.Name = "emailGTBox";
             emailGTBox.PlaceholderForeColor = Color.Silver;
             emailGTBox.PlaceholderText = "Enter example@gmail.com";
+            emailGTBox.PlaceholderForeColor = Color.Silver;
+            emailGTBox.PlaceholderText = "";
             emailGTBox.SelectedText = "";
             emailGTBox.ShadowDecoration.CustomizableEdges = customizableEdges14;
             emailGTBox.Size = new Size(383, 38);
@@ -385,6 +396,47 @@
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox1.TabIndex = 23;
             guna2PictureBox1.TabStop = false;
+            // 
+            // typeOfAccount
+            // 
+            typeOfAccount.BackColor = Color.Transparent;
+            typeOfAccount.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold);
+            typeOfAccount.ForeColor = Color.FromArgb(102, 112, 133);
+            typeOfAccount.Location = new Point(52, 292);
+            typeOfAccount.Name = "typeOfAccount";
+            typeOfAccount.Size = new Size(141, 27);
+            typeOfAccount.TabIndex = 23;
+            typeOfAccount.Text = "Type Of Account";
+            // 
+            // guna2ComboBox1
+            // 
+            guna2ComboBox1.BackColor = Color.Transparent;
+            guna2ComboBox1.BorderRadius = 10;
+            guna2ComboBox1.CustomizableEdges = customizableEdges3;
+            guna2ComboBox1.DrawMode = DrawMode.OwnerDrawFixed;
+            guna2ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            guna2ComboBox1.FocusedColor = Color.FromArgb(94, 148, 255);
+            guna2ComboBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2ComboBox1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2ComboBox1.ForeColor = Color.FromArgb(102, 112, 133);
+            guna2ComboBox1.ItemHeight = 30;
+            guna2ComboBox1.Items.AddRange(new object[] { "User", "Admin", "Cashier" });
+            guna2ComboBox1.Location = new Point(52, 329);
+            guna2ComboBox1.Name = "guna2ComboBox1";
+            guna2ComboBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2ComboBox1.Size = new Size(383, 36);
+            guna2ComboBox1.TabIndex = 24;
+            // 
+            // guna2Panel2
+            // 
+            guna2Panel2.BackColor = Color.FromArgb(14, 126, 254);
+            guna2Panel2.CustomizableEdges = customizableEdges1;
+            guna2Panel2.ForeColor = Color.White;
+            guna2Panel2.Location = new Point(52, 364);
+            guna2Panel2.Name = "guna2Panel2";
+            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Panel2.Size = new Size(383, 1);
+            guna2Panel2.TabIndex = 22;
             // 
             // SignUp
             // 
