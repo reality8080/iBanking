@@ -1,14 +1,14 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0" version="27.0.3">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="2949" dy="2119" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1861" dy="2022" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="ZNhwTYIBPkEkqX2G76P4-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ZNhwTYIBPkEkqX2G76P4-0" target="ZNhwTYIBPkEkqX2G76P4-11">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="780" y="-210" />
-              <mxPoint x="570" y="-210" />
+              <mxPoint x="780" y="-160" />
+              <mxPoint x="570" y="-160" />
               <mxPoint x="570" y="-106" />
             </Array>
           </mxGeometry>
@@ -16,17 +16,17 @@
         <mxCell id="ZNhwTYIBPkEkqX2G76P4-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ZNhwTYIBPkEkqX2G76P4-0" target="ZNhwTYIBPkEkqX2G76P4-20">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="780" y="-210" />
-              <mxPoint x="1000" y="-210" />
+              <mxPoint x="780" y="-160" />
+              <mxPoint x="1000" y="-160" />
               <mxPoint x="1000" y="-106" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="ZNhwTYIBPkEkqX2G76P4-0" value="Login Form" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="720" y="-334" width="120" height="60" as="geometry" />
+          <mxGeometry x="720" y="-306" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ZNhwTYIBPkEkqX2G76P4-1" value="ForGot Form" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="530" y="-334" width="120" height="60" as="geometry" />
+          <mxGeometry x="530" y="-306" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ZNhwTYIBPkEkqX2G76P4-2" value="Manage Transaction" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="180" y="194" width="120" height="60" as="geometry" />
@@ -112,26 +112,29 @@
         <mxCell id="ZNhwTYIBPkEkqX2G76P4-27" value="Cashier Nộp tiền" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="1311" y="194" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ZNhwTYIBPkEkqX2G76P4-44" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Employee&amp;nbsp; Home&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="640" y="-667" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="ZNhwTYIBPkEkqX2G76P4-45" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;User Deposit&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="480" y="-667" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="ZNhwTYIBPkEkqX2G76P4-46" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Employee&amp;nbsp;&amp;nbsp;Information User&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="800" y="-667" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="ZNhwTYIBPkEkqX2G76P4-47" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;User Change Passwork&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="320" y="-667" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="ZNhwTYIBPkEkqX2G76P4-48" value="Employee&amp;nbsp;&amp;nbsp;Information" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1120" y="-667" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="ZNhwTYIBPkEkqX2G76P4-49" value="Employee Information Employee" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="960" y="-667" width="120" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="ZNhwTYIBPkEkqX2G76P4-50" value="User" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="720" y="-480" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ZNhwTYIBPkEkqX2G76P4-51" value="Confirm By Password" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="640" y="-760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZNhwTYIBPkEkqX2G76P4-52" value="Change Passwork" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="480" y="-760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZNhwTYIBPkEkqX2G76P4-53" value="Deposit History" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="800" y="-760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZNhwTYIBPkEkqX2G76P4-60" value="Home" style="rounded=1;whiteSpace=wrap;html=1;rotation=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="720" y="-600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZNhwTYIBPkEkqX2G76P4-61" value="Bank" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="320" y="-760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZNhwTYIBPkEkqX2G76P4-62" value="Transaction History" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1120" y="-760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZNhwTYIBPkEkqX2G76P4-63" value="Imformation" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="960" y="-760" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
