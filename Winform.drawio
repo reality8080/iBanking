@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0" version="27.0.3">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1420" dy="662" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2039" dy="543" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -11,25 +11,25 @@
           <mxGeometry x="-130" y="90" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ZNhwTYIBPkEkqX2G76P4-2" value="Manage Home" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="50" y="250" width="120" height="60" as="geometry" />
+          <mxGeometry x="40" y="250" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ZNhwTYIBPkEkqX2G76P4-3" value="Manage Deposit" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="-130" y="250" width="120" height="60" as="geometry" />
+          <mxGeometry x="-120" y="250" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ZNhwTYIBPkEkqX2G76P4-4" value="Manage Information User" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="230" y="250" width="120" height="60" as="geometry" />
+          <mxGeometry x="200" y="250" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ZNhwTYIBPkEkqX2G76P4-5" value="Manage Home" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="50" y="340" width="120" height="60" as="geometry" />
+          <mxGeometry x="-440" y="250" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ZNhwTYIBPkEkqX2G76P4-6" value="Manager Change Passwork" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="-130" y="340" width="120" height="60" as="geometry" />
+          <mxGeometry x="-280" y="250" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ZNhwTYIBPkEkqX2G76P4-7" value="Manage Information" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="230" y="340" width="120" height="60" as="geometry" />
+          <mxGeometry x="520" y="250" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ZNhwTYIBPkEkqX2G76P4-8" value="Manage Information Employee" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="50" y="450" width="120" height="60" as="geometry" />
+          <mxGeometry x="360" y="250" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
