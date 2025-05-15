@@ -49,6 +49,7 @@
             btndoanhthu = new Guna.UI2.WinForms.Guna2Button();
             btngiaodich = new Guna.UI2.WinForms.Guna2Button();
             btndoipass = new Guna.UI2.WinForms.Guna2Button();
+            newAccountLLB = new LinkLabel();
             SuspendLayout();
             // 
             // Guna2_PanelBody
@@ -56,10 +57,11 @@
             Guna2_PanelBody.CustomizableEdges = customizableEdges1;
             Guna2_PanelBody.FillColor = Color.Azure;
             Guna2_PanelBody.FillColor2 = Color.Azure;
-            Guna2_PanelBody.Location = new Point(357, 12);
+            Guna2_PanelBody.Location = new Point(286, 10);
+            Guna2_PanelBody.Margin = new Padding(2, 2, 2, 2);
             Guna2_PanelBody.Name = "Guna2_PanelBody";
             Guna2_PanelBody.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            Guna2_PanelBody.Size = new Size(1241, 842);
+            Guna2_PanelBody.Size = new Size(993, 674);
             Guna2_PanelBody.TabIndex = 0;
             Guna2_PanelBody.Paint += guna2CustomGradientPanel1_Paint;
             // 
@@ -73,10 +75,11 @@
             btnthongtinnv.FillColor = Color.FromArgb(34, 52, 119);
             btnthongtinnv.Font = new Font("Segoe UI Light", 12F);
             btnthongtinnv.ForeColor = Color.White;
-            btnthongtinnv.Location = new Point(42, 49);
+            btnthongtinnv.Location = new Point(34, 39);
+            btnthongtinnv.Margin = new Padding(2, 2, 2, 2);
             btnthongtinnv.Name = "btnthongtinnv";
             btnthongtinnv.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnthongtinnv.Size = new Size(270, 68);
+            btnthongtinnv.Size = new Size(216, 54);
             btnthongtinnv.TabIndex = 1;
             btnthongtinnv.Text = "Thông tin nhân viên";
             btnthongtinnv.TextAlign = HorizontalAlignment.Left;
@@ -92,10 +95,11 @@
             btnthongtinkh.FillColor = Color.FromArgb(34, 52, 119);
             btnthongtinkh.Font = new Font("Segoe UI Light", 12F);
             btnthongtinkh.ForeColor = Color.White;
-            btnthongtinkh.Location = new Point(41, 137);
+            btnthongtinkh.Location = new Point(33, 110);
+            btnthongtinkh.Margin = new Padding(2, 2, 2, 2);
             btnthongtinkh.Name = "btnthongtinkh";
             btnthongtinkh.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnthongtinkh.Size = new Size(270, 68);
+            btnthongtinkh.Size = new Size(216, 54);
             btnthongtinkh.TabIndex = 2;
             btnthongtinkh.Text = "Thông tin khách hàng";
             btnthongtinkh.TextAlign = HorizontalAlignment.Left;
@@ -111,10 +115,11 @@
             btndoithongtin.FillColor = Color.FromArgb(34, 52, 119);
             btndoithongtin.Font = new Font("Segoe UI Light", 12F);
             btndoithongtin.ForeColor = Color.White;
-            btndoithongtin.Location = new Point(41, 247);
+            btndoithongtin.Location = new Point(33, 198);
+            btndoithongtin.Margin = new Padding(2, 2, 2, 2);
             btndoithongtin.Name = "btndoithongtin";
             btndoithongtin.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btndoithongtin.Size = new Size(270, 68);
+            btndoithongtin.Size = new Size(216, 54);
             btndoithongtin.TabIndex = 3;
             btndoithongtin.Text = "Thay đổi thông tin";
             btndoithongtin.TextAlign = HorizontalAlignment.Left;
@@ -130,10 +135,11 @@
             btndoanhthu.FillColor = Color.FromArgb(34, 52, 119);
             btndoanhthu.Font = new Font("Segoe UI Light", 12F);
             btndoanhthu.ForeColor = Color.White;
-            btndoanhthu.Location = new Point(41, 372);
+            btndoanhthu.Location = new Point(33, 298);
+            btndoanhthu.Margin = new Padding(2, 2, 2, 2);
             btndoanhthu.Name = "btndoanhthu";
             btndoanhthu.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btndoanhthu.Size = new Size(270, 68);
+            btndoanhthu.Size = new Size(216, 54);
             btndoanhthu.TabIndex = 4;
             btndoanhthu.Text = "Báo cáo doanh thu";
             btndoanhthu.TextAlign = HorizontalAlignment.Left;
@@ -149,10 +155,11 @@
             btngiaodich.FillColor = Color.FromArgb(34, 52, 119);
             btngiaodich.Font = new Font("Segoe UI Light", 12F);
             btngiaodich.ForeColor = Color.White;
-            btngiaodich.Location = new Point(41, 478);
+            btngiaodich.Location = new Point(33, 382);
+            btngiaodich.Margin = new Padding(2, 2, 2, 2);
             btngiaodich.Name = "btngiaodich";
             btngiaodich.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btngiaodich.Size = new Size(270, 68);
+            btngiaodich.Size = new Size(216, 54);
             btngiaodich.TabIndex = 5;
             btngiaodich.Text = "Lịch sử giao dịch";
             btngiaodich.TextAlign = HorizontalAlignment.Left;
@@ -168,21 +175,36 @@
             btndoipass.FillColor = Color.FromArgb(34, 52, 119);
             btndoipass.Font = new Font("Segoe UI Light", 12F);
             btndoipass.ForeColor = Color.White;
-            btndoipass.Location = new Point(41, 594);
+            btndoipass.Location = new Point(33, 475);
+            btndoipass.Margin = new Padding(2, 2, 2, 2);
             btndoipass.Name = "btndoipass";
             btndoipass.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btndoipass.Size = new Size(271, 71);
+            btndoipass.Size = new Size(217, 57);
             btndoipass.TabIndex = 0;
             btndoipass.Text = "Thay đổi mật khẩu";
             btndoipass.TextAlign = HorizontalAlignment.Left;
             btndoipass.Click += btndoipass_Click;
             // 
+            // newAccountLLB
+            // 
+            newAccountLLB.AutoSize = true;
+            newAccountLLB.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold);
+            newAccountLLB.LinkColor = Color.FromArgb(14, 126, 254);
+            newAccountLLB.Location = new Point(34, 568);
+            newAccountLLB.Name = "newAccountLLB";
+            newAccountLLB.Size = new Size(156, 25);
+            newAccountLLB.TabIndex = 20;
+            newAccountLLB.TabStop = true;
+            newAccountLLB.Text = "Đăng kí tài khoản";
+            newAccountLLB.LinkClicked += newAccountLLB_LinkClicked;
+            // 
             // ManageHome
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(34, 52, 119);
-            ClientSize = new Size(1626, 872);
+            ClientSize = new Size(1301, 698);
+            Controls.Add(newAccountLLB);
             Controls.Add(btngiaodich);
             Controls.Add(btndoanhthu);
             Controls.Add(btndoipass);
@@ -191,10 +213,12 @@
             Controls.Add(btnthongtinnv);
             Controls.Add(Guna2_PanelBody);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2, 2, 2, 2);
             Name = "ManageHome";
             Text = "Home";
             Load += ManageHome_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -206,5 +230,6 @@
         private Guna.UI2.WinForms.Guna2Button btndoanhthu;
         private Guna.UI2.WinForms.Guna2Button btngiaodich;
         private Guna.UI2.WinForms.Guna2Button btndoipass;
+        private LinkLabel newAccountLLB;
     }
 }

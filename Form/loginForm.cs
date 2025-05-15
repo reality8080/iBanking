@@ -245,7 +245,7 @@ namespace iBanking
                 _logger.LogInformation("Dang nhap thanh cong");
                 //Employee e = await _repoEmployee.readEmployeeById(Convert.ToInt32(idgTBox.Text));
 
-                var mform = new ManageHome(Convert.ToInt32(idgTBox.Text)); 
+                var mform = new ManageHome(Convert.ToInt32(idgTBox.Text),_serviceProvider, _serviceProvider.GetService<ILogger<ManageHome>>()!); 
 
                 // Chạy ứng dụng với form
 

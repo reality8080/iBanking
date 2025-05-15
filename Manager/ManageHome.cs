@@ -1,4 +1,7 @@
-﻿using iBanking.NewModels;
+﻿using iBanking.Form;
+using iBanking.NewModels;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,13 +16,16 @@ namespace iBanking.Manager
 {
     public partial class ManageHome : System.Windows.Forms.Form
     {
-     
+        public readonly IServiceProvider _serviceProvider;
+        public readonly ILogger<ManageHome> _logger;
         public int manager;
-        public ManageHome(int manager)
-        { 
+        public ManageHome(int manager, IServiceProvider _serviceProvider, ILogger<ManageHome> _logger)
+        {
             InitializeComponent();
             this.manager = manager;
-           
+            this._serviceProvider = _serviceProvider ?? throw new ArgumentNullException(nameof(_serviceProvider));
+            this._logger = _logger ?? throw new ArgumentNullException(nameof(_logger));
+
         }
 
         private void btnthongtinnv_Click(object sender, EventArgs e)
@@ -88,6 +94,22 @@ namespace iBanking.Manager
         private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void newAccountLLB_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            var signUpForm = _serviceProvider.GetService<SignUp>();
+            if (signUpForm != null)
+            {
+                signUpForm.FormClosed += (s, args) => this.Show();
+                signUpForm.Show();
+            }
+            else
+            {
+                _logger.LogWarning("Form dang ky bi loi");
+                MessageBox.Show("Form dang ky bi loi");
+            }
         }
     }
 }

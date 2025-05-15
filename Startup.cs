@@ -80,6 +80,7 @@ namespace iBanking
             services.AddScoped<ISerUser, SerUser>();
             services.AddScoped<ISerEmployee, SerEmployee>();
 
+            services.AddScoped(typeof(ILogger<ManageHome>), typeof(Logger<ManageHome>));
 
             //services.AddScoped<IRepoUser, UserService>();
 

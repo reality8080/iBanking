@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            //Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            //Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -54,17 +52,11 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            //Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            //Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            //Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            //Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            //Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            //Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             LayoutGPanel = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -87,8 +79,6 @@
             layoutPanel = new Guna.UI2.WinForms.Guna2Panel();
             exitGIBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            typeOfAccount = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             LayoutGPanel.SuspendLayout();
             layoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
@@ -118,10 +108,10 @@
             LayoutGPanel.Controls.Add(userNameHGLb);
             LayoutGPanel.Controls.Add(exitGBTN);
             LayoutGPanel.Controls.Add(signUpBtn);
-            LayoutGPanel.CustomizableEdges = customizableEdges25;
+            LayoutGPanel.CustomizableEdges = customizableEdges23;
             LayoutGPanel.Location = new Point(54, 70);
             LayoutGPanel.Name = "LayoutGPanel";
-            LayoutGPanel.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            LayoutGPanel.ShadowDecoration.CustomizableEdges = customizableEdges24;
             LayoutGPanel.Size = new Size(490, 692);
             LayoutGPanel.TabIndex = 1;
             LayoutGPanel.UseTransparentBackground = true;
@@ -141,11 +131,11 @@
             // guna2Panel2
             // 
             guna2Panel2.BackColor = Color.FromArgb(14, 126, 254);
-            guna2Panel2.CustomizableEdges = customizableEdges3;
+            guna2Panel2.CustomizableEdges = customizableEdges1;
             guna2Panel2.ForeColor = Color.White;
-            guna2Panel2.Location = new Point(52, 327);
+            guna2Panel2.Location = new Point(52, 329);
             guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Panel2.Size = new Size(383, 1);
             guna2Panel2.TabIndex = 22;
             // 
@@ -153,7 +143,7 @@
             // 
             idManagerTXT.BorderRadius = 10;
             idManagerTXT.BorderThickness = 0;
-            idManagerTXT.CustomizableEdges = customizableEdges5;
+            idManagerTXT.CustomizableEdges = customizableEdges3;
             idManagerTXT.DefaultText = "";
             idManagerTXT.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             idManagerTXT.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -169,16 +159,15 @@
             idManagerTXT.PlaceholderForeColor = Color.Silver;
             idManagerTXT.PlaceholderText = "Enter 1234";
             idManagerTXT.SelectedText = "";
-            idManagerTXT.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            idManagerTXT.ShadowDecoration.CustomizableEdges = customizableEdges4;
             idManagerTXT.Size = new Size(383, 38);
             idManagerTXT.TabIndex = 23;
-            idManagerTXT.UseSystemPasswordChar = true;
             // 
             // typeOfACCgCB
             // 
             typeOfACCgCB.BackColor = Color.Transparent;
             typeOfACCgCB.BorderRadius = 10;
-            typeOfACCgCB.CustomizableEdges = customizableEdges7;
+            typeOfACCgCB.CustomizableEdges = customizableEdges5;
             typeOfACCgCB.DrawMode = DrawMode.OwnerDrawFixed;
             typeOfACCgCB.DropDownStyle = ComboBoxStyle.DropDownList;
             typeOfACCgCB.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -189,7 +178,7 @@
             typeOfACCgCB.Items.AddRange(new object[] { "User", "Employee", "Admin" });
             typeOfACCgCB.Location = new Point(52, 292);
             typeOfACCgCB.Name = "typeOfACCgCB";
-            typeOfACCgCB.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            typeOfACCgCB.ShadowDecoration.CustomizableEdges = customizableEdges6;
             typeOfACCgCB.Size = new Size(383, 36);
             typeOfACCgCB.TabIndex = 24;
             typeOfACCgCB.SelectedIndexChanged += typeOfACCgCB_SelectedIndexChanged;
@@ -210,7 +199,7 @@
             typeOfAccount.BackColor = Color.Transparent;
             typeOfAccount.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold);
             typeOfAccount.ForeColor = Color.FromArgb(102, 112, 133);
-            typeOfAccount.Location = new Point(52, 255);
+            typeOfAccount.Location = new Point(52, 292);
             typeOfAccount.Name = "typeOfAccount";
             typeOfAccount.Size = new Size(141, 27);
             typeOfAccount.TabIndex = 23;
@@ -230,11 +219,11 @@
             // guna2Panel1
             // 
             guna2Panel1.BackColor = Color.FromArgb(14, 126, 254);
-            guna2Panel1.CustomizableEdges = customizableEdges9;
+            guna2Panel1.CustomizableEdges = customizableEdges7;
             guna2Panel1.ForeColor = Color.White;
             guna2Panel1.Location = new Point(52, 519);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Panel1.Size = new Size(383, 1);
             guna2Panel1.TabIndex = 21;
             // 
@@ -243,7 +232,7 @@
             pwsGTxb.BorderRadius = 10;
             pwsGTxb.BorderThickness = 0;
             pwsGTxb.CharacterCasing = CharacterCasing.Upper;
-            pwsGTxb.CustomizableEdges = customizableEdges11;
+            pwsGTxb.CustomizableEdges = customizableEdges9;
             pwsGTxb.DefaultText = "";
             pwsGTxb.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             pwsGTxb.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -259,7 +248,7 @@
             pwsGTxb.PlaceholderForeColor = Color.Silver;
             pwsGTxb.PlaceholderText = "Enter ABcd@1234";
             pwsGTxb.SelectedText = "";
-            pwsGTxb.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            pwsGTxb.ShadowDecoration.CustomizableEdges = customizableEdges10;
             pwsGTxb.Size = new Size(383, 38);
             pwsGTxb.TabIndex = 20;
             pwsGTxb.UseSystemPasswordChar = true;
@@ -278,22 +267,22 @@
             // passGPanel
             // 
             passGPanel.BackColor = Color.FromArgb(14, 126, 254);
-            passGPanel.CustomizableEdges = customizableEdges13;
+            passGPanel.CustomizableEdges = customizableEdges11;
             passGPanel.ForeColor = Color.White;
             passGPanel.Location = new Point(52, 244);
             passGPanel.Name = "passGPanel";
-            passGPanel.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            passGPanel.ShadowDecoration.CustomizableEdges = customizableEdges12;
             passGPanel.Size = new Size(383, 1);
             passGPanel.TabIndex = 17;
             // 
             // usernameGPanel
             // 
             usernameGPanel.BackColor = Color.FromArgb(14, 126, 254);
-            usernameGPanel.CustomizableEdges = customizableEdges15;
+            usernameGPanel.CustomizableEdges = customizableEdges13;
             usernameGPanel.ForeColor = Color.White;
             usernameGPanel.Location = new Point(52, 159);
             usernameGPanel.Name = "usernameGPanel";
-            usernameGPanel.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            usernameGPanel.ShadowDecoration.CustomizableEdges = customizableEdges14;
             usernameGPanel.Size = new Size(383, 1);
             usernameGPanel.TabIndex = 16;
             // 
@@ -301,7 +290,7 @@
             // 
             emailGTBox.BorderRadius = 10;
             emailGTBox.BorderThickness = 0;
-            emailGTBox.CustomizableEdges = customizableEdges17;
+            emailGTBox.CustomizableEdges = customizableEdges15;
             emailGTBox.DefaultText = "";
             emailGTBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             emailGTBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -315,11 +304,9 @@
             emailGTBox.Margin = new Padding(5, 7, 5, 7);
             emailGTBox.Name = "emailGTBox";
             emailGTBox.PlaceholderForeColor = Color.Silver;
-            emailGTBox.PlaceholderText = "Enter example@gmail.com";
-            emailGTBox.PlaceholderForeColor = Color.Silver;
             emailGTBox.PlaceholderText = "";
             emailGTBox.SelectedText = "";
-            emailGTBox.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            emailGTBox.ShadowDecoration.CustomizableEdges = customizableEdges16;
             emailGTBox.Size = new Size(383, 38);
             emailGTBox.TabIndex = 15;
             // 
@@ -327,7 +314,7 @@
             // 
             userNamegTBox.BorderRadius = 10;
             userNamegTBox.BorderThickness = 0;
-            userNamegTBox.CustomizableEdges = customizableEdges19;
+            userNamegTBox.CustomizableEdges = customizableEdges17;
             userNamegTBox.DefaultText = "";
             userNamegTBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             userNamegTBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -343,7 +330,7 @@
             userNamegTBox.PlaceholderForeColor = Color.Silver;
             userNamegTBox.PlaceholderText = "Enter UserName";
             userNamegTBox.SelectedText = "";
-            userNamegTBox.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            userNamegTBox.ShadowDecoration.CustomizableEdges = customizableEdges18;
             userNamegTBox.Size = new Size(383, 38);
             userNamegTBox.TabIndex = 14;
             // 
@@ -374,7 +361,7 @@
             exitGBTN.BorderColor = Color.FromArgb(14, 126, 254);
             exitGBTN.BorderRadius = 5;
             exitGBTN.BorderThickness = 1;
-            exitGBTN.CustomizableEdges = customizableEdges21;
+            exitGBTN.CustomizableEdges = customizableEdges19;
             exitGBTN.DisabledState.BorderColor = Color.DarkGray;
             exitGBTN.DisabledState.CustomBorderColor = Color.DarkGray;
             exitGBTN.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -384,7 +371,7 @@
             exitGBTN.ForeColor = Color.FromArgb(102, 112, 133);
             exitGBTN.Location = new Point(313, 575);
             exitGBTN.Name = "exitGBTN";
-            exitGBTN.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            exitGBTN.ShadowDecoration.CustomizableEdges = customizableEdges20;
             exitGBTN.Size = new Size(122, 31);
             exitGBTN.TabIndex = 2;
             exitGBTN.Text = "Thoát";
@@ -395,7 +382,7 @@
             signUpBtn.BorderColor = Color.FromArgb(14, 126, 254);
             signUpBtn.BorderRadius = 5;
             signUpBtn.BorderThickness = 1;
-            signUpBtn.CustomizableEdges = customizableEdges23;
+            signUpBtn.CustomizableEdges = customizableEdges21;
             signUpBtn.DisabledState.BorderColor = Color.DarkGray;
             signUpBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             signUpBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -405,7 +392,7 @@
             signUpBtn.ForeColor = Color.White;
             signUpBtn.Location = new Point(52, 575);
             signUpBtn.Name = "signUpBtn";
-            signUpBtn.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            signUpBtn.ShadowDecoration.CustomizableEdges = customizableEdges22;
             signUpBtn.Size = new Size(122, 31);
             signUpBtn.TabIndex = 1;
             signUpBtn.Text = "Đăng Ký";
@@ -415,10 +402,10 @@
             // 
             layoutPanel.BackColor = Color.FromArgb(224, 224, 224);
             layoutPanel.Controls.Add(exitGIBtn);
-            layoutPanel.CustomizableEdges = customizableEdges28;
+            layoutPanel.CustomizableEdges = customizableEdges26;
             layoutPanel.Location = new Point(-2, 0);
             layoutPanel.Name = "layoutPanel";
-            layoutPanel.ShadowDecoration.CustomizableEdges = customizableEdges29;
+            layoutPanel.ShadowDecoration.CustomizableEdges = customizableEdges27;
             layoutPanel.Size = new Size(1147, 51);
             layoutPanel.TabIndex = 22;
             layoutPanel.MouseDown += layoutPanel_MouseDown;
@@ -435,7 +422,7 @@
             exitGIBtn.Location = new Point(1104, 12);
             exitGIBtn.Name = "exitGIBtn";
             exitGIBtn.PressedState.ImageSize = new Size(64, 64);
-            exitGIBtn.ShadowDecoration.CustomizableEdges = customizableEdges27;
+            exitGIBtn.ShadowDecoration.CustomizableEdges = customizableEdges25;
             exitGIBtn.Size = new Size(30, 30);
             exitGIBtn.TabIndex = 18;
             exitGIBtn.UseTransparentBackground = true;
@@ -443,39 +430,16 @@
             // 
             // guna2PictureBox1
             // 
+            guna2PictureBox1.CustomizableEdges = customizableEdges28;
             guna2PictureBox1.Image = Properties.Resources.screenshot_17446384772;
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(599, 48);
             guna2PictureBox1.Name = "guna2PictureBox1";
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges29;
             guna2PictureBox1.Size = new Size(546, 727);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox1.TabIndex = 23;
             guna2PictureBox1.TabStop = false;
-            // 
-            // typeOfAccount
-            // 
-            typeOfAccount.BackColor = Color.Transparent;
-            typeOfAccount.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold);
-            typeOfAccount.ForeColor = Color.FromArgb(102, 112, 133);
-            typeOfAccount.Location = new Point(52, 292);
-            typeOfAccount.Name = "typeOfAccount";
-            typeOfAccount.Size = new Size(141, 27);
-            typeOfAccount.TabIndex = 23;
-            typeOfAccount.Text = "Type Of Account";
-            // 
-            // guna2ComboBox1
-            // 
-            // 
-            // guna2Panel2
-            // 
-            guna2Panel2.BackColor = Color.FromArgb(14, 126, 254);
-            guna2Panel2.CustomizableEdges = customizableEdges1;
-            guna2Panel2.ForeColor = Color.White;
-            guna2Panel2.Location = new Point(52, 364);
-            guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Panel2.Size = new Size(383, 1);
-            guna2Panel2.TabIndex = 22;
             // 
             // SignUp
             // 

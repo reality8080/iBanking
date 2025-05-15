@@ -189,21 +189,5 @@ namespace iBanking
         {
 
         }
-
-        private void newAccountLLB_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-            var signUpForm = _serviceProvider.GetService<SignUp>();
-            if (signUpForm != null)
-            {
-                signUpForm.FormClosed += (s, args) => this.Show();
-                signUpForm.Show();
-            }
-            else
-            {
-                _logger.LogWarning("Form dang ky bi loi");
-                MessageBox.Show("Form dang ky bi loi");
-            }
-        }
     }
 }
