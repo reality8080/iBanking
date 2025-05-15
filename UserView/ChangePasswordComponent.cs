@@ -94,8 +94,8 @@ namespace iBanking.UserView
 
                             // Cập nhật lại đối tượng user
                             user.Password = newPassword;
-                            UserLogin userLogin = new UserLogin(_serviceProvider);
-                            userLogin.Show();
+                            //UserLogin userLogin = new UserLogin(_serviceProvider);
+                            //userLogin.Show();
                             this.Hide();
                         }
                         else

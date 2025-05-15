@@ -79,6 +79,7 @@
             layoutPanel = new Guna.UI2.WinForms.Guna2Panel();
             exitGIBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             LayoutGPanel.SuspendLayout();
             layoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
@@ -90,6 +91,7 @@
             LayoutGPanel.BorderColor = Color.Black;
             LayoutGPanel.BorderRadius = 30;
             LayoutGPanel.BorderThickness = 1;
+            LayoutGPanel.Controls.Add(guna2HtmlLabel2);
             LayoutGPanel.Controls.Add(guna2Panel3);
             LayoutGPanel.Controls.Add(guna2Panel2);
             LayoutGPanel.Controls.Add(idManagerTXT);
@@ -133,7 +135,7 @@
             guna2Panel2.BackColor = Color.FromArgb(14, 126, 254);
             guna2Panel2.CustomizableEdges = customizableEdges1;
             guna2Panel2.ForeColor = Color.White;
-            guna2Panel2.Location = new Point(52, 329);
+            guna2Panel2.Location = new Point(52, 333);
             guna2Panel2.Name = "guna2Panel2";
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Panel2.Size = new Size(383, 1);
@@ -176,7 +178,7 @@
             typeOfACCgCB.ForeColor = Color.FromArgb(102, 112, 133);
             typeOfACCgCB.ItemHeight = 30;
             typeOfACCgCB.Items.AddRange(new object[] { "User", "Employee", "Admin" });
-            typeOfACCgCB.Location = new Point(52, 292);
+            typeOfACCgCB.Location = new Point(52, 296);
             typeOfACCgCB.Name = "typeOfACCgCB";
             typeOfACCgCB.ShadowDecoration.CustomizableEdges = customizableEdges6;
             typeOfACCgCB.Size = new Size(383, 36);
@@ -441,6 +443,17 @@
             guna2PictureBox1.TabIndex = 23;
             guna2PictureBox1.TabStop = false;
             // 
+            // guna2HtmlLabel2
+            // 
+            guna2HtmlLabel2.BackColor = Color.Transparent;
+            guna2HtmlLabel2.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold);
+            guna2HtmlLabel2.ForeColor = Color.FromArgb(102, 112, 133);
+            guna2HtmlLabel2.Location = new Point(52, 261);
+            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            guna2HtmlLabel2.Size = new Size(141, 27);
+            guna2HtmlLabel2.TabIndex = 27;
+            guna2HtmlLabel2.Text = "Type Of Account";
+            // 
             // SignUp
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -485,5 +498,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2TextBox idManagerTXT;
         private Guna.UI2.WinForms.Guna2HtmlLabel idManagHLb;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
     }
 }
