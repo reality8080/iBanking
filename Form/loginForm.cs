@@ -127,53 +127,119 @@ namespace iBanking
                 e.Handled = true;
             }
         }
+        //private async Task employeeLogin()
+        //{
+        //    if (string.IsNullOrEmpty(idgTBox.Text) || string.IsNullOrEmpty(passGTxb.Text))
+        //    {
+        //        _logger.LogWarning("Khong duoc de trong tai khoan hoac mat khau");
+        //        MessageBox.Show("Khong duoc de trong tai khoan hoac mat khau");
+        //        return;
+        //    }
+
+        //    try
+        //    {
+        //        bool check = await _serEmployee.CheckPass(idgTBox.Text, passGTxb.Text);
+        //        if (!check)
+        //        {
+        //            _logger.LogWarning("Dang nhap that bai");
+        //            MessageBox.Show("Dang nhap that bai");
+
+        //            return;
+        //        }
+
+        //        _logger.LogInformation("Dang nhap thanh cong");
+
+        //        //var form1 = _serviceProvider.GetService<mainForm>();
+        //        Employee e = await _repoEmployee.readEmployeeById(Convert.ToInt32(idgTBox.Text));
+        //        var f1 = _serviceProvider.GetRequiredService<CashierHome>();
+
+        //        if (f1 != null)
+        //        {
+        //            this.Hide();
+        //            //_serviceProvider.GetService<mainForm>()?.Show();
+        //            f1.Show();
+
+        //        }
+        //        else
+        //        {
+        //            _logger.LogWarning("Dang nhap that bai, loi tuyen tai");
+        //            MessageBox.Show("Dang nhap that bai, loi truyen tai");
+
+        //        }
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _logger.LogWarning(ex.Message);
+        //        return;
+        //    }
+        //}
+
         private async Task employeeLogin()
         {
-            if (string.IsNullOrEmpty(idgTBox.Text) || string.IsNullOrEmpty(passGTxb.Text))
+            string employeeIdText = idgTBox.Text.Trim();
+            string password = passGTxb.Text; // Không trim password
+
+            if (string.IsNullOrEmpty(employeeIdText) || string.IsNullOrEmpty(password))
             {
-                _logger.LogWarning("Khong duoc de trong tai khoan hoac mat khau");
-                MessageBox.Show("Khong duoc de trong tai khoan hoac mat khau");
+                _logger.LogWarning("ID nhân viên hoặc mật khẩu không được để trống.");
+                MessageBox.Show("ID nhân viên hoặc mật khẩu không được để trống.", "Thiếu Thông Tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            
+
+            if (!int.TryParse(employeeIdText, out int employeeId))
+            {
+                _logger.LogWarning($"ID nhân viên không hợp lệ: {employeeIdText}");
+                MessageBox.Show("ID nhân viên không hợp lệ. Vui lòng nhập một số.", "Lỗi Định Dạng", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             try
             {
-                bool check = await _serEmployee.CheckPass(idgTBox.Text, passGTxb.Text);
-                if (!check)
-                {
-                    _logger.LogWarning("Dang nhap that bai");
-                    MessageBox.Show("Dang nhap that bai");
+                // _serEmployee.CheckPass nên nhận int employeeId thay vì string để nhất quán
+                bool isAuthenticated = await _serEmployee.CheckPass(employeeIdText, password); // Giữ nguyên nếu CheckPass yêu cầu string ID
 
+                if (!isAuthenticated)
+                {
+                    _logger.LogWarning($"Đăng nhập thất bại cho nhân viên ID: {employeeId}.");
+                    MessageBox.Show("ID nhân viên hoặc mật khẩu không chính xác.", "Đăng Nhập Thất Bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                _logger.LogInformation("Dang nhap thanh cong");
+                _logger.LogInformation($"Nhân viên ID: {employeeId} đăng nhập thành công.");
 
-                //var form1 = _serviceProvider.GetService<mainForm>();
-                Employee e = await _repoEmployee.readEmployeeById(Convert.ToInt32(idgTBox.Text));
-                var f1 = _serviceProvider.GetRequiredService<CashierHome>();
+                // Lấy thông tin Employee (không nhất thiết nếu bạn chỉ cần ID, nhưng có thể cần tên để chào mừng)
+                // Employee employeeDetails = await _repoEmployee.readEmployeeById(employeeId);
+                // if (employeeDetails == null)
+                // {
+                //     _logger.LogError($"Không thể lấy thông tin chi tiết cho nhân viên ID: {employeeId} sau khi đăng nhập thành công.");
+                //     MessageBox.Show("Đã xảy ra lỗi khi lấy thông tin nhân viên.", "Lỗi Hệ Thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //     return;
+                // }
 
-                if (f1 != null)
-                {
-                    this.Hide();
-                    //_serviceProvider.GetService<mainForm>()?.Show();
-                    f1.Show();
+                // Tạo CashierHome và truyền các dependencies cùng với employeeId
+                // Giả sử ILogger<loginForm> có thể dùng tạm hoặc bạn có ILogger<CashierHome> riêng
+                var cashierHomeScreen = new CashierHome(
+                    _serviceProvider,
+                    _serUser,
+                    _serEmployee,
+                    _logger, // Hoặc _serviceProvider.GetService<ILogger<CashierHome>>() nếu đã đăng ký
+                    _repoUser,
+                    _repoEmployee,
+                    employeeId // Truyền ID của nhân viên đã đăng nhập
+                );
 
-                }
-                else
-                {
-                    _logger.LogWarning("Dang nhap that bai, loi tuyen tai");
-                    MessageBox.Show("Dang nhap that bai, loi truyen tai");
-
-                }
-
+                this.Hide();
+                cashierHomeScreen.FormClosed += (s, args) => this.Close(); // Đóng form login khi CashierHome đóng
+                cashierHomeScreen.Show();
             }
             catch (Exception ex)
             {
-                _logger.LogWarning(ex.Message);
-                return;
+                _logger.LogError(ex, $"Lỗi trong quá trình đăng nhập của nhân viên ID: {employeeIdText}.");
+                MessageBox.Show("Đã xảy ra lỗi trong quá trình đăng nhập: " + ex.Message, "Lỗi Hệ Thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private async Task userLogin()
         {
             try
@@ -233,7 +299,7 @@ namespace iBanking
                     return;
                 }
 
-                bool check = await _serUser.CheckPass(idgTBox.Text, passGTxb.Text);
+                bool check = await _serEmployee.CheckPass(idgTBox.Text, passGTxb.Text);
                 if (!check)
                 {
                     _logger.LogWarning("Dang nhap that bai");

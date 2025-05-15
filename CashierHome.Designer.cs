@@ -250,6 +250,7 @@
             guna2Button1.Size = new Size(119, 41);
             guna2Button1.TabIndex = 0;
             guna2Button1.Text = "Đăng Xuất";
+            guna2Button1.Click += guna2Button1_Click;
             // 
             // guna2PictureBox1
             // 

@@ -111,5 +111,21 @@ namespace iBanking.Manager
                 MessageBox.Show("Form dang ky bi loi");
             }
         }
+
+        private void logOutBtn_Click(object sender, EventArgs e)
+        {
+            var login = _serviceProvider.GetService<loginForm>();
+            this.Hide();
+            if (login != null)
+            {
+                login.FormClosed += (s, args) => this.Close();
+                login.Show();
+            }
+            else
+            {
+                //_logger.LogWarning("Login form could not be created.");
+                MessageBox.Show("Login form could not be created.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

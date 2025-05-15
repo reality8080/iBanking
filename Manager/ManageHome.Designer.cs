@@ -42,6 +42,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageHome));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna2_PanelBody = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             btnthongtinnv = new Guna.UI2.WinForms.Guna2Button();
             btnthongtinkh = new Guna.UI2.WinForms.Guna2Button();
@@ -50,6 +53,8 @@
             btngiaodich = new Guna.UI2.WinForms.Guna2Button();
             btndoipass = new Guna.UI2.WinForms.Guna2Button();
             newAccountLLB = new LinkLabel();
+            logOutBtn = new Guna.UI2.WinForms.Guna2PictureBox();
+            ((System.ComponentModel.ISupportInitialize)logOutBtn).BeginInit();
             SuspendLayout();
             // 
             // Guna2_PanelBody
@@ -58,7 +63,7 @@
             Guna2_PanelBody.FillColor = Color.Azure;
             Guna2_PanelBody.FillColor2 = Color.Azure;
             Guna2_PanelBody.Location = new Point(286, 10);
-            Guna2_PanelBody.Margin = new Padding(2, 2, 2, 2);
+            Guna2_PanelBody.Margin = new Padding(2);
             Guna2_PanelBody.Name = "Guna2_PanelBody";
             Guna2_PanelBody.ShadowDecoration.CustomizableEdges = customizableEdges2;
             Guna2_PanelBody.Size = new Size(993, 674);
@@ -76,7 +81,7 @@
             btnthongtinnv.Font = new Font("Segoe UI Light", 12F);
             btnthongtinnv.ForeColor = Color.White;
             btnthongtinnv.Location = new Point(34, 39);
-            btnthongtinnv.Margin = new Padding(2, 2, 2, 2);
+            btnthongtinnv.Margin = new Padding(2);
             btnthongtinnv.Name = "btnthongtinnv";
             btnthongtinnv.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnthongtinnv.Size = new Size(216, 54);
@@ -96,7 +101,7 @@
             btnthongtinkh.Font = new Font("Segoe UI Light", 12F);
             btnthongtinkh.ForeColor = Color.White;
             btnthongtinkh.Location = new Point(33, 110);
-            btnthongtinkh.Margin = new Padding(2, 2, 2, 2);
+            btnthongtinkh.Margin = new Padding(2);
             btnthongtinkh.Name = "btnthongtinkh";
             btnthongtinkh.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnthongtinkh.Size = new Size(216, 54);
@@ -116,7 +121,7 @@
             btndoithongtin.Font = new Font("Segoe UI Light", 12F);
             btndoithongtin.ForeColor = Color.White;
             btndoithongtin.Location = new Point(33, 198);
-            btndoithongtin.Margin = new Padding(2, 2, 2, 2);
+            btndoithongtin.Margin = new Padding(2);
             btndoithongtin.Name = "btndoithongtin";
             btndoithongtin.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btndoithongtin.Size = new Size(216, 54);
@@ -136,7 +141,7 @@
             btndoanhthu.Font = new Font("Segoe UI Light", 12F);
             btndoanhthu.ForeColor = Color.White;
             btndoanhthu.Location = new Point(33, 298);
-            btndoanhthu.Margin = new Padding(2, 2, 2, 2);
+            btndoanhthu.Margin = new Padding(2);
             btndoanhthu.Name = "btndoanhthu";
             btndoanhthu.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btndoanhthu.Size = new Size(216, 54);
@@ -156,7 +161,7 @@
             btngiaodich.Font = new Font("Segoe UI Light", 12F);
             btngiaodich.ForeColor = Color.White;
             btngiaodich.Location = new Point(33, 382);
-            btngiaodich.Margin = new Padding(2, 2, 2, 2);
+            btngiaodich.Margin = new Padding(2);
             btngiaodich.Name = "btngiaodich";
             btngiaodich.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btngiaodich.Size = new Size(216, 54);
@@ -176,7 +181,7 @@
             btndoipass.Font = new Font("Segoe UI Light", 12F);
             btndoipass.ForeColor = Color.White;
             btndoipass.Location = new Point(33, 475);
-            btndoipass.Margin = new Padding(2, 2, 2, 2);
+            btndoipass.Margin = new Padding(2);
             btndoipass.Name = "btndoipass";
             btndoipass.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btndoipass.Size = new Size(217, 57);
@@ -198,12 +203,27 @@
             newAccountLLB.Text = "Đăng kí tài khoản";
             newAccountLLB.LinkClicked += newAccountLLB_LinkClicked;
             // 
+            // logOutBtn
+            // 
+            logOutBtn.CustomizableEdges = customizableEdges15;
+            logOutBtn.Image = (Image)resources.GetObject("logOutBtn.Image");
+            logOutBtn.ImageRotate = 0F;
+            logOutBtn.Location = new Point(47, 614);
+            logOutBtn.Name = "logOutBtn";
+            logOutBtn.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            logOutBtn.Size = new Size(64, 54);
+            logOutBtn.SizeMode = PictureBoxSizeMode.StretchImage;
+            logOutBtn.TabIndex = 21;
+            logOutBtn.TabStop = false;
+            logOutBtn.Click += logOutBtn_Click;
+            // 
             // ManageHome
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(34, 52, 119);
             ClientSize = new Size(1301, 698);
+            Controls.Add(logOutBtn);
             Controls.Add(newAccountLLB);
             Controls.Add(btngiaodich);
             Controls.Add(btndoanhthu);
@@ -213,10 +233,11 @@
             Controls.Add(btnthongtinnv);
             Controls.Add(Guna2_PanelBody);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "ManageHome";
             Text = "Home";
             Load += ManageHome_Load;
+            ((System.ComponentModel.ISupportInitialize)logOutBtn).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -231,5 +252,6 @@
         private Guna.UI2.WinForms.Guna2Button btngiaodich;
         private Guna.UI2.WinForms.Guna2Button btndoipass;
         private LinkLabel newAccountLLB;
+        private Guna.UI2.WinForms.Guna2PictureBox logOutBtn;
     }
 }

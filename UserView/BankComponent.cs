@@ -58,12 +58,25 @@ namespace iBanking.UserView
                             if (reader.Read())
                             {
                                 // Tạo đối tượng User từ dữ liệu
+
+                                decimal someDecimalValue;
+                                if (reader.IsDBNull(3)) // Kiểm tra xem cột tại chỉ số 3 có NULL không
+                                {
+                                    someDecimalValue = 0.0m; // Hoặc một giá trị mặc định khác phù hợp với logic của bạn
+                                                             // Hoặc bạn có thể gán cho một biến decimal? (nullable decimal)
+                                                             // decimal? nullableDecimalValue = null;
+                                }
+                                else
+                                {
+                                    someDecimalValue = reader.GetDecimal(3);
+                                }
+
                                 User user = new User
                                 {
                                     Id = reader.GetInt32(reader.GetOrdinal("id")),
                                     Password = reader.GetString(reader.GetOrdinal("password")),
                                     Name = reader.GetString(reader.GetOrdinal("name")),
-                                    Balance = reader.GetDecimal(reader.GetOrdinal("balance")),
+                                    Balance= someDecimalValue,
                                     Email = reader.GetString(reader.GetOrdinal("email"))
                                 };
                                 return user;

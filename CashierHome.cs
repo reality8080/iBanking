@@ -1,4 +1,8 @@
-﻿using System;
+﻿using iBanking.Interfaces.Repo;
+using iBanking.Interfaces.Ser;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,38 +16,52 @@ namespace iBanking
 {
     public partial class CashierHome : System.Windows.Forms.Form
     {
-        public CashierHome()
+        private readonly IServiceProvider _serviceProvider;
+        private readonly ISerUser _serUser;
+        private readonly ISerEmployee _serEmployee;
+        private readonly ILogger<loginForm> _logger;
+        private readonly IRepoUser _repoUser;
+        private readonly IRepoEmployee _repoEmployee;
+        private readonly int employeeId;
+        public CashierHome(IServiceProvider _serviceProvider, ISerUser _serUser, ISerEmployee _serEmployee, ILogger<loginForm> _logger, IRepoUser _repoUser, IRepoEmployee _repoEmployee,int employeeId)
         {
             InitializeComponent();
+            this._serviceProvider = _serviceProvider;
+            this._serUser = _serUser;
+            this._serEmployee = _serEmployee;
+            this._logger = _logger;
+            this._repoUser = _repoUser;
+            this._repoEmployee = _repoEmployee;
+            this.employeeId = employeeId;
         }
 
         private void btnMoCa_Click(object sender, EventArgs e)
         {
-            CashierOpenShift cashierOpenShift = new CashierOpenShift(2);
+            CashierOpenShift cashierOpenShift = new CashierOpenShift(employeeId);
             OpenChildForm(cashierOpenShift);
         }
 
         private void btnDongCa_Click(object sender, EventArgs e)
         {
-            CashierCloseShift cashierCloseShift = new CashierCloseShift(2);
+            CashierCloseShift cashierCloseShift = new CashierCloseShift(employeeId);
             OpenChildForm(cashierCloseShift);
         }
 
         private void btnNopTien_Click(object sender, EventArgs e)
         {
-            CashierNopTien cashierNopTien = new CashierNopTien(2);
+            CashierNopTien cashierNopTien = new CashierNopTien(employeeId);
             OpenChildForm(cashierNopTien);
         }
 
         private void btnThongTin_Click(object sender, EventArgs e)
         {
-            CashierInfo cashierInfo = new CashierInfo(2); //dang gia su la 2
+            CashierInfo cashierInfo = new CashierInfo(employeeId); //dang gia su la employeeId
             OpenChildForm(cashierInfo);
         }
 
         private void btnDoiMk_Click(object sender, EventArgs e)
         {
-            CashierChangePass cashierChangePass = new CashierChangePass(2); //dang gia su la 2
+            CashierChangePass cashierChangePass = new CashierChangePass(employeeId); //dang gia su la employeeId
             OpenChildForm(cashierChangePass);
         }
         private System.Windows.Forms.Form currentFormChild;
@@ -78,6 +96,22 @@ namespace iBanking
         private void btnMini_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            var login = new loginForm(_serviceProvider,_serUser,_serEmployee,_logger,_repoUser,_repoEmployee);
+            this.Hide();
+            if (login != null)
+            {
+                login.FormClosed += (s, args) => this.Close();
+                login.Show();
+            }
+            else
+            {
+                //_logger.LogWarning("Login form could not be created.");
+                MessageBox.Show("Login form could not be created.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
