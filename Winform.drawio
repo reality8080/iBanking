@@ -166,7 +166,7 @@
         <mxCell id="ZNhwTYIBPkEkqX2G76P4-63" value="Imformation" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="930" y="-694.5" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="grhPrpGq0YVfpYXsBdQM-0" value="Sign Up" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="grhPrpGq0YVfpYXsBdQM-0" value="Sign Up Form" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="-240" y="134" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
